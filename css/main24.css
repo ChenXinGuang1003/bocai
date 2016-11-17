@@ -1,0 +1,117 @@
+/* reset */
+*{ margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+textarea { resize:none; overflow:auto; }
+em{ font-style:normal; }
+/* !£nd reset*/
+
+body{ font-size:0.14rem; height:100%; background:#1A1309;  font-family: "Arial","Microsoft YaHei","ºÚÌå","ËÎÌå",sans-serif;}
+.mainBox{ width:100%; height:100%; overflow:hidden;  background:#1A1309; }
+#headerBox{ width:100%; height:0.35rem; line-height:0.35rem; background:#986600; box-sizing:border-box; overflow:hidden;  position:relative;  }
+#headerBox a:nth-of-type(1){ padding:0.12rem; border-radius:0.12rem; background:rgba(0,0,0,0.3) url(../img/index_ico.png) center center no-repeat; background-size:70%; position:absolute; left:0.1rem; top:calc(0.18rem - 0.12rem); }
+#headerBox a:nth-of-type(2){ display:block; width:0.4rem; height:0.28rem; line-height:0.28rem; text-align:center; border-radius:0.06rem; background:rgba(0,0,0,0.3); color: #fff; font-size:0.12rem; position:absolute; right: 0.1rem; top:calc(0.18rem - 0.14rem); }
+#headerBox .logo{ display:block; position:absolute; left:calc(1.5rem - 0.54rem); top:calc(0.18rem - 0.16rem);height:0.3rem; }
+
+#contant{ width:auto; overflow:hidden; }
+#contant section.contant_list{ width:3rem; float:left; overflow:hidden; }
+section.contant_list .nav{ width:2.85rem; margin:0.12rem auto 0.08rem; overflow:hidden; }
+section.contant_list .nav div{ width:0.95rem; height:0.32rem; float:left; text-align:center;  background:#fff; line-height:0.32rem; font-size:0.14rem; color:#333333; text-shadow:2px 2px 1px #B49743; border:1px solid #AFAFAF; box-sizing:border-box; }
+section.contant_list .nav div:nth-of-type(1){  border-radius:0.05rem 0 0 0.05rem; }
+section.contant_list .nav div:nth-of-type(3){  border-radius:0 0.05rem 0.05rem 0; }
+section.contant_list .nav div.active{ border:1px solid #986600; background:#986600; color:#fff; }
+section.contant_list #main_tab{ width:9rem; overflow:hidden; transition:.5s; }
+section.contant_list #main_tab .seList{ width:3rem; float:left; overflow:hidden; }
+
+/* 体育赛事 */
+#main_tab .seList .tab_tab{ width:2.85rem; margin:0 auto; background:#fff; color:rgba(0, 0, 0,0.8); overflow:hidden; border-radius:0.05rem 0.05rem 0 0;}
+.seList .tab_tab div{ width:1.425rem; height:0.32rem; text-align:center; line-height:0.32rem; float:left; border:1px solid #fff; text-shadow:2px 2px 1px #B49743; box-sizing:border-box; }
+.seList .tab_tab div.active{ background:#F5F5F5; border:1px solid #DDDDDD; border-bottom:none; color:rgba(236, 37, 37,1); }
+.seList section.smcontant{ width:2.85rem; margin:0 auto; padding-bottom:0.25rem; border-radius:0 0 0.05rem 0.05rem; background:#F5F5F5; overflow:hidden; }
+section.smcontant .Piclist{ width:100%; overflow:hidden; display:none; }
+section.smcontant ul.active{ display:block; }
+section.smcontant .Piclist li{ width:100%; height:auto; overflow:hidden; }
+.Piclist li .Piclist_top{ width:100%; height:0.35rem; overflow:hidden; line-height:0.35rem;  font-weight:bolder;  border:1px solid #DDDDDD; border-top:none; box-sizing:border-box;}
+
+.Piclist li .Piclist_bottom{ width:100%; overflow:hidden; transition:.3s; background:#fff; }
+.Piclist:nth-of-type(1) li .Piclist_bottom{ height:0; }
+.Piclist li .Piclist_bottom a{ display:block; width:100%; height:0.3rem; overflow:hidden; line-height:0.3rem; }
+.Piclist li .Piclist_top span,.Piclist_bottom a span{ float:left; padding-left:0.2rem; margin-left:0.1rem; color:#555; }
+.Piclist li:nth-of-type(1) .Piclist_top span,.Piclist li:nth-of-type(2) .Piclist_top span{ background:url(/img/sport_07.png) no-repeat left center; }
+.Piclist li:nth-of-type(3) .Piclist_top span,.Piclist li:nth-of-type(4) .Piclist_top span{ background:url(/img/sport_11.png) no-repeat left center; }
+.Piclist li:nth-of-type(5) .Piclist_top span{ background:url(/img/sport_13.png) no-repeat left center; }
+.Piclist li:nth-of-type(6) .Piclist_top span{ background:url(/img/sport_15.png) no-repeat left center; }
+.Piclist li:nth-of-type(7) .Piclist_top span{ background:url(/img/sport_18.png) no-repeat left center; }
+.Piclist li .Piclist_top em,.Piclist_bottom a em{ float:right; display:inline-block; font-size:0.08rem; height:0.15rem; margin-top:0.1rem; line-height:0.15rem; padding:0 0.05rem; margin-right:0.05rem; border-radius:0.06rem; background:#f40900; color:#fff; }
+.Piclist_bottom a em{ background:rgba(182, 2, 215, 0.89); font-weight:bolder; }
+.Piclist .Piclist_bottom span{ background:url(/img/main_list.png) no-repeat 0.1rem center; background-size:0.05rem; }
+/* !end 体育赛事 */
+
+/* 乐透 */
+.seLisT3 aside{ width:2.85rem; margin:0 auto; overflow:hidden; background:#fff; border:1px solid rgba(204, 204, 204, 0.96); box-sizing:border-box; }
+.seLisT3 aside div{ width:100%; overflow:hidden; }
+.seLisT3 aside .lottery_time{ width:100%; font-size:0.12rem; color:#000; text-indent:0.08rem; height:0.28rem; line-height:0.28rem; background:#F5F5F5; }
+.lottery_time span{ font-size:0.1rem; }
+.lottery_time span:nth-of-type(1){ margin-left:0.3rem; }
+.lottery_time span:nth-of-type(1) mark{ color:rgb(0, 146, 95); font-size:0.11rem; background:none; }
+.lottery_time span:nth-of-type(2){ margin-left:0.9rem; font-weight:bolder; font-size:0.13rem; color:#C53737; }
+
+.lottery_num{ border:1px solid rgba(204, 204, 204, 0.96); box-sizing:border-box; }
+.lottery_num p{ width:100%; height:0.35rem; overflow:hidden; line-height:0.35rem; }
+.lottery_num p:nth-of-type(1) span{ float:left; margin:0 0.05rem 0 0.08rem; font-size: 0.1rem; }
+.lottery_num p:nth-of-type(1) em{ display:block; width:0.19rem; height:0.19rem; margin-top:0.07rem; float:left; text-align:center; font-size:0.09rem; font-weight: bolder; line-height:0.21rem; letter-spacing:1px; background:url(/img/BallBg_3.png) no-repeat 0 0; background-size:cover; }
+.lottery_num p:nth-of-type(1) em:nth-of-type(7){ background:none; font-size:0.15rem; width:0.1rem; font-weight:normal; }
+.lottery_num p:nth-of-type(1) em:nth-of-type(1),.lottery_num p:nth-of-type(1) em:nth-of-type(2).lottery_num p:nth-of-type(1) em:nth-of-type(4){ background-position:center -0.19rem; }
+.lottery_num p:nth-of-type(1) em:nth-of-type(8){ background-position:center bottom; }
+.lottery_num p:nth-of-type(2){ font-size:0.1rem; position:relative; text-indent:0.18rem; }
+.lottery_num p:nth-of-type(2) em{ color:rgba(0, 0, 0, 0.7); }
+.lottery_num p:nth-of-type(2) a{ position:absolute; right:0.1rem; top:-0.05rem; color:#337ab7; }
+
+.lottery_kind{ width:100%; height:0.35rem; background:#F5F5F5; overflow:hidden; }
+.lottery_kind a{ padding:0.05rem 0.07rem; color:#fff; background:#C78600; font-size: 0.11rem; border-radius:0.05rem; margin:0.045rem 0 0 0.05rem; float:left; }
+.lottery_kind a:nth-of-type(1){ margin-left:0.18rem; }
+.lottery_kind a.active{ background:#986600; }
+
+.lotterListBox{ display:none; }
+.lotterListBox:nth-of-type(1){ display:block; }
+.seLisT3 section{ width:2.85rem; margin:0 auto; background:#F5F5F5; padding-top: 0.15rem; overflow:hidden; }
+.seLisT3 section .lotteryBtn{ width:100%; overflow:hidden; }
+.lotteryBtn a{ padding:0.02rem 0.03rem; color:#fff; background:#C78600; font-size: 0.11rem; margin-left:0.02rem; float:left; }
+.lotteryBtn anth-of-type(1){ margin-left:0; }
+.lotteryBtn a.active{ background:#986600; }
+.box nav{ width:100%; height:0.25rem; line-height:0.25rem; font-size: 0.1rem; overflow:hidden; float:left;  }
+.box nav span{ display:inline-block; width:15%; text-align:left; float:left; }
+.box nav span:nth-of-type(1),.box nav span:nth-of-type(4){ text-align:center; }
+.box nav span.IU{ width:16%; }
+.box .numBox{ width:100%; overflow:hidden; display:none; }
+.box .numBox:nth-of-type(1){ display:block; }
+.box p{ width:100%; height:0.32rem; overflow:hidden; line-height:0.32rem; border-bottom:1px solid #DDDDDD; }
+.box p input{ width:16%; height:0.18rem; outline:none; font-weight:bolder; text-align:center; }
+.box p span{ display:inline-block; width:13%; color:#C53737; font-size:0.11rem; text-align:center; }
+.box p span:nth-of-type(1),.box p span:nth-of-type(3){ color:#000; }
+.box p span.bg_red,.box p span.bg_blue,.box p span.bg_green{ height:0.19rem; text-align:center; font-size:0.09rem; font-weight: bolder; line-height:0.21rem; letter-spacing:1px; background:url(/img/BallBg_3.png) no-repeat center 0; background-size: 52%; }
+.box p span.bg_blue{ background-position:center 50%  }
+.box p span.bg_green{ background-position:center 100%  }
+
+.styles nav span{ width:33% !important; }
+.styles nav span:nth-of-type(1){ text-align: left !important; text-indent:0.15rem; }
+.styles p span:nth-of-type(1){ width:20% !important; }
+.styles p span:nth-of-type(2){ width:33% !important; text-align:center !important; }
+.styles p input{ width:33% !important; }
+.styles p .bg_red{ background:url(/img/red.png) no-repeat center center !important; }
+.styles p .bg_blue{ background:url(/img/blue.png) no-repeat center center !important; }
+.styles p .bg_green{ background:url(/img/green.png) no-repeat center center !important; }
+
+.stys .lotteryBtn{ font-size: 0.1rem; line-height: 0.1rem; text-indent: 0.05rem; }
+.stys nav span{ text-align:center !important; } 
+.stys p span{ text-align:center !important; } 
+.stys p input{ width:0.12rem !important; margin:0 6%; }
+
+section .sub{ width:100%; overflow:hidden; background:#1A1309; padding-top:0.1rem; }
+section .sub input{ width:1.2rem; height:0.3rem; border:none; font-size:0.14rem; font-weight:bolder; border-radius:0.04rem; text-align:center; line-height:0.3rem;  }
+#reset{ float:left; background:#e6e6e6; color:#000; }
+#submit{ float:right; background:#986600; color:#fff; }
+/* !end 乐透 */
+.footer{ width:3rem; height:0.36rem; background:#392912; font-size:0.1rem; text-align:center; line-height:0.36rem; color:#fff; border-top:4px solid #0A0805; margin-top:0.36rem; }

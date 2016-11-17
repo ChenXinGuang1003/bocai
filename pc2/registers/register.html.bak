@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>注 册</title>
+		<meta charset='gb2312'>
+		<style type='text/css'>
+		
+		</style>
+		<script type='text/javascript' src='../js/jquery-1.10.1.min.js'></script>
+		<script type='text/javascript'>
+			$(function(){
+				$('input[type=submit]').click(function(){
+					$.ajax({
+						type:'get',
+						url:'check_reg.php',
+						date:{'name':'jake'},
+						dataType:'json',
+						success:function(e){
+							alert(e);
+						}
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+	<form method="post" action="">
+		<label><span style='color:red'>*&nbsp;</span>帐 号：</label>
+		<input type="text" name="user_name">
+		<p>帐号：须为4~12个英文或数字</p>
+		<label><span style='color:red'>*&nbsp;</span>密	码：</label>
+		<input type="password" name="user_pass">
+		<p>密码规则：须为6~12个英文或数字</p>
+		<label><span style='color:red'>*&nbsp;</span>确认密码：</label>
+		<input type="password" name="repass">
+		<p></p>
+		<label><span style='color:red'>*&nbsp;</span>真实姓名：</label>
+		<input type="text" name="pay_name">
+		<p></p>
+		<label><span style='color:red'>*&nbsp;</span>手	机：</label>
+		<input type="text" name="tel">
+		<p></p>
+		<input type="submit" value="注册">
+	</form>
+	</body>
+</html>

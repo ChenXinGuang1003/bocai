@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>刮刮卡</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background: #121212;">
+<!--main-->
+<div class="main">
+<!--header-->
+	<div class="header">
+  		<div class="logo">
+        	<a href="index.html"><img src="pic/logo.png" /></a>
+        </div>
+        <div class="logo2">
+        	<img src="pic/mg_gamelist_w.png" />
+        </div>	
+    </div>
+
+<!--nav-->
+	<div class="nav">
+		<ul>
+    		<li class="title">游戏分类:</li>
+        	<li class="hotgame"><a href="remen1.html">热门游戏</a></li>
+        	<li><a href="index1.html">全部</a></li>
+        	<li><a href="pk.html">视频扑克</a></li>
+        	<li><a href="zhuomianyouxi.html">桌面游戏</a></li>
+        	<li><a href="jzj1.html">角子机</a></li>
+        	<li><a href="guaguaka.html">刮刮卡</a></li>
+        	<li><a href="jzj1.html">角子机</a></li>
+        	<li><a href="dc.html">赌场游戏</a></li>
+    	</ul>
+	</div>
+<!--list-->
+	<div class="gamelist">
+    	<ul>
+        	<li><div class="gametitle">打地鼠​</div>
+            	<a href="/newmg2/playgame.php?id=RubyWhackAJackpot" target="_blank"><div id="img39"></div></a>
+            </li>
+            <li><div class="gametitle">太空强制收兑</div>
+            	<a href="/newmg2/playgame.php?id=RubySpaceEvader" target="_blank"><div id="img44"></div></a>
+            </li>
+            <li><div class="gametitle">六位枪手掠夺者</div>
+            	<a href="/newmg2/playgame.php?id=RubySixShooterLooter" target="_blank"><div id="img45"></div></a>
+            </li>
+            <li><div class="gametitle">掠夺海</div>
+            	<a href="/newmg2/playgame.php?id=RubyPlunderTheSea" target="_blank"><div id="img49"></div></a>
+            </li>
+			<li><div class="gametitle">越位寻求</div>
+            	<a href="/newmg2/playgame.php?id=RubyOffsideAndSeek" target="_blank"><div id="img51"></div></a>
+            </li>            
+            <li><div class="gametitle">孟买魔术</div>
+            	<a href="/newmg2/playgame.php?id=RubyMumbaiMagic" target="_blank"><div id="img53"></div></a>
+            </li>
+            <li><div class="gametitle">兔子锅炉</div>
+            	<a href="/newmg2/playgame.php?id=RubyBunnyBoiler" target="_blank"><div id="img63"></div></a>
+            </li>
+            <li><div class="gametitle">骰宝</div>
+            	<a href="/newmg2/playgame.php?id=CrownAndAnchor" target="_blank"><div id="img33"></div></a>
+            </li>
+            <li><div class="gametitle">刮刮卡</div>
+            	<a href="/newmg2/playgame.php?id=RubySixShooterLooter" target="_blank"><div id="img36"></div></a>
+            </li>
+            <li><div class="gametitle">藏宝时间</div>
+            	<a href="/newmg2/playgame.php?id=BootyTime" target="_blank"><div id="img87"></div></a>
+            </li>
+            <li><div class="gametitle">疯狂现金</div>
+            	<a href="/newmg2/playgame.php?id=cashcrazy" target="_blank"><div id="img83"></div></a>
+            </li>
+		</ul>
+	</div>
+<!--footer-->
+    <div class="footer">
+   		<ul>
+        	<li><a href="guaguaka.html">首页</a></li>
+            <li><a href="#">上一页</a></li>
+            <li><a href="guaguaka.html">page:1</a></li>
+            <li><a href="#">下一页</a></li>
+            <li><a href="guaguaka.html">尾页</a></li>
+            <li><a href="#">共1页</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src='public.js'></script> </body>
+</html>

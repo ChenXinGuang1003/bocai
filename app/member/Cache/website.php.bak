@@ -1,0 +1,38 @@
+<?php 
+unset($web_site);
+$web_site			=	array();
+$web_site['close']	=	0;
+$web_site['web_name']	=	'皇冠国际';
+$web_site['reg_msg_from']	=	'皇冠国际';
+$web_site['reg_msg_title']	=	'尊敬VIP会员您好！欢迎您的到来。';
+$web_site['reg_msg_msg']	=	'首先感谢您对本公司的支持！本公司系统支持24小时在线存取款，您只需点击会员存款就可以进行投注！';
+$web_site['end_close_time']	=	'2016-03-05 10:10:10';
+$web_site['service_email']	=	'881@email.com';
+$web_site['generalize_email']	=	'882@email.com';
+$web_site['complain_email']	=	'883@email.com';
+$web_site['contact_tel']	=	'188666666';
+$web_site['check_url1']	=	'www.hg66g.com';
+$web_site['check_url2']	=	'www.hg55686.com';
+$web_site['check_url3']	=	'www.hg669988.cc';
+$web_site['check_url4']	=	'www.hg665588.cc';
+$web_site['check_url5']	=	'www.hg662288.cc';
+$web_site['check_url6']	=	'www.hg661188.cc';
+$web_site['check_url7']	=	'www.hg555668.com';
+$web_site['check_url8']	=	'www.hg66g.com';
+$web_site['ag_hall']	=	'3000';
+$web_site['ag_viphall']	=	'';
+$web_site['tyc_hall']	=	'';
+$web_site['hk_sxf']	=	'0.010';
+$web_site['caipiao_auto_time']	=	'10';
+$web_site['lhc_auto_time']	=	'30';
+$web_site['sport_auto_time']	=	'30';
+$web_site['auto_zhenren']	=	'1';
+$web_site['notice_regster']	=	'1';
+$web_site['show_caipiao']	=	'';
+$web_site['caipiao_auto']	=	'1';
+$web_site['lhc_auto']	=	'';
+$web_site['sport_auto']	=	'1';
+$web_site['caipiao_show_row']	=	'20';
+$web_site['lhc_show_row']	=	'100';
+$web_site['sport_show_row']	=	'100';
+?>

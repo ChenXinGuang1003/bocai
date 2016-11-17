@@ -1,0 +1,1200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*重置样式*/
+body{font-size: 12px;line-height: 18px; font-family:"微软雅黑";}
+*{ margin:0; padding:0;}
+ul,li{ list-style:none;}
+img,hr{border:0;}
+a{ text-decoration:none;}
+.clr {clear:both;height:0px;}
+
+
+
+/**main**/
+.main{width: 980px;margin: 0 auto;}
+/**header**/
+.header{position: relative;width: 850px;height:70px;margin: 0 auto;padding-top: 20px}
+.logo{position: relative;float: left;width:240px;height: 58px;}
+.logo2{position: relative;top: 23px;float: left;width: 104px;height: 27px;}
+
+/**nav**/
+.nav{width: 863px;height: 35px;margin:0px auto;padding: 0 10px;color: #fff;text-align: left;background: url(pic/title.png) center no-repeat;}
+.nav ul{display: inline-block;width: 863px;margin: 8px auto;padding: 0 5px;}
+.nav ul li.title{width: 115px;margin: 0;text-align: right;background: none;cursor: default;}
+.nav ul li.title a{font-size:12px;}
+.nav ul li.hotgame a{color: #24e12b;}
+.nav ul li{display: inline-block;position: relative;float: left;height: 21px;margin: 0 5px;padding: 3px 10px;box-sizing: border-box;}
+.nav ul li a{color: #c8c8c8;font-size: 12px;}
+
+/**gamelist**/
+.gamelist{ position: relative;width: 950px;height: 650px;margin: 0 auto;padding:10px;text-align: left;}
+.gamelist ul li{ background:url(../pic/slot_gamebg.png) no-repeat; position: relative;display: inline-block;width: 160px;height: 188px;
+margin:13px;overflow: hidden;}
+.gametitle{width: 140px;height: 20px;margin: 10px auto;color: #24e12b;text-align: center;line-height: 20px;font-size:18px;font-family:"楷体";}
+/**图片**/
+#img1{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyFirecracker.png); background-position: 0px 0px;}
+#img1:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyFirecracker.png); background-position: -145px 0px;}
+#img2{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WhataHoot3.png); background-position: 0px 0px;}
+#img2:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WhataHoot3.png); background-position: -145px 0px;}
+#img3{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_StarlightKiss1.png); background-position: 0px 0px;}
+#img3:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_StarlightKiss1.png); background-position: -145px 0px;}
+#img4{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AgeofDiscovery3.png); background-position: 0px 0px;}
+#img4:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AgeofDiscovery3.png); background-position: -145px 0px;}
+#img5{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_KaratePig1.png); background-position: 0px 0px;}
+#img5:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_KaratePig1.png); background-position: -145px 0px;}
+#img6{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldFactory1.png); background-position: 0px 0px;}
+#img6:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldFactory1.png); background-position: -145px 0px;}
+#img7{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Carnaval2.png); background-position: 0px 0px;}
+#img7:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Carnaval2.png); background-position: -145px 0px;}
+#img8{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BustTheBank1.png); background-position: 0px 0px;}
+#img8:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BustTheBank1.png); background-position: -145px 0px;}
+#img9{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BreakAway1.png); background-position: 0px 0px;}
+#img9:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BreakAway1.png); background-position: -145px 0px;}
+#img10{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Avalon_HD.png); background-position: 0px 0px;}
+#img10:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Avalon_HD.png); background-position: -145px 0px;}
+#img11{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyZodiac.png); background-position: 0px 0px;}
+#img11:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyZodiac.png); background-position: -145px 0px;}
+#img12{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PeekaBoo5Reel.png); background-position: 0px 0px;}
+#img12:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PeekaBoo5Reel.png); background-position: -145px 0px;}
+#img13{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyTwins.png); background-position: 0px 0px;}
+#img13:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyTwins.png); background-position: -145px 0px;}
+#img14{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Chainmail.png); background-position: 0px 0px;}
+#img14:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Chainmail.png); background-position: -145px 0px;}
+#img15{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HotasHades.png); background-position: 0px 0px;}
+#img15:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HotasHades.png); background-position: -145px 0px;}
+#img16{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Pistoleras.png); background-position: 0px 0px;}
+#img16:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Pistoleras.png); background-position: -145px 0px;}
+#img17{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyLeprechaun.png); background-position: 0px 0px;}
+#img17:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyLeprechaun.png); background-position: -145px 0px;}
+#img18{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_KittyCabana.png); background-position: 0px 0px;}
+#img18:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_KittyCabana.png); background-position: -145px 0px;}
+#img19{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HoundHotel.png); background-position: 0px 0px;}
+#img19:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HoundHotel.png); background-position: -145px 0px;}
+#img20{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Ariana.png); background-position: 0px 0px;}
+#img20:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Ariana.png); background-position: -145px 0px;}
+#img21{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyFirecracker.png); background-position: 0px 0px;}
+#img21:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyFirecracker.png); background-position: -145px 0px;}
+#img22{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_VegasDreams.png); background-position: 0px 0px;}
+#img22:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_VegasDreams.png); background-position: -145px 0px;}
+/**全部**/
+#img23{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WhataHoot3.png); background-position: 0px 0px;}
+#img23:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WhataHoot3.png); background-position: -145px 0px;}
+#img24{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WesternFrontier.png); background-position: 0px 0px;}
+#img24:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WesternFrontier.png); background-position: -145px 0px;}
+#img25{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_UntamedCrownedEagle.png); background-position: 0px 0px;}
+#img25:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_UntamedCrownedEagle.png); background-position: -145px 0px;}
+#img26{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_UntamedBengalTiger1.png); background-position: 0px 0px;}
+#img26:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_UntamedBengalTiger1.png); background-position: -145px 0px;}
+#img27{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TombRaider2.png); background-position: 0px 0px;}
+#img27:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TombRaider2.png); background-position: -145px 0px;}
+#img28{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TigerMoon.png); background-position: 0px 0px;}
+#img28:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TigerMoon.png); background-position: -145px 0px;}
+#img29{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ThroneOfEgypt1.png); background-position: 0px 0px;}
+#img29:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ThroneOfEgypt1.png); background-position: -145px 0px;}
+#img30{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SterlingSilver3D1.png); background-position: 0px 0px;}
+#img30:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SterlingSilver3D1.png); background-position: -145px 0px;}
+#img31{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_StarlightKiss1.png); background-position: 0px 0px;}
+#img31:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_StarlightKiss1.png); background-position: -145px 0px;}
+#img32{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SkullDuggery1.png); background-position: 0px 0px;}
+#img32:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SkullDuggery1.png); background-position: -145px 0px;}
+#img33{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SicBo1.png); background-position: 0px 0px;}
+#img33:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SicBo1.png); background-position: -145px 0px;}
+#img34{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SecretSanta.png); background-position: 0px 0px;}
+#img34:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SecretSanta.png); background-position: -145px 0px;}
+#img35{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SecretAdmirer1.png); background-position: 0px 0px;}
+#img35:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SecretAdmirer1.png); background-position: -145px 0px;}
+#img36{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Scratch1.png); background-position: 0px 0px;}
+#img36:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Scratch1.png); background-position: -145px 0px;}
+#img37{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WitchesWealth1.png); background-position: 0px 0px;}
+#img37:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WitchesWealth1.png); background-position: -145px 0px;}
+#img38{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WheelofRiches2.png); background-position: 0px 0px;}
+#img38:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WheelofRiches2.png); background-position: -145px 0px;}
+#img39{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WhackaJackpot1.png); background-position: 0px 0px;}
+#img39:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WhackaJackpot1.png); background-position: -145px 0px;}
+#img40{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_TriplePocket.png); background-position: 0px 0px;}
+#img40:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_TriplePocket.png); background-position: -145px 0px;}
+#img41{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TotemTreasure1.png); background-position: 0px 0px;}
+#img41:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TotemTreasure1.png); background-position: -145px 0px;}
+#img42{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TombRaiderSotS1.png); background-position: 0px 0px;}
+#img42:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TombRaiderSotS1.png); background-position: -145px 0px;}
+#img43{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SuperBonusBingo1.png); background-position: 0px 0px;}
+#img43:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SuperBonusBingo1.png); background-position: -145px 0px;}
+#img44{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SpaceEvader1.png); background-position: 0px 0px;}
+#img44:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SpaceEvader1.png); background-position: -145px 0px;}
+#img45{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SixShooterLooter1.png); background-position: 0px 0px;}
+#img45:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SixShooterLooter1.png); background-position: -145px 0px;}
+#img46{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Scrooge1.png); background-position: 0px 0px;}
+#img46:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Scrooge1.png); background-position: -145px 0px;}
+#img47{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RapidReels5.png); background-position: 0px 0px;}
+#img47:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RapidReels5.png); background-position: -145px 0px;}
+#img48{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PrimeProperty1.png); background-position: 0px 0px;}
+#img48:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PrimeProperty1.png); background-position: -145px 0px;}
+#img49{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PlundertheSea1.png); background-position: 0px 0px;}
+#img49:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PlundertheSea1.png); background-position: -145px 0px;}
+#img50{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MHBlackjack1.png); background-position: 0px 0px;}
+#img50:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MHBlackjack1.png); background-position: -145px 0px;}
+#img51{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_OffsideandSeek1.png); background-position: 0px 0px;}
+#img51:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_OffsideandSeek1.png); background-position: -145px 0px;}
+#img52{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Munchkins2.png); background-position: 0px 0px;}
+#img52:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Munchkins2.png); background-position: -145px 0px;}
+#img53{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MumbaiMagic1.png); background-position: 0px 0px;}
+#img53:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MumbaiMagic1.png); background-position: -145px 0px;}
+#img54{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_MHHoldEmHighPoker1.png); background-position: 0px 0px;}
+#img54:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_MHHoldEmHighPoker1.png); background-position: -145px 0px;}
+#img55{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyNumbers1.png); background-position: 0px 0px;}
+#img55:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyNumbers1.png); background-position: -145px 0px;}
+#img56{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Legacy2.png); background-position: 0px 0px;}
+#img56:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Legacy2.png); background-position: -145px 0px;}
+#img57{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Kathmandu1.png); background-position: 0px 0px;}
+#img57:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Kathmandu1.png); background-position: -145px 0px;}
+#img58{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Joker80001.png); background-position: 0px 0px;}
+#img58:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Joker80001.png); background-position: -145px 0px;}
+#img59{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Hitman1.png); background-position: 0px 0px;}
+#img59:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Hitman1.png); background-position: -145px 0px;}
+#img60{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HappyNewYear3.png); background-position: 0px 0px;}
+#img60:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HappyNewYear3.png); background-position: -145px 0px;}
+#img61{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HandToHandCombat1.png); background-position: 0px 0px;}
+#img61:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HandToHandCombat1.png); background-position: -145px 0px;}
+#img62{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldCoast3.png); background-position: 0px 0px;}
+#img62:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldCoast3.png); background-position: -145px 0px;}
+#img63{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BunnyBoiler1.png); background-position: 0px 0px;}
+#img63:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BunnyBoiler1.png); background-position: -145px 0px;}
+#img64{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BonusPokerDeluxe1.png); background-position: 0px 0px;}
+#img64:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BonusPokerDeluxe1.png); background-position: -145px 0px;}
+#img65{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BonusPoker1.png); background-position: 0px 0px;}
+#img65:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BonusPoker1.png); background-position: -145px 0px;}
+#img66{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AroundTheWorld.png); background-position: 0px 0px;}
+#img66:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AroundTheWorld.png); background-position: -145px 0px;}
+#img67{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AllAces1.png); background-position: 0px 0px;}
+#img67:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AllAces1.png); background-position: -145px 0px;}
+#img68{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RRKing1.png); background-position: 0px 0px;}
+#img68:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RRKing1.png); background-position: -145px 0px;}
+#img69{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Robojack_SquareButton.png); background-position: 0px 0px;}
+#img69:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Robojack_SquareButton.png); background-position: -145px 0px;}
+#img70{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RedHotDevil.jpg); background-position: 0px 0px;}
+#img70:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RedHotDevil.jpg); background-position: -145px 0px;}
+#img71{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Cyberstud1.png); background-position: 0px 0px;}
+#img71:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Cyberstud1.png); background-position: -145px 0px;}
+#img72{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Playboy1.png); background-position: 0px 0px;}
+#img72:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Playboy1.png); background-position: -145px 0px;}
+#img73{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HighSociety.png); background-position: 0px 0px;}
+#img73:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HighSociety.png); background-position: -145px 0px;}
+#img74{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldenDragon6.png); background-position: 0px 0px;}
+#img74:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldenDragon6.png); background-position: -145px 0px;}
+#img75{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FortuneCookie7.png); background-position: 0px 0px;}
+#img75:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FortuneCookie7.png); background-position: -145px 0px;}
+#img76{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FootballStar2.png); background-position: 0px 0px;}
+#img76:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FootballStar2.png); background-position: -145px 0px;}
+#img77{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FireHawk.png); background-position: 0px 0px;}
+#img77:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FireHawk.png); background-position: -145px 0px;}
+#img78{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_EnchantedWoods1.png); background-position: 0px 0px;}
+#img78:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_EnchantedWoods1.png); background-position: -145px 0px;}
+#img79{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DrWattsUp1.png); background-position: 0px 0px;}
+#img79:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DrWattsUp1.png); background-position: -145px 0px;}
+#img80{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DolphinQuest.png); background-position: 0px 0px;}
+#img80:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DolphinQuest.png); background-position: -145px 0px;}
+#img81{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CrazyChameleons1.png); background-position: 0px 0px;}
+#img81:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CrazyChameleons1.png); background-position: -145px 0px;}
+#img82{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CoolBuck1.png); background-position: 0px 0px;}
+#img82:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CoolBuck1.png); background-position: -145px 0px;}
+#img83{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CashCrazy9.png); background-position: 0px 0px;}
+#img83:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CashCrazy9.png); background-position: -145px 0px;}
+#img84{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Carnaval2.png); background-position: 0px 0px;}
+#img84:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Carnaval2.png); background-position: -145px 0px;}
+#img85{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Butterflies.png); background-position: 0px 0px;}
+#img85:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Butterflies.png); background-position: -145px 0px;}
+#img86{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BushTelegraph1.png); background-position: 0px 0px;}
+#img86:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BushTelegraph1.png); background-position: -145px 0px;}
+#img87{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BootyTime.png); background-position: 0px 0px;}
+#img87:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BootyTime.png); background-position: -145px 0px;}
+#img88{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Baccarat2.png); background-position: 0px 0px;}
+#img88:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Baccarat2.png); background-position: -145px 0px;}
+#img89{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Avalon_HD.png); background-position: 0px 0px;}
+#img89:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Avalon_HD.png); background-position: -145px 0px;}
+#img90{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AvalonII.png); background-position: 0px 0px;}
+#img90:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AvalonII.png); background-position: -145px 0px;}
+#img91{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_USRoulette1.png); background-position: 0px 0px;}
+#img91:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_USRoulette1.png); background-position: -145px 0px;}
+#img92{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigTop1.png); background-position: 0px 0px;}
+#img92:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigTop1.png); background-position: -145px 0px;}
+#img93{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CosmicCat1.png); background-position: 0px 0px;}
+#img93:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CosmicCat1.png); background-position: -145px 0px;}
+#img94{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CrazyChameleons1.png); background-position: 0px 0px;}
+#img94:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CrazyChameleons1.png); background-position: -145px 0px;}
+#img95{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_EuroRoulette1.png); background-position: 0px 0px;}
+#img95:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_EuroRoulette1.png); background-position: -145px 0px;}
+#img96{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FrenchRoulette1.png); background-position: 0px 0px;}
+#img96:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FrenchRoulette1.png); background-position: -145px 0px;}
+#img97{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FortuneCookie7.png); background-position: 0px 0px;}
+#img97:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FortuneCookie7.png); background-position: -145px 0px;}
+#img98{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FruitSlots1.png); background-position: 0px 0px;}
+#img98:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FruitSlots1.png); background-position: -145px 0px;}
+#img99{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GeniesGems2.png); background-position: 0px 0px;}
+#img99:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GeniesGems2.png); background-position: -145px 0px;}
+#img100{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldenDragon6.png); background-position: 0px 0px;}
+#img100:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldenDragon6.png); background-position: -145px 0px;}
+#img101{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ImmortalRomance1.png); background-position: 0px 0px;}
+#img101:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ImmortalRomance1.png); background-position: -145px 0px;}
+#img102{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JokerPoker1.png); background-position: 0px 0px;}
+#img102:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JokerPoker1.png); background-position: -145px 0px;}
+#img103{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Keno3.png); background-position: 0px 0px;}
+#img103:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Keno3.png); background-position: -145px 0px;}
+#img104{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LouisianaDouble1.png); background-position: 0px 0px;}
+#img104:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LouisianaDouble1.png); background-position: -145px 0px;}
+#img105{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LadyInRed2.png); background-position: 0px 0px;}
+#img105:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LadyInRed2.png); background-position: -145px 0px;}
+#img106{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyWitch1.png); background-position: 0px 0px;}
+#img106:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyWitch1.png); background-position: -145px 0px;}
+#img107{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MermaidsMillions1.png); background-position: 0px 0px;}
+#img107:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MermaidsMillions1.png); background-position: -145px 0px;}
+#img108{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Moonshine1.png); background-position: 0px 0px;}
+#img108:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Moonshine1.png); background-position: -145px 0px;}
+#img109{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PremierRacing1.png); background-position: 0px 0px;}
+#img109:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PremierRacing1.png); background-position: -145px 0px;}
+#img110{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MysticDreams1.png); background-position: 0px 0px;}
+#img110:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MysticDreams1.png); background-position: -145px 0px;}
+#img111{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_OrientalFortune2.png); background-position: 0px 0px;}
+#img111:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_OrientalFortune2.png); background-position: -145px 0px;}
+#img112{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PharaohsFortune2.png); background-position: 0px 0px;}
+#img112:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PharaohsFortune2.png); background-position: -145px 0px;}
+#img113{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TombRaider2.png); background-position: 0px 0px;}
+#img113:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TombRaider2.png); background-position: -145px 0px;}
+#img114{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TombRaiderSotS1.png); background-position: 0px 0px;}
+#img114:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TombRaiderSotS1.png); background-position: -145px 0px;}
+#img115{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TrickOrTreat2.png); background-position: 0px 0px;}
+#img115:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TrickOrTreat2.png); background-position: -145px 0px;}
+#img116{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TripleMagic1.png); background-position: 0px 0px;}
+#img116:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TripleMagic1.png); background-position: -145px 0px;}
+#img117{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_UntamedBengalTiger1.png); background-position: 0px 0px;}
+#img117:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_UntamedBengalTiger1.png); background-position: -145px 0px;}
+#img118{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GirlswithGuns1.png); background-position: 0px 0px;}
+#img118:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GirlswithGuns1.png); background-position: -145px 0px;}
+#img119{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BushTelegraph.png); background-position: 0px 0px;}
+#img119:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BushTelegraph.png); background-position: -145px 0px;}
+#img120{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/AgeOfDiscovery.png); background-position: 0px 0px;}
+#img120:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/AgeOfDiscovery.png); background-position: -145px 0px;}
+#img121{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Hitman1.png); background-position: 0px 0px;}
+#img121:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Hitman1.png); background-position: -145px 0px;}
+#img122{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HotShot3.png); background-position: 0px 0px;}
+#img122:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HotShot3.png); background-position: -145px 0px;}
+#img123{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/HouseofDragons.png); background-position: 0px 0px;}
+#img123:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/HouseofDragons.png); background-position: -145px 0px;}
+#img124{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JingleBells6.png); background-position: 0px 0px;}
+#img124:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JingleBells6.png); background-position: -145px 0px;}
+#img125{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_KingArthur.png); background-position: 0px 0px;}
+#img125:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_KingArthur.png); background-position: -145px 0px;}
+#img126{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MonkeysMoney1.png); background-position: 0px 0px;}
+#img126:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MonkeysMoney1.png); background-position: -145px 0px;}
+#img127{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MayanPrincess1.png); background-position: 0px 0px;}
+#img127:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MayanPrincess1.png); background-position: -145px 0px;}
+#img128{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LadiesNite5.png); background-position: 0px 0px;}
+#img128:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LadiesNite5.png); background-position: -145px 0px;}
+#img129{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_KingsofCash1.png); background-position: 0px 0px;}
+#img129:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_KingsofCash1.png); background-position: -145px 0px;}
+#img130{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_HighSpeedPoker1.png); background-position: 0px 0px;}
+#img130:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_HighSpeedPoker1.png); background-position: -145px 0px;}
+#img131{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TheDarkKnight2.png); background-position: 0px 0px;}
+#img131:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TheDarkKnight2.png); background-position: -145px 0px;}
+#img132{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Moonshine1.png); background-position: 0px 0px;}
+#img132:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Moonshine1.png); background-position: -145px 0px;}
+#img133{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JurassicJackpot1.png); background-position: 0px 0px;}
+#img133:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JurassicJackpot1.png); background-position: -145px 0px;}
+#img134{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LionsShare1.png); background-position: 0px 0px;}
+#img134:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LionsShare1.png); background-position: -145px 0px;}
+#img135{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PartyTime1.png); background-position: 0px 0px;}
+#img135:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PartyTime1.png); background-position: -145px 0px;}
+#img136{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PharaohsFortune2.png); background-position: 0px 0px;}
+#img136:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PharaohsFortune2.png); background-position: -145px 0px;}
+#img137{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PiggyFortunes.png); background-position: 0px 0px;}
+#img137:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PiggyFortunes.png); background-position: -145px 0px;}
+#img138{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PiratesParadise4.png); background-position: 0px 0px;}
+#img138:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PiratesParadise4.png); background-position: -145px 0px;}
+#img139{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BreakdaBankAgainMegaSpin1.png); background-position: 0px 0px;}
+#img139:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BreakdaBankAgainMegaSpin1.png); background-position: -145px 0px;}
+#img140{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Thunderstruck1.png); background-position: 0px 0px;}
+#img140:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Thunderstruck1.png); background-position: -145px 0px;}
+#img141{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ThunderstruckTwo1.png); background-position: 0px 0px;}
+#img141:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ThunderstruckTwo1.png); background-position: -145px 0px;}
+#img142{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PremierRacing1.png); background-position: 0px 0px;}
+#img142:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PremierRacing1.png); background-position: -145px 0px;}
+#img143{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PremierTrotting1.png); background-position: 0px 0px;}
+#img143:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PremierTrotting1.png); background-position: -145px 0px;}
+#img144{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PremierRoulette9.png); background-position: 0px 0px;}
+#img144:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PremierRoulette9.png); background-position: -145px 0px;}
+#img145{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SureWin6.png); background-position: 0px 0px;}
+#img145:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SureWin6.png); background-position: -145px 0px;}
+#img146{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RedDog1.png); background-position: 0px 0px;}
+#img146:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RedDog1.png); background-position: -145px 0px;}
+#img147{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TheDarkKnightRises.png); background-position: 0px 0px;}
+#img147:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TheDarkKnightRises.png); background-position: -145px 0px;}
+#img148{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JurassicPark.png); background-position: 0px 0px;}
+#img148:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JurassicPark.png); background-position: -145px 0px;}
+#img149{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GrannyPrix1.png); background-position: 0px 0px;}
+#img149:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GrannyPrix1.png); background-position: -145px 0px;}
+#img150{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigTop1.png); background-position: 0px 0px;}
+#img150:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigTop1.png); background-position: -145px 0px;}
+#img151{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DiamondDeal1.png); background-position: 0px 0px;}
+#img151:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DiamondDeal1.png); background-position: -145px 0px;}
+#img152{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ReelsRoyce1.png); background-position: 0px 0px;}
+#img152:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ReelsRoyce1.png); background-position: -145px 0px;}
+#img153{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JewelThief2.png); background-position: 0px 0px;}
+#img153:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JewelThief2.png); background-position: -145px 0px;}
+#img154{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RacingForPinks.png); background-position: 0px 0px;}
+#img154:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RacingForPinks.png); background-position: -145px 0px;}
+#img155{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ReelStrike1.png); background-position: 0px 0px;}
+#img155:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ReelStrike1.png); background-position: -145px 0px;}
+#img156{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_KillerClubs1.png); background-position: 0px 0px;}
+#img156:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_KillerClubs1.png); background-position: -145px 0px;}
+#img157{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CentreCourt1.png); background-position: 0px 0px;}
+#img157:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CentreCourt1.png); background-position: -145px 0px;}
+#img158{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GopherGold2.png); background-position: 0px 0px;}
+#img158:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GopherGold2.png); background-position: -145px 0px;}
+#img159{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_7Oceans1.png); background-position: 0px 0px;}
+#img159:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_7Oceans1.png); background-position: -145px 0px;}
+#img160{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WheelOfWealth1.png); background-position: 0px 0px;}
+#img160:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WheelOfWealth1.png); background-position: -145px 0px;}
+#img161{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MayanBingo1.png); background-position: 0px 0px;}
+#img161:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MayanBingo1.png); background-position: -145px 0px;}
+#img162{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ElectroBingo1.png); background-position: 0px 0px;}
+#img162:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ElectroBingo1.png); background-position: -145px 0px;}
+#img163{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_EnchantedWoods1.png); background-position: 0px 0px;}
+#img163:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_EnchantedWoods1.png); background-position: -145px 0px;}
+#img164{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Germinator1.png); background-position: 0px 0px;}
+#img164:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Germinator1.png); background-position: -145px 0px;}
+#img165{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TwistedCircus.png); background-position: 0px 0px;}
+#img165:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TwistedCircus.png); background-position: -145px 0px;}
+#img166{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SambaBingo1.png); background-position: 0px 0px;}
+#img166:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SambaBingo1.png); background-position: -145px 0px;}
+#img167{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CashClams2.png); background-position: 0px 0px;}
+#img167:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CashClams2.png); background-position: -145px 0px;}
+#img168{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CouchPotato2.png); background-position: 0px 0px;}
+#img168:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CouchPotato2.png); background-position: -145px 0px;}
+#img169{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DoubleMagic1.png); background-position: 0px 0px;}
+#img169:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DoubleMagic1.png); background-position: -145px 0px;}
+#img170{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FlyingAce2.png); background-position: 0px 0px;}
+#img170:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FlyingAce2.png); background-position: -145px 0px;}
+#img171{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldCoast3.png); background-position: 0px 0px;}
+#img171:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldCoast3.png); background-position: -145px 0px;}
+#img172{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JackpotExpress1.png); background-position: 0px 0px;}
+#img172:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JackpotExpress1.png); background-position: -145px 0px;}
+#img173{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RocktheBoat18.png); background-position: 0px 0px;}
+#img173:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RocktheBoat18.png); background-position: -145px 0px;}
+#img174{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RomanRiches11.png); background-position: 0px 0px;}
+#img174:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RomanRiches11.png); background-position: -145px 0px;}
+#img175{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TripleMagic1.png); background-position: 0px 0px;}
+#img175:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TripleMagic1.png); background-position: -145px 0px;}
+#img176{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Elementals2.png); background-position: 0px 0px;}
+#img176:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Elementals2.png); background-position: -145px 0px;}
+#img177{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FishParty1.png); background-position: 0px 0px;}
+#img177:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FishParty1.png); background-position: -145px 0px;}
+#img178{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoodToGo2.png); background-position: 0px 0px;}
+#img178:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoodToGo2.png); background-position: -145px 0px;}
+#img179{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Harveys1.png); background-position: 0px 0px;}
+#img179:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Harveys1.png); background-position: -145px 0px;}
+#img180{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Hohoho1.png); background-position: 0px 0px;}
+#img180:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Hohoho1.png); background-position: -145px 0px;}
+#img181{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ReelGems1.png); background-position: 0px 0px;}
+#img181:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ReelGems1.png); background-position: -145px 0px;}
+#img182{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RRHearts&Tarts1.png); background-position: 0px 0px;}
+#img182:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RRHearts&Tarts1.png); background-position: -145px 0px;}
+#img183{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SecretAdmirer1.png); background-position: 0px 0px;}
+#img183:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SecretAdmirer1.png); background-position: -145px 0px;}
+#img184{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SpringBreak2.png); background-position: 0px 0px;}
+#img184:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SpringBreak2.png); background-position: -145px 0px;}
+#img185{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TallyHo1.png); background-position: 0px 0px;}
+#img185:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TallyHo1.png); background-position: -145px 0px;}
+#img186{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CoolWolf1.png); background-position: 0px 0px;}
+#img186:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CoolWolf1.png); background-position: -145px 0px;}
+#img187{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Keno3.png); background-position: 0px 0px;}
+#img187:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Keno3.png); background-position: -145px 0px;}
+#img188{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_Baccarat1.png); background-position: 0px 0px;}
+#img188:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_Baccarat1.png); background-position: -145px 0px;}
+#img189{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DeucesWild1.png); background-position: 0px 0px;}
+#img189:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DeucesWild1.png); background-position: -145px 0px;}
+#img190{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DeucesJoker1.png); background-position: 0px 0px;}
+#img190:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DeucesJoker1.png); background-position: -145px 0px;}
+#img191{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DoubleDoubleBonus1.png); background-position: 0px 0px;}
+#img191:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DoubleDoubleBonus1.png); background-position: -145px 0px;}
+#img192{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_5ReelDrive1.png); background-position: 0px 0px;}
+#img192:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_5ReelDrive1.png); background-position: -145px 0px;}
+#img193{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigTop1.png); background-position: 0px 0px;}
+#img193:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigTop1.png); background-position: -145px 0px;}
+#img194{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Cashapillar1.png); background-position: 0px 0px;}
+#img194:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Cashapillar1.png); background-position: -145px 0px;}
+#img195{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DeckTheHalls1.png); background-position: 0px 0px;}
+#img195:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DeckTheHalls1.png); background-position: -145px 0px;}
+#img196{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GreatGriffin1.png); background-position: 0px 0px;}
+#img196:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GreatGriffin1.png); background-position: -145px 0px;}
+#img197{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RRKing1.png); background-position: 0px 0px;}
+#img197:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RRKing1.png); background-position: -145px 0px;}
+#img198{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_somanymonsters.png); background-position: 0px 0px;}
+#img198:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_somanymonsters.png); background-position: -145px 0px;}
+#img199{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_somuchcandy.png); background-position: 0px 0px;}
+#img199:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_somuchcandy.png); background-position: -145px 0px;}
+#img200{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_somuchsushi.png); background-position: 0px 0px;}
+#img200:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_somuchsushi.png); background-position: -145px 0px;}
+#img201{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SunQuest3.png); background-position: 0px 0px;}
+#img201:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SunQuest3.png); background-position: -145px 0px;}
+#img202{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_UntamedGiantPanda.png); background-position: 0px 0px;}
+#img202:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_UntamedGiantPanda.png); background-position: -145px 0px;}
+#img203{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WinningWizards1.png); background-position: 0px 0px;}
+#img203:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WinningWizards1.png); background-position: -145px 0px;}
+#img204{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FinerReelsofLife.png); background-position: 0px 0px;}
+#img204:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FinerReelsofLife.png); background-position: -145px 0px;}
+#img205{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MaxDamage1.png); background-position: 0px 0px;}
+#img205:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MaxDamage1.png); background-position: -145px 0px;}
+#img206{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BattlestarGalactica1.png); background-position: 0px 0px;}
+#img206:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BattlestarGalactica1.png); background-position: -145px 0px;}
+#img207{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TitansOfTheSun_Theia.png); background-position: 0px 0px;}
+#img207:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TitansOfTheSun_Theia.png); background-position: -145px 0px;}
+#img208{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AlaskanFishing1.png); background-position: 0px 0px;}
+#img208:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AlaskanFishing1.png); background-position: -145px 0px;}
+#img209{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AllAmerican1.png); background-position: 0px 0px;}
+#img209:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AllAmerican1.png); background-position: -145px 0px;}
+#img210{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ArcticAgents.png); background-position: 0px 0px;}
+#img210:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ArcticAgents.png); background-position: -145px 0px;}
+#img211{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigBreak1.png); background-position: 0px 0px;}
+#img211:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigBreak1.png); background-position: -145px 0px;}
+#img212{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigChef.png); background-position: 0px 0px;}
+#img212:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigChef.png); background-position: -145px 0px;}
+#img213{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigKahuna_SL1.png); background-position: 0px 0px;}
+#img213:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigKahuna_SL1.png); background-position: -145px 0px;}
+#img214{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BunnyBoilerGold1.png); background-position: 0px 0px;}
+#img214:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BunnyBoilerGold1.png); background-position: -145px 0px;}
+#img215{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Crocodopolis.png); background-position: 0px 0px;}
+#img215:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Crocodopolis.png); background-position: -145px 0px;}
+#img216{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CryptCrusade1.png); background-position: 0px 0px;}
+#img216:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CryptCrusade1.png); background-position: -145px 0px;}
+#img217{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_CryptCrusadeGold1.png); background-position: 0px 0px;}
+#img217:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_CryptCrusadeGold1.png); background-position: -145px 0px;}
+#img218{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DawnoftheBread1.png); background-position: 0px 0px;}
+#img218:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DawnoftheBread1.png); background-position: -145px 0px;}
+#img219{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DrLove.png); background-position: 0px 0px;}
+#img219:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DrLove.png); background-position: -145px 0px;}
+#img220{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Dogfather2.png); background-position: 0px 0px;}
+#img220:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Dogfather2.png); background-position: -145px 0px;}
+#img221{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_EaglesWings1.png); background-position: 0px 0px;}
+#img221:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_EaglesWings1.png); background-position: -145px 0px;}
+#img222{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FatLadySings1.png); background-position: 0px 0px;}
+#img222:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FatLadySings1.png); background-position: -145px 0px;}
+#img223{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FoamyFortunes1.png); background-position: 0px 0px;}
+#img223:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FoamyFortunes1.png); background-position: -145px 0px;}
+#img224{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_FreezingFuzzballs1.png); background-position: 0px 0px;}
+#img224:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_FreezingFuzzballs1.png); background-position: -145px 0px;}
+#img225{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HairyFairies1.png); background-position: 0px 0px;}
+#img225:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HairyFairies1.png); background-position: -145px 0px;}
+#img226{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HellBoy1.png); background-position: 0px 0px;}
+#img226:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HellBoy1.png); background-position: -145px 0px;}
+#img227{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_HellGrannies.png); background-position: 0px 0px;}
+#img227:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_HellGrannies.png); background-position: -145px 0px;}
+#img228{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_IrishEyes.png); background-position: 0px 0px;}
+#img228:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_IrishEyes.png); background-position: -145px 0px;}
+#img229{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_JekyllandHyde.png); background-position: 0px 0px;}
+#img229:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_JekyllandHyde.png); background-position: -145px 0px;}
+#img230{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyLeprechaunsLoot.png); background-position: 0px 0px;}
+#img230:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyLeprechaunsLoot.png); background-position: -145px 0px;}
+#img231{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MugshotMadness1.png); background-position: 0px 0px;}
+#img231:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MugshotMadness1.png); background-position: -145px 0px;}
+#img232{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PharoahsGems1.png); background-position: 0px 0px;}
+#img232:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PharoahsGems1.png); background-position: -145px 0px;}
+#img233{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PhantomCash.png); background-position: 0px 0px;}
+#img233:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PhantomCash.png); background-position: -145px 0px;}
+#img234{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ParadiseFound.png); background-position: 0px 0px;}
+#img234:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ParadiseFound.png); background-position: -145px 0px;}
+#img235{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PiggyFortunes.png); background-position: 0px 0px;}
+#img235:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PiggyFortunes.png); background-position: -145px 0px;}
+#img236{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_OffsideandSeek1.png); background-position: 0px 0px;}
+#img236:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_OffsideandSeek1.png); background-position: -145px 0px;}
+#img237{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PurePlatinum1.png); background-position: 0px 0px;}
+#img237:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PurePlatinum1.png); background-position: -145px 0px;}
+#img238{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RollerDerby.png); background-position: 0px 0px;}
+#img238:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RollerDerby.png); background-position: -145px 0px;}
+#img239{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RugbyStar.png); background-position: 0px 0px;}
+#img239:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RugbyStar.png); background-position: -145px 0px;}
+#img240{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SlamFunk1.png); background-position: 0px 0px;}
+#img240:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SlamFunk1.png); background-position: -145px 0px;}
+#img241{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SoccerSafari1.png); background-position: 0px 0px;}
+#img241:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SoccerSafari1.png); background-position: -145px 0px;}
+#img242{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Spingo.png); background-position: 0px 0px;}
+#img242:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Spingo.png); background-position: -145px 0px;}
+#img243{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_StarScape1.png); background-position: 0px 0px;}
+#img243:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_StarScape1.png); background-position: -145px 0px;}
+#img244{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SteamPunkHeroes.png); background-position: 0px 0px;}
+#img244:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SteamPunkHeroes.png); background-position: -145px 0px;}
+#img245{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SurfSafari.png); background-position: 0px 0px;}
+#img245:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SurfSafari.png); background-position: -145px 0px;}
+#img246{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SuperZeroes1.png); background-position: 0px 0px;}
+#img246:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SuperZeroes1.png); background-position: -145px 0px;}
+#img247{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TensOrBetterPowerPoker1.png); background-position: 0px 0px;}
+#img247:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TensOrBetterPowerPoker1.png); background-position: -145px 0px;}
+#img248{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SweetHarvest1.png); background-position: 0px 0px;}
+#img248:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SweetHarvest1.png); background-position: -145px 0px;}
+#img249{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TheLostPrincessAnastasia.png); background-position: 0px 0px;}
+#img249:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TheLostPrincessAnastasia.png); background-position: -145px 0px;}
+#img250{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TurtleyAwesome1.png); background-position: 0px 0px;}
+#img250:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TurtleyAwesome1.png); background-position: -145px 0px;}
+#img251{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_VictorianVillian.png); background-position: 0px 0px;}
+#img251:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_VictorianVillian.png); background-position: -145px 0px;}
+#img252{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WhackaJackpot1.png); background-position: 0px 0px;}
+#img252:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WhackaJackpot1.png); background-position: -145px 0px;}
+#img253{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TigerVsBear.png); background-position: 0px 0px;}
+#img253:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TigerVsBear.png); background-position: -145px 0px;}
+#img254{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WhiteBuffalo.png); background-position: 0px 0px;}
+#img254:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WhiteBuffalo.png); background-position: -145px 0px;}
+#img255{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WildCatch.png); background-position: 0px 0px;}
+#img255:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WildCatch.png); background-position: -145px 0px;}
+#img256{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WildChampions1.png); background-position: 0px 0px;}
+#img256:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WildChampions1.png); background-position: -145px 0px;}
+#img257{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_DoubleExposureBlackjack1.png); background-position: 0px 0px;}
+#img257:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_DoubleExposureBlackjack1.png); background-position: -145px 0px;}
+#img258{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_MultiWheelRoulette1.png); background-position: 0px 0px;}
+#img258:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_MultiWheelRoulette1.png); background-position: -145px 0px;}
+#img259{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_MHPerfectPairsBlackjack1.png); background-position: 0px 0px;}
+#img259:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_MHPerfectPairsBlackjack1.png); background-position: -145px 0px;}
+#img260{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DrWattsUp1.png); background-position: 0px 0px;}
+#img260:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DrWattsUp1.png); background-position: -145px 0px;}
+#img261{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LuckyKoi.png); background-position: 0px 0px;}
+#img261:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LuckyKoi.png); background-position: -145px 0px;}
+#img262{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MHAtlanticCityBlackjack1.png); background-position: 0px 0px;}
+#img262:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MHAtlanticCityBlackjack1.png); background-position: -145px 0px;}
+#img263{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ArcticAgents.png); background-position: 0px 0px;}
+#img263:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ArcticAgents.png); background-position: -145px 0px;}
+#img264{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AroundTheWorld.png); background-position: 0px 0px;}
+#img264:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AroundTheWorld.png); background-position: -145px 0px;}
+#img265{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_BigFive1.png); background-position: 0px 0px;}
+#img265:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_BigFive1.png); background-position: -145px 0px;}
+#img266{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_ChiefsFortune1.png); background-position: 0px 0px;}
+#img266:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_ChiefsFortune1.png); background-position: -145px 0px;}
+#img267{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_DroneWars.png); background-position: 0px 0px;}
+#img267:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_DroneWars.png); background-position: -145px 0px;}
+#img268{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GeniesGems2.png); background-position: 0px 0px;}
+#img268:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GeniesGems2.png); background-position: -145px 0px;}
+#img269{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_InItToWinIt.png); background-position: 0px 0px;}
+#img269:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_InItToWinIt.png); background-position: -145px 0px;}
+#img270{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/default.png); background-position: 0px 0px;}
+#img270:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/default.png); background-position: -145px 0px;}
+#img271{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MadHatters1.png); background-position: 0px 0px;}
+#img271:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MadHatters1.png); background-position: -145px 0px;}
+#img272{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_MajorMillions1.png); background-position: 0px 0px;}
+#img272:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_MajorMillions1.png); background-position: -145px 0px;}
+#img273{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PollenNation1.png); background-position: 0px 0px;}
+#img273:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PollenNation1.png); background-position: -145px 0px;}
+#img274{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_PremierRacing1.png); background-position: 0px 0px;}
+#img274:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_PremierRacing1.png); background-position: -145px 0px;}
+#img275{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_RivieraRiches1.png); background-position: 0px 0px;}
+#img275:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_RivieraRiches1.png); background-position: -145px 0px;}
+#img276{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/SurfSafari_Button.png); background-position: 0px 0px;}
+#img276:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/SurfSafari_Button.png); background-position: -145px 0px;}
+#img277{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TotemTreasure1.png); background-position: 0px 0px;}
+#img277:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TotemTreasure1.png); background-position: -145px 0px;}
+#img278{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_robojack1.png); background-position: 0px 0px;}
+#img278:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_robojack1.png); background-position: -145px 0px;}
+#img279{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_SantasWildRide1.png); background-position: 0px 0px;}
+#img279:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_SantasWildRide1.png); background-position: -145px 0px;}
+#img280{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_WhatonEarth1.png); background-position: 0px 0px;}
+#img280:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_WhatonEarth1.png); background-position: -145px 0px;}
+#img281{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_VegasDreams.png); background-position: 0px 0px;}
+#img281:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_VegasDreams.png); background-position: -145px 0px;}
+#img282{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TreasureNile1.png); background-position: 0px 0px;}
+#img282:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TreasureNile1.png); background-position: -145px 0px;}
+#img283{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_TrickOrTreat2.png); background-position: 0px 0px;}
+#img283:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_TrickOrTreat2.png); background-position: -145px 0px;}
+#img284{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_Tunzamunni1.png); background-position: 0px 0px;}
+#img284:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_Tunzamunni1.png); background-position: -145px 0px;}
+#img285{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AcesFacesPowerPoker1.png); background-position: 0px 0px;}
+#img285:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AcesFacesPowerPoker1.png); background-position: -145px 0px;}
+#img286{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_LeaguesOfFortune1.png); background-position: 0px 0px;}
+#img286:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_LeaguesOfFortune1.png); background-position: -145px 0px;}
+#img287{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_InItToWinIt.png); background-position: 0px 0px;}
+#img287:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_InItToWinIt.png); background-position: -145px 0px;}
+#img288{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_GoldSeries_3CardPoker1.png); background-position: 0px 0px;}
+#img288:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_GoldSeries_3CardPoker1.png); background-position: -145px 0px;}
+#img289{width: 145px; height: 136px; margin:0px 5px; background-image:
+url(../pic/BTN_AcesFacesPowerPoker1.png); background-position: 0px 0px;}
+#img289:hover{width: 145px;margin:0px 5px; height: 136px; background-image:
+url(../pic/BTN_AcesFacesPowerPoker1.png); background-position: -145px 0px;}
+
+
+
+/**footer**/
+.footer{line-height: 50px;text-align: center;width:800px;height:50px;margin:0 300px;}
+.footer ul{}
+.footer ul li{display: inline-block;float: left;width: 63px;height:33px;margin: 0 5px;color: #fff;line-height: 33px;background:url(../pic/page_btn.png) no-repeat;background-position: top left;}
+.footer ul li a{color: #FFF;font-size:15px;font-family:"楷体";display: block;margin: 0px auto;}

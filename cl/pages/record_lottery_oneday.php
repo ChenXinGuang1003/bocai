@@ -1,0 +1,245 @@
+<?php
+$lhc_result = six_lottery_order::getOneDayOrder($_SESSION["userid"],$date_POST);
+$lhc_result_status0 = six_lottery_order::getOneDayOrder($_SESSION["userid"],$date_POST,"0");
+$lhc_win = six_lottery_order::getOneDayTotalWin($_SESSION["userid"],$date_POST);
+
+$d3_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"D3");
+$p3_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"P3");
+$t3_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"T3");
+$cq_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"CQ");
+$tj_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"TJ");
+$jx_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"JX");
+$gxsf_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"GXSF");
+$gdsf_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"GDSF");
+$tjsf_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"TJSF");
+$gd11_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"GD11");
+$bjpk_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"BJPK");
+$bjkn_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"BJKN");
+$cqsf_result = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"CQSF");
+
+$d3_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"D3","0");
+$p3_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"P3","0");
+$t3_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"T3","0");
+$cq_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"CQ","0");
+$tj_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"TJ","0");
+$jx_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"JX","0");
+$gxsf_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"GXSF","0");
+$gdsf_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"GDSF","0");
+$tjsf_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"TJSF","0");
+$gd11_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"GD11","0");
+$bjpk_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"BJPK","0");
+$bjkn_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"BJKN","0");
+$cqsf_result_status0 = lottery_order::getOneDayTotalCountByType($_SESSION["userid"],$date_POST,"CQSF","0");
+
+$d3_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"D3");
+$p3_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"P3");
+$t3_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"T3");
+$cq_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"CQ");
+$tj_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"TJ");
+$jx_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"JX");
+$gxsf_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"GXSF");
+$gdsf_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"GDSF");
+$tjsf_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"TJSF");
+$gd11_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"GD11");
+$bjpk_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"BJPK");
+$bjkn_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"BJKN");
+$cqsf_win = lottery_order::getOneDayTotalWinByType($_SESSION["userid"],$date_POST,"CQSF");
+
+$total_bet_money = $lhc_result["bet_money"] + $d3_result["bet_money"] + $p3_result["bet_money"]
+    + $t3_result["bet_money"] + $cq_result["bet_money"]+ $tj_result["bet_money"]
+    + $jx_result["bet_money"]+ $gxsf_result["bet_money"] + $gdsf_result["bet_money"]
+    + $tjsf_result["bet_money"] + $gd11_result["bet_money"]+ $bjpk_result["bet_money"]
+    + $bjkn_result["bet_money"]+ $cqsf_result["bet_money"];
+
+$total_bet_money_status0 = $lhc_result_status0["bet_money"] + $d3_result_status0["bet_money"] + $p3_result_status0["bet_money"]
+    + $t3_result_status0["bet_money"] + $cq_result_status0["bet_money"]+ $tj_result_status0["bet_money"]
+    + $jx_result_status0["bet_money"]+ $gxsf_result_status0["bet_money"] + $gdsf_result_status0["bet_money"]
+    + $tjsf_result_status0["bet_money"] + $gd11_result_status0["bet_money"]+ $bjpk_result_status0["bet_money"]
+    + $bjkn_result_status0["bet_money"] + $cqsf_result_status0["bet_money"];
+
+$total_win_money = $lhc_win + $d3_win + $p3_win
+    + $t3_win + $cq_win+ $tj_win
+    + $jx_win+ $gxsf_win + $gdsf_win
+    + $tjsf_win + $gd11_win+ $bjpk_win
+    + $bjkn_win + $cqsf_win;
+
+echo '
+<div id="MACenterContent">
+    <div id="MNav">
+        <span class="mbtn" >投注记录</span>
+        <div class="navSeparate"></div>
+    </div>
+    <div id="MNavLv2">
+        
+        <span class="MGameType" onclick="chgType(\'liveHistory\');">真人记录</span>｜
+        <span class="MGameType MCurrentType" onclick="chgType(\'skRecord\');">彩票投注记录</span>｜
+        <span class="MGameType" onclick="chgType(\'ballRecord\');">体育投注记录</span>｜
+		<span class="MGameType" onclick="chgType(\'cqRecord\');">存取款记录</span>｜
+    </div>
+    <div id="MMainData">
+        <div class="MControlNav">
+            <select name="foo" id="MSelectType" class="MFormStyle">
+                <option label="今日交易" value="today">今日交易</option>
+                <option label="历史交易" value="history" selected="selected">历史交易</option>
+            </select>
+
+            <select disabled="disabled">
+                <option label="'.$date_POST.'" selected="selected">'.$date_POST.'</option>
+            </select>
+
+            <input type="button" class="MBtnStyle" value="上一页" onclick="f_com.MChgPager({type: \'POST\', method: \'SKHistory\'});" onmouseover="mover(this);" onmouseout="mout(this);" />
+        </div>
+        <!-- 彩票歷史交易 -->
+        <div class="MPanel" style="display: block;">
+            <table class="MMain" border="1">
+                <tr>
+                    <th style="width: 20%">游戏名称</th>
+                    <th style="width: 30%">下注金额</th>
+                    <th style="width: 30%">未结算金额</th>
+                    <th style="width: 20%">结果</th>
+                </tr>
+				<tr align="right" class="MColor1">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'CQ\'});">重庆时时彩</a></td>
+                    <td style="text-align: center;">'.$cq_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$cq_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$cq_win.'</td>
+                </tr>
+				<tr align="right" class="MColor1">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'BJKN\'});">北京快乐8</a></td>
+                    <td style="text-align: center;">'.$bjkn_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$bjkn_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$bjkn_win.'</td>
+                </tr>
+                <tr align="right" class="MColor1" >
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLhcHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'LT\'});">六合彩</a></td>
+                    <td style="text-align: center;">'.$lhc_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$lhc_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$lhc_win.'</td>
+                </tr>
+                <tr align="right" class=" MColor2">
+                    <td style="text-align: center;"><a class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'D3\'});">3D彩</a></td>
+                    <td style="text-align: center;">'.$d3_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$d3_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$d3_win.'</td>
+                </tr>
+                <tr align="right" class="MColor1">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'P3\'});">排列三</a></td>
+                    <td style="text-align: center;">'.$p3_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$p3_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$p3_win.'</td>
+                </tr>
+                <tr align="right" class=" MColor2" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'T3\'});">上海时时乐</a></td>
+                    <td style="text-align: center;">'.$t3_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$t3_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$t3_win.'</td>
+                </tr>
+                
+                <tr align="right" class=" MColor2" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'JX\'});">江西时时彩</a></td>
+                    <td style="text-align: center;">'.$jx_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$jx_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$jx_win.'</td>
+                </tr>
+                <tr align="right" class="MColor1" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'TJ\'});">天津时时彩</a></td>
+                    <td style="text-align: center;">'.$tj_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$tj_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$tj_win.'</td>
+                </tr>
+                <tr align="right" class=" MColor2" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'GXSF\'});">广西十分彩</a></td>
+                    <td style="text-align: center;">'.$gxsf_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$gxsf_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$gxsf_win.'</td>
+                </tr>
+                <tr align="right" class="MColor1" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'GDSF\'});">广东十分彩</a></td>
+                    <td style="text-align: center;">'.$gdsf_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$gdsf_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$gdsf_win.'</td>
+                </tr>
+                <tr align="right" class=" MColor2" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'TJSF\'});">天津十分彩</a></td>
+                    <td style="text-align: center;">'.$tjsf_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$tjsf_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$tjsf_win.'</td>
+                </tr>
+                <tr align="right" class=" MColor2" style="display:none;">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'CQSF\'});">重庆十分彩</a></td>
+                    <td style="text-align: center;">'.$cqsf_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$cqsf_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$cqsf_win.'</td>
+                </tr>
+                
+                <tr align="right" class=" MColor2">
+                    <td style="text-align: center;"><a  class="pagelink" href="javascript: f_com.MChgPager({type: \'POST\', method: \'SKLotteryHistoryDetails\'}, {date: \''.$date_POST.'\', gtype: \'GD11\'});">广东十一选五</a></td>
+                    <td style="text-align: center;">'.$gd11_result["bet_money"].'</td>
+                    <td style="text-align: center;">'.$gd11_result_status0["bet_money"].'</td>
+                    <td style="text-align: center;">'.$gd11_win.'</td>
+                </tr>
+               
+                    <td style="text-align: center;">总计</td>
+                    <td style="text-align: center;" align="right">'.$total_bet_money.'</td>
+                    <td style="text-align: center;" align="right">'.$total_bet_money_status0.'</td>
+                    <td style="text-align: center;" align="right">'.$total_win_money.'</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var GAMESELECT = "SKLotteryHistory"
+//選擇遊戲
+$("#MSelectType").change(function() {
+    switch(GAMESELECT) {
+        case \'SKRecord\':
+        case \'SKLotteryRecord\':
+            f_com.MChgPager({method: \'SKHistory\'});
+    break;
+case \'SKHistory\':
+    case \'SKLotteryHistory\':
+        f_com.MChgPager({method: \'SKRecord\'});
+        break;
+    }
+});
+
+function chgType(type) {
+    switch(type) {
+        case \'ballRecord\':
+            f_com.MChgPager({method: \'ballRecord\'});
+    break;
+case \'lotteryRecord\':
+        f_com.MChgPager({method: \'lotteryRecord\'});
+        break;
+    case \'liveHistory\':
+        f_com.MChgPager({method: \'liveHistory\'});
+        break;
+    case \'gameHistory\':
+        f_com.MChgPager({method: \'gameHistory\'});
+        break;
+    case \'skRecord\':
+        f_com.MChgPager({method: \'skRecord\'});
+        break;
+    case \'a3dhHistory\':
+        f_com.MChgPager({method: \'a3dhHistory\'});
+        break;
+    case \'TPBFightHistory\':
+        f_com.MChgPager({method: \'TPBFightHistory\'});
+        break;
+    case \'TPBSPORTHistory\':
+        f_com.MChgPager({method: \'TPBSPORTHistory\'});
+        break;
+    case \'cqRecord\':
+        f_com.MChgPager({method: \'cqRecord\'});
+        break;
+    }
+}
+
+/*彩票歷史交易*/
+$("#sklotterygame").change(function() {
+    f_com.MChgPager({type: \'POST\', method: \'skLotteryHistory\'}, {gameType: $("#sklotterygame").val()});
+});
+</script>
+';

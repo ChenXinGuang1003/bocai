@@ -1,0 +1,144 @@
+.confirm_mask{ background:#000;opacity:0.7;}
+.confirm_box{
+    background:#EEE;
+    line-height:0;
+    box-shadow:0px 2px 5px #333;
+    border:2px solid #666;
+    border-radius:3px;
+    font-size:10pt;
+    margin:20% 0 0 0;
+}
+#portal .confirm_box {
+    margin:50px 0 0 0;
+}
+.confirm_box .title{
+    width:auto; 
+    margin:1px;
+    display:block;
+    height:28px;
+    line-height:28px;
+    background-color: #a49b95;
+    background:transparent url(/TPL/pitaya/images/gradient.png) repeat-x 0 0;
+    color: #fff;
+    text-shadow: 2px 2px #111111;
+    position:relative;
+}
+.confirm_box .title .close{
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    border-radius:2px;
+    font-weight:bold;
+    font-size:10pt;
+    top:4px;
+    right:4px;
+    background:transparent url(/TPL/pitaya/images/close.jpg) no-repeat top left;
+    color:#000;
+    text-shadow: none;
+    cursor:pointer;
+}
+.confirm_box .title .close:hover{
+    background:transparent url(/TPL/pitaya/images/close_over.jpg) no-repeat top left;
+}
+.confirm_inner{
+    text-align:left; 
+    margin:0;
+    padding:0.5em; 
+    padding:0.5em 0.5em 0.5em 72px; 
+    background:#eee url(/TPL/pitaya/images/q.png) no-repeat 4px 8px;
+    _background-image:url(/TPL/pitaya/images/q2.png);
+    line-height:11pt;
+    min-height:75px;
+}
+
+.confirm_box input {
+    overflow: hidden;
+    width: auto;
+    height: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    margin: 3px;
+    padding: 0 10px;
+    color: white;
+    text-shadow: #3e5779 0 -1px 0;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+    border: 1px solid #2d3f57;
+    border-radius: 5px;
+}
+.confirm_box input.YES {
+    background-image: none;
+    background-color: #50709a;
+    background-image: -moz-linear-gradient(top, #7c97bb 0%, #5a7caa 50%, #50709a 51%, #476489 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c97bb), color-stop(50%,#5a7caa), color-stop(51%,#50709a), color-stop(100%,#476489)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* W3C */
+}
+.confirm_box input.NO {
+    background-image: none;
+    background-color: #e57a78;
+    background-image: -moz-linear-gradient(top, #e57a78 0%, #dc504d 50%, #d83b38 51%, #ce2c28 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e57a78), color-stop(50%,#dc504d), color-stop(51%,#d83b38), color-stop(100%,#ce2c28)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #e57a78 0%,#dc504d 50%,#d83b38 51%,#ce2c28 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, #e57a78 0%,#dc504d 50%,#d83b38 51%,#ce2c28 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, #e57a78 0%,#dc504d 50%,#d83b38 51%,#ce2c28 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom, #e57a78, #dc504d 50%, #d83b38 51%, #ce2c28);
+}
+/* for IE*/
+.confirm_mask{ filter:alpha(opacity=70);}
+
+.zoom_show {
+    animation:boxzoomin 300ms 1;
+    -o-animation:boxzoomin 300ms 1; /* Opera */
+    -moz-animation:boxzoomin 300ms 1; /* Firefox */
+    -webkit-animation:boxzoomin 300ms 1; /* Safari and Chrome */
+}
+.zoom_hide {
+    animation:boxzoomout 150ms 1;
+    -o-animation:boxzoomout 150ms 1; /* Opera */
+    -moz-animation:boxzoomout 150ms 1; /* Firefox */
+    -webkit-animation:boxzoomout 150ms 1; /* Safari and Chrome */
+}
+
+@-webkit-keyframes boxzoomin {
+    0% {-webkit-transform: scale(0.2);opacity: 0.25;}
+    100% {-webkit-transform: scale(1);opacity: 1;}
+}
+@-o-keyframes boxzoomin {
+    0% {-o-transform: scale(0.2);opacity: 0.25;}
+    100% {-o-transform: scale(1);opacity: 1;}
+}
+@-moz-keyframes boxzoomin {
+    0% {-moz-transform: scale(0.2);opacity: 0.25;}
+    100% {-moz-transform: scale(1);opacity: 1;}
+}
+@keyframes boxzoomin {
+    0% {transform: scale(0.2);opacity: 0.25;}
+    100% {transform: scale(1);opacity: 1;}
+}
+
+@-webkit-keyframes boxzoomout {
+    0% {opacity: 1;}
+    100% {opacity: 0.25;}
+}
+@-o-keyframes boxzoomout {
+    0% {opacity: 1;}
+    100% {opacity: 0.25;}
+}
+@-moz-keyframes boxzoomout {
+    0% {opacity: 1;}
+    100% {opacity: 0.25;}
+}
+@keyframes boxzoomout {
+    0% {opacity: 1;}
+    100% {opacity: 0.25;}
+}

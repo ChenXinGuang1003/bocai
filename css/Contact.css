@@ -1,0 +1,26 @@
+/* reset */
+*{ margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+textarea { resize:none; overflow:auto; }
+em{ font-style:normal; }
+/* !£nd reset*/
+
+body{ font-size:0.14rem;  font-family: "Arial","Microsoft YaHei","ºÚÌå","ËÎÌå",sans-serif;}
+.mainBox{ width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden;  background:#1A1309; }
+#headerBox{ width:100%; height:0.35rem; line-height:0.35rem; background:#986600; box-sizing:border-box; overflow:hidden; position:relative; }
+#headerBox a{ padding:0.1rem; border-radius:0.1rem; background:rgba(0,0,0,0.3) url(../img/index_ico.png) center center no-repeat; background-size:70%; position:absolute; left:0.1rem; top:calc(0.18rem - 0.1rem); }
+#headerBox .logo{ display:block; position:absolute; left:calc(1.5rem - 0.54rem); top:calc(0.18rem - 0.16rem); height:0.3rem; }
+
+#main{ width:3rem; overflow:hidden; margin-top:0.15rem; }
+#main h1{ width:3rem; height:0.45rem; line-height:0.45rem; text-indent:0.1rem; font-size:0.14rem; background:rgba(152, 102, 0, 0.24); color:#fff; font-weight:normal; }
+#main div{ width:3rem; overflow:hidden; border-bottom:3px solid #000; position:relative; color:#fff; }
+#main .consult{ background:url(../img/online.png) no-repeat 0 0; background-size:25%;}
+#main .email{ background:url(../img/email.png) no-repeat 0 0; background-size:25%; }
+#main div p:nth-of-type(1){ width:2.1rem; height:0.4rem; float:right; line-height:0.45rem;}
+#main div p:nth-of-type(2){ font-size:0.12rem; width:2.1rem; height:0.4rem; float:right; line-height:0.25rem; }
+#main div span{ font-size:0.18rem; font-weight:bolder; color:#fff; background:rgba(178,178,178,0.3); width:0.2rem; height:0.2rem; line-height:0.2rem; text-align:center; position:absolute; right:0.05rem; top:calc(0.4rem - 0.14rem); border-radius:50%; }
+#footer{ width:3rem; height:0.35rem; line-height:0.35rem; overflow:hidden; text-align:center; color:#fff; background:#986600; position:absolute; bottom:0;}
+#footer a{ font-size:0.14rem; color:#E8E8E8; font-weight:bolder; display:inline-block; width:1rem; float:left; text-align:center; text-decoration:none; }

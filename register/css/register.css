@@ -1,0 +1,54 @@
+/* reset */
+*{ margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+textarea,input{ resize:none; overflow:auto; border:none; }
+em{ font-style:normal; }
+/* !£nd reset*/
+
+html{ height:100%; background:#1A1309; }
+body{ font-size:0.14rem; font-family: "Arial","Microsoft YaHei","ºÚÌå","ËÎÌå",sans-serif;}
+.mainBox{ width:100%; height:100%; overflow:hidden;  background:#1A1309; }
+#headerBox{ width:100%; height:0.35rem; line-height:0.35rem; background:#986600; box-sizing:border-box; overflow:hidden;  position:relative;  }
+#headerBox a{ padding:0.12rem; border-radius:0.12rem; background:rgba(0,0,0,0.3) url(../../img/index_ico.png) center center no-repeat; background-size:70%; position:absolute; left:0.1rem; top:calc(0.18rem - 0.12rem); }
+#headerBox .logo{ display:block; margin:calc(0.18rem - 0.15rem) 0 0 calc(1.5rem - 0.48rem); height:0.3rem; }
+
+
+#user{ width:3rem; overflow:hidden; }
+
+#user #myFORM{ width:3rem; overflow:hidden; }
+
+#myFORM .formSection{ width:2.8rem; border:1px solid #986600; box-sizing:border-box; box-shadow:0 0 4px yellow; position:relative; margin:0.2rem auto; padding-bottom:0.1rem; }
+
+.formSection h2{ position:absolute; font-size:0.14rem; background:#1A1309; padding:0 0.05rem; left:0.05rem; top:-0.1rem; color:#fff; text-shadow:2px 2px 2px #A02B2D; }
+
+.formSection p{ width:2.6rem; overflow:hidden; margin:0.1rem auto 0;  }
+
+.formSection p label{ display:block;  text-indent:0.05rem; color:#fff; font-size:0.1rem; line-height:0.1rem; }
+
+.formSection p label mark{ color:red; float:left; margin-top:0.025rem; background:none; }
+
+.formSection p:nth-of-type(1){ margin-top:0.2rem; }
+
+.formSection p>input{ display:inline-block; width:100%; height:0.32rem; border-radius:0.03rem; line-height:0.32rem; text-indent:0.05rem;  margin:0.08rem auto 0;  }
+
+
+.formSection:nth-of-type(2) .passWord{ width:2.6rem; margin:0.1rem auto 0; }
+
+.formSection:nth-of-type(2) .passWord input{ width:0.3rem;  border-radius:0.03rem; }
+
+.formSection input:focus{ background:#ccc; }
+
+#myFORM .agreement{ width:2.6rem; height:0.15rem; line-height:0.15rem; margin:-0.1rem auto; color:#fff; }
+.agreement label{ float:left; font-size:0.08rem; }
+.agreement input{ float:left; display:block; width:0.12rem; height:0.12rem; margin:0.01rem 0.05rem 0 0.1rem; }
+.linka{ width:100%; height:0.3rem; line-height:0.3rem; }
+.linka a{ float:right; font-size:0.1rem; color:red; margin-right:0.1rem;}
+.btnform{ width:2.6rem; height:0.32rem; margin:0 auto 0.1rem; overflow:hidden; }
+
+.btnform input{ width:42%; height:0.32rem; text-align:center; line-height:0.32rem; color:#fff; border-radius:0.08rem ; font-size:0.13rem; }
+
+.btnform input:nth-of-type(1){ float:left; background:linear-gradient(to bottom, #D84646 , #8D1717); }
+.btnform input:nth-of-type(2){ float:right;  background: linear-gradient(to bottom, #D8A746 , #956504);}

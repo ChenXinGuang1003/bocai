@@ -1,0 +1,2359 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+     display: block;
+}
+
+/** adding the class sf-navbar in addition to sf-menu creates an all-horizontal nav-bar menu ** */
+.sf-navbar { background: #bdd2ff; position: relative; margin-bottom: 5em; }
+.sf-navbar:before { content: ""; position: absolute; left: 0; z-index: -1; background-color: #bdd2ff; height: 200%; width: 100%; }
+.sf-navbar ul { box-shadow: none; }
+.sf-navbar li { background: #aabde6; position: static; }
+.sf-navbar > li > a { border: none; }
+.sf-navbar > li > ul { min-width: 36em; /* set this to whatever suits your design */ }
+.sf-navbar > li > ul > li > a { border: none; }
+.sf-navbar ul li { background: #bdd2ff; position: relative; }
+.sf-navbar ul ul { left: 0; top: 100%; }
+.sf-navbar ul ul li { width: 100%; }
+.sf-navbar > li > ul > li { float: left; }
+.sf-navbar li.current, .sf-navbar li:hover, .sf-navbar li.sfHover { background: #bdd2ff; }
+.sf-navbar ul li.current { background: #bdd2ff; }
+.sf-navbar ul li:hover, .sf-navbar ul li.sfHover { background: #d1dfff; }
+.sf-navbar ul ul li { background: #d1dfff; }
+.sf-navbar ul ul li:hover, .sf-navbar ul ul li.sfHover, .sf-navbar ul ul li.current { background: #e6eeff; }
+.sf-navbar ul li.current > a { font-weight: bold; }
+
+/* provide background colour for submenu strip */
+/* you should just set the menu's container bg colour rather than use pseudo-elements */
+/** point all arrows down ** */
+.sf-arrows.sf-navbar ul .sf-with-ul:after { margin-top: -3px; margin-right: 0; border-color: transparent; border-top-color: #dfeeff; /* edit this to suit design (no rgba in IE8) */ border-top-color: rgba(255, 255, 255, 0.5); }
+.sf-arrows.sf-navbar ul > li > .sf-with-ul:focus:after, .sf-arrows.sf-navbar ul > li:hover > .sf-with-ul:after { border-color: transparent; border-top-color: white; }
+.sf-arrows.sf-navbar ul > .sfHover > .sf-with-ul:after { border-color: transparent; border-top-color: white; }
+
+/* adding sf-vertical class in addition to sf-menu creates a vertical menu */
+/* eg. <ul class="sf-menu sf-vertical"> ... */
+.sf-vertical { width: 12em; /* If you want the width of the closed menu to expand to its widest top-level menu item (like its "Supersubs" submenus do), replace the width rule above with the following two rules. */ /*min-width: 12em; *width: 12em; */ }
+.sf-vertical ul { left: 100%; top: 0; }
+.sf-vertical > li { float: none; }
+.sf-vertical li { width: 100%; }
+.sf-vertical.sf-arrows > li > .sf-with-ul:after { margin-top: -5px; margin-right: -3px; border-color: transparent; border-left-color: #dfeeff; /* edit this to suit design (no rgba in IE8) */ border-left-color: rgba(255, 255, 255, 0.5); }
+.sf-vertical.sf-arrows li > .sf-with-ul:focus:after, .sf-vertical.sf-arrows li:hover > .sf-with-ul:after { border-left-color: white; }
+.sf-vertical.sf-arrows .sfHover > .sf-with-ul:after { border-left-color: white; }
+
+/** alter arrow directions ** */
+.slideText { position: relative; overflow: hidden; width: 100%; height: 20px; }
+
+.slideText ul, .slideText li { margin: 0; padding: 0; list-style: none; width: 100%; }
+
+.slideText ul { position: absolute; }
+.slideText ul li { font-size: 11px; height: 20px; line-height: 20px; }
+.slideText ul li a { display: block; overflow: hidden; font-size: 11px; height: 20px; line-height: 20px; text-decoration: none; }
+.slideText ul li a:hover { text-decoration: underline; }
+
+html {
+    width:100%;
+    height:100%;
+}
+
+body {
+    width:100%;
+    height:100%;
+    font-family: Verdana, "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+    background-color:#fff;
+}
+
+a {
+    text-decoration: none;
+}
+#box_body {
+    height:97%;
+    height:-webkit-calc(100% - 18px);
+    height:calc(100% - 18px);
+    background:#fff url("/TPL/pitaya/images/bg_top.jpg") repeat-x left 0;
+}
+#box_range {
+    min-width: 1000px;
+    width:100%;
+    position: relative;
+    height:100%;
+    background: url("/TPL/pitaya/images/line_dotted_AAA.gif") repeat-x left 148px;
+}
+
+#header {
+    position: relative;
+}
+#header h1 {
+    display: block;
+    height: 86px;
+    width: 213px;
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url("/TPL/pitaya/images/logo.jpg") no-repeat left top;
+}
+#ui-marquee {
+    height:18px;
+    line-height:18px;
+    background-color:#121212;
+}
+#ui-marquee > b{
+    display:none;
+}
+#ui-marquee div.marquee{
+    overflow:hidden;
+    position: relative;
+    font-size: 11px;
+    background-color:#121212;
+    height: 18px;
+    line-height: 18px;
+    color:#fff;
+}
+
+#ui-btn-features {
+    font-size: 11px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Verdana, "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+}
+#ui-btn-features:after {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+    clear: both;
+}
+#ui-btn-features li {
+    float: left;
+}
+#ui-btn-features a {
+    color: #333333;
+    display: inline-block;
+    border-left: 1px solid #555555;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:pointer;
+}
+#ui-btn-features li:first-child a {
+    border: none;
+}
+#ui-btn-features li:last-child a {
+    font-weight: bold;
+}
+
+#ui-btn-games {
+    position: absolute;
+    top: 40px;
+    left: 223px;
+    background: url("/TPL/pitaya/images/btn_line.jpg") no-repeat -1px top;
+    padding-left: 1px;
+    z-index:10001;
+    width:710px;
+}
+#ui-btn-games ul.layer1 li.layer1-li {
+    background:transparent url("/TPL/pitaya/images/btn_line.jpg") no-repeat top left;
+    float:left;
+    display:inline-block;
+    min-width:120px;
+}
+
+#ui-btn-games ul.layer1 li.layer1-li a.layer1-a{
+    background: url("/TPL/pitaya/images/arrow_01.png") no-repeat 17px center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px black, -1px -1px 1px black;
+    height: 46px;
+    line-height: 46px;
+    display: block;
+    padding-left: 32px;
+    border-left: 1px;
+    border-right: 1px;
+    color: white;
+}
+#ui-btn-games ul.layer1 li.layer1-li a.layer1-a:hover, #ui-btn-games ul.layer1 li.layer1-li a.now {
+    background: url("/TPL/pitaya/images/btn_bg_hover_left.jpg") no-repeat left center;
+}
+#ui-btn-games ul.layer1 li.layer1-li a.layer1-a b{
+    display:none;
+}
+#ui-btn-games a.sf-with-ul { padding-left: 1em; padding-right: 1em; font-weight: bold; text-shadow: 0px 0px 1px black, -1px -1px 1px black; height: 46px; line-height: 46px; display: block; padding-left: 32px; background: url("/TPL/pitaya/images/arrow_01.png") no-repeat 17px center; border-left: 1px; border-right: 1px; border-image: url("/TPL/pitaya/images/btn_line.jpg") 0 1 0 1 stretch; }
+#ui-btn-games a.sf-with-ul:hover { border: none; margin-left: 1px; background: url("/TPL/pitaya/images/btn_bg_hover_left.jpg") no-repeat left center; }
+#ui-btn-games ul.sf-menu { background: url(/TPL/pitaya/images/btn_box_line.jpg) no-repeat 100% top; padding-right: 1px; }
+#ui-btn-games ul.sf-menu li.horizontal { float: left; }
+#ui-btn-games ul.sf-menu ul { background: url(/TPL/pitaya/images/000_65.png) repeat; }
+#ui-btn-games ul.sf-menu ul { background: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; filter: alpha(opacity=80); }
+#ui-btn-games ul.sf-menu ul li { margin-top: 1px; text-align: center; padding: 10px 0.5em 10px 0.5em; min-width:100px;}
+#ui-btn-games ul.sf-menu ul li a { font-size: 12px;color:#fff; }
+
+#ui-btn-games ul.sf-menu ul li.BT a {
+    padding-left:16px;
+    background:transparent url('/TPL/pitaya/images/bb3dIcon.png') no-repeat left center;
+}
+
+#ui-btn-games ul.sf-menu ul li.BBKN a {
+    padding-left:16px;
+    background:transparent url('/TPL/pitaya/images/bb3dIcon.png') no-repeat left center;
+}
+
+#ui-btn-games nav, .second-nav {
+    position:absolute;
+    width:180px;
+    background-color:#fff;
+    border:1px solid #333;
+    padding:5px;
+    top:55px;
+    border-radius:8px;
+    overflow:visible;
+    box-shadow: 0px 0px 3px 3px rgba(96, 96, 96, 0.6);
+    display:none;
+    z-index:5000;
+}
+dl.second-nav  {
+    width:640px;
+    position:absolute;
+    background-color:#fff;
+    border:1px solid #333;
+    padding:5px;
+    top:55px;
+    border-radius:8px;
+    overflow:visible;
+    box-shadow: 0px 0px 3px 3px rgba(96, 96, 96, 0.6);
+    display:none;
+    z-index:5000;
+}
+dl.second-nav dd {
+    width:48%;
+    display:inline-block;
+    float:left;
+}
+nav#NORMAL {
+    left:-10px;
+    display:none;
+}
+nav#TT {
+    left:95px;
+    display:none;
+}
+nav#SF {
+    left:200px;
+    display:none;
+}
+nav#S5 {
+    left:300px;
+    display:none;
+}
+nav#KN {
+    left:300px;
+    display:none;
+}
+#ui-btn-games nav:before, .second-nav:before {
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    border:0;
+    border-bottom:15px solid #333;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    position:absolute;
+    top:-15px;
+    left:65px;
+}
+#ui-btn-games nav:after, .second-nav:after {
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    border:0;
+    border-bottom:15px solid #fff;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    position:absolute;
+    top:-14px;
+    left:65px;
+}
+
+
+#ui-btn-games nav a, .second-nav a {
+    width:90%;
+    display:block;
+    margin:0 auto;
+    padding:3px;
+    height:22px;
+    line-height:22px;
+    color:#333;
+    border-bottom:1px solid #ccc;
+    font-size:9pt;
+}
+#ui-btn-games nav a:hover, .second-nav a:hover {
+    background: #2489ce; /* Old browsers */
+    color:#fff;
+    text-shadow: -1px -1px 1px #333333;
+}
+#ui-btn-games nav > a:first-child, .second-nav > a:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+#ui-btn-games nav > a:last-child, .second-nav > a:last-child  {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom:0;
+}
+#ui-btn-games nav a::after, .second-nav a[data-gtype]::after {
+    content:">";
+    float:right;
+}
+nav.rde-menu {
+    position:absolute;
+    width:150px;
+    background-color:#111;
+    background: linear-gradient(to bottom,  rgba(17,17,17,0.6) 0%,rgba(17,17,17,1) 100%); /* W3C */
+    border:1px solid #000;
+    padding:5px;
+    border-radius:8px;
+    overflow:visible;
+    box-shadow: 0px 0px 3px 3px rgba(96,96,96,0.6);
+    display:none;
+    z-index:5001;
+}
+nav.rde-menu a {
+    width:90%;
+    display:block;
+    margin:0 auto;
+    padding:5px;
+    height:24px;
+    line-height:24px;
+    font-weight:bold;
+    color:#fff;
+    border-bottom:1px solid #ccc;
+    font-size:11pt;
+}
+nav.rde-menu a:hover {
+    background: #a49b95; /* Old browsers */
+    background: linear-gradient(to bottom,  #a49b95 0%,#4e3f3e 65%,#5a5755 100%); /* W3C */
+    color:#fff;
+    text-shadow: -1px -1px 1px #111111;
+    box-shadow:inset 1px 1px 1px #111;
+}
+nav.rde-menu a:first-child{
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+nav.rde-menu a:last-child {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom:0;
+}
+nav.rde-menu::before {
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    border:0;
+    border-bottom:5px solid transparent;
+    border-right:15px solid #000;
+    border-top:5px solid transparent;
+    position:absolute;
+    top:79px;
+    left:-15px;
+}
+
+#game_result {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0.5em 0 0.5em;
+    font-size: 14px;
+    font-weight: bold;
+    background: #58504c;
+    color: white;
+    text-shadow: -1px -1px 1px #111111;
+    border: 2px solid #777777;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px black, 0px 0px 2px black;
+    cursor:pointer;
+}
+#game_result:hover {
+    box-shadow: none;
+    border-color: #222222;
+    border-right: 2px solid #867b75;
+    border-bottom: 2px solid #867b75;
+    background: #666666;
+}
+
+
+#main:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+#left, #content {
+    float: left;
+}
+#left {
+    width: 226px;
+}
+
+#clock {
+    background: url("/TPL/pitaya/images/icon_clock.png") no-repeat 16px center;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 38px;
+    font-size: 10px;
+}
+#clock > b{
+    display:none;
+}
+
+#user_info .icon {
+    display: inline-block;
+    width: 22px;
+    height: 21px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    background: url("/TPL/pitaya/images/icon_user.png") no-repeat left center;
+}
+#user_info dl.block dd {
+    background: url("/TPL/pitaya/images/block_line.jpg") no-repeat center bottom;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 30px;
+}
+#user_info dl.block dd:nth-last-child(2) {
+    background: none;
+}
+#user_info dl.block dd span {
+    font-weight: bold;
+}
+
+dl.block {
+    background: url("/TPL/pitaya/images/block_bg.jpg") repeat-y left center;
+    width: 215px;
+    font-size: 12px;
+    margin-left: 3px;
+    margin-bottom: 4px;
+}
+dl.block dt {
+    background: url("/TPL/pitaya/images/block_header.jpg") no-repeat left center;
+    width: 215px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 15px;
+    color: white;
+}
+#user_info dl.block dd.footer {
+    height: 6px;
+    line-height: 0;
+    border: none;
+    background: url("/TPL/pitaya/images/block_footer.jpg") no-repeat left center;
+}
+
+#message_box {
+    background: url("/TPL/pitaya/images/block_bg.jpg") repeat-y left center;
+    width: 215px;
+    font-size: 12px;
+    margin-left: 3px;
+    margin-bottom: 4px;
+}
+#message_box .inner {
+    background: url("/TPL/pitaya/images/block_header.jpg") no-repeat center top;
+    min-height: 250px;
+    line-height:18px;
+}
+#message_box .inner span.err{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    background: url("/TPL/pitaya/images/icon_err.gif") no-repeat left center;
+}
+#message_box .footer {
+    height: 6px;
+    line-height: 0;
+    background: url("/TPL/pitaya/images/block_footer.jpg") no-repeat left center;
+}
+
+.msg-tag, .msg-title {
+    height: 32px;
+    line-height: 32px;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+    color: white;
+    border-left: 1px;
+    border-right: 1px;
+    border-image: url("/TPL/pitaya/images/btn_line.png") 0 1 0 1 stretch;
+}
+.msg-tag:hover, .msg-tag.active {
+    background: url("/TPL/pitaya/images/btn_hover.png") repeat-x center;
+}
+
+.msg-tag:first-child {
+    border-left: 0 !important;
+}
+
+.msg-tag:last-child {
+    border-right: 0 !important;
+}
+
+.msg-text {
+    padding-left: 0.5em;
+}
+
+#content {
+    width:75%;
+    width: -webkit-calc(100% - 236px);
+    width: calc(100% - 236px);
+    margin-top: 1px;
+    min-height: 500px;
+    height:100%;
+}
+#content h2 {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    background: url("/TPL/pitaya/images/icon_star.png") no-repeat left center;
+    margin-left: 0.5em;
+    padding-left: 24px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px #333333, 1px 1px 2px #222222;
+}
+#content h2 > b {
+    display:none;
+}
+a#limitShow {
+    width:32px;
+    height:32px;
+    display:inline-block;
+    background:transparent url("/TPL/pitaya/images/setIcon.png") no-repeat 2px 5px;
+    cursor:pointer;
+    vertical-align:top;
+}
+#content #content_inner {
+    position: relative;
+}
+#content #game_info {
+    position: absolute;
+    top: -34px;
+    right: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 11px;
+    color: white;
+}
+#content #game_info #ui-countdown {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    min-width: 7em;
+    padding-left: 30px;
+    padding-right: 10px;
+    line-height: inherit;
+    color: #990000;
+    font-size: 16px;
+    font-weight: bold;
+    background: url("/TPL/pitaya/images/bg_field.gif") no-repeat left center;
+    font-family: Verdana, "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+}
+
+#content #game_info #ui-countdown::before {
+    content: '';
+    color:#333;
+    font-weight:normal;
+    font-size:12px;
+    float:left;
+}
+#content #wager_groups {
+    width: 810px;
+    padding-left: 15px;
+    height: 30px;
+    overflow:hidden;
+    white-space:nowrap;
+    position:relative;
+}
+#content #wager_groups div {
+    width:200%;
+    z-index:100;
+    position:absolute;
+    top :0 ;
+    left:15px;
+    white-space:nowrap;
+}
+#content b.before, #content b.after {
+    display:none;
+}
+#content .scrollL::before, #content div.scrollL b.before {
+    content:'<<更多';
+    position:absolute;
+    width:60px;
+    height:26px;
+    line-height:26px;
+    top:2px;
+    left:0;
+    background-color:#fff;
+    color:#333;
+    text-align:center;
+    font-weight:bold;
+    z-index:101;
+    cursor:pointer;
+    display:block;
+    font-size:12px;
+    border-right:2px dotted #ccc;
+}
+#content .scrollR::after, #content div.scrollR b.after  {
+    content:'更多>>';
+    position:absolute;
+    width:60px;
+    height:26px;
+    line-height:26px;
+    top:2px;
+    right:0;
+    background-color:#fff;
+    color:#333;
+    text-align:center;
+    font-weight:bold;
+    z-index:101;
+    cursor:pointer;
+    display:block;
+    font-size:12px;
+    border-left:2px dotted #ccc;
+
+}
+#content #wager_groups a {
+    display: inline-block;
+    vertical-align: top;
+    height: 27px;
+    line-height: 30px;
+    color: #353535;
+    font-size: 12px;
+    background: url("/TPL/pitaya/images/arrow_02.gif") no-repeat 2px center;
+    padding: 0 7px 0 15px;
+    overflow:hidden;
+}
+#content #wager_groups a#allplay {
+    background:transparent url("/TPL/pitaya/images/addIcon.png") no-repeat 2px center;
+    padding: 0 7px 0 22px;
+}
+
+#content #wager_groups a:hover, #content #wager_groups a.NowPlay {
+    color: #940501;
+    background-image: url("/TPL/pitaya/images/arrow_03.gif");
+    border-bottom: 4px solid #dddddd;
+}
+#wager_groups ul li {
+    float:left;
+    width:auto;
+    padding:0 10px 0 0  ;
+    display:inline-block;
+}
+#wager_groups nav, #wager_groups dl{
+    display:none;
+}
+
+#rde-contextmenu {
+    display:none;
+}
+
+.txt {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black
+}
+.oddsI {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black
+}
+#total_gold {
+    color: red;
+    font-weight: bold;
+}
+b.At{
+    font-weight:normal;
+    color:#454545;
+}
+b.OddsL{
+    color:red;
+}
+#pc{
+    font-weight:normal;
+    color:red;
+}
+input.OrderGold{
+    width:84px;
+}
+input.GoldQQ{
+    width:55px;
+    margin:0 2px;
+}
+.ListOrder {
+    color: white;
+    padding-right: 10px;
+}
+div.Info, #quickMode{
+    clear:both;
+    height:32px;
+    line-height:32px;
+    width:97%;
+    margin: 0 0 0 5px;
+}
+#left div.Info {
+   height:24px;
+   line-height:24px;
+}
+#bet-scroll {
+    max-height:150px;
+    overflow:auto;
+    position:relative;
+}
+.ListOrder span.num, .ListOrder label.num{
+    color: black;
+    width: 100%;
+    display: block;
+}
+.Inp {
+    display: block;
+    width:100%;
+    color:#000;
+    text-align:right;
+}
+.Inp input{
+    width:45px;
+}
+.Inp input.btn, .Inp input.btnD {
+    border: 0px;
+    font-size: 12px;
+}
+.PlayType {
+    text-align: center;
+    width: 100%;
+    margin:3px 0;
+    background-color:#eeffff;
+    border-top:1px solid #126bd1;
+    border-bottom:1px solid #126bd1;
+    clear:both;
+}
+#left div.Grp{
+    text-align:left;
+    width:90%;
+    clear:both;
+}
+/*左方的包組下注*/
+#left div.Grp div{
+    color:#454545;
+}
+#left div.Grp div span{
+    color:white;
+    background-color:#333;
+}
+#left div.Grp div b{
+    color:red;
+}
+#left div.Grp a{
+    color:#333;
+}
+#left div.Grp div{
+    color:#454545;
+}
+#left div.Grp div span{
+    color:white;
+    background-color:#333;
+}
+#left div.Grp div b{
+    color:red;
+}
+#left div.Grp a {
+    overflow: hidden;
+    width: auto;
+    height: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    bottom: 6px;
+    right: 10px;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    text-shadow: #3e5779 0 -1px 0;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+    border: 1px solid #2d3f57;
+    border-radius: 5px;
+    background-image: none;
+    background-color: #7c97bb; /* Old browsers */
+    background-image: linear-gradient(to bottom, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* W3C */
+}
+#left #QuickBtn{
+    background-color:#fff;
+    color:#454545;
+    border:2px solid #126bd1;
+    border-radius:5px;
+    z-index:1;
+    position:relative;
+
+}
+#left #QuickBtn table{
+    width:95%;
+    border:1px solid #333;
+    margin:0 auto;
+    background-color:#333;
+}
+/*左方六合彩快選節a tag css*/
+#left #QuickBtn a:link {
+    color: #454545;
+    text-decoration: none;
+}
+#left #QuickBtn a:visited {
+    color: #454545;
+}
+#left #QuickBtn a:hover {
+    color:#0099CC;
+    text-decoration: none;
+}
+#err {
+    color: #cc0000;
+    background: #ffffff;
+}
+#left a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+#left a:visited {
+    color: #ffffff;
+}
+#left a:hover {
+    color:#0099CC;
+    text-decoration: none;
+}
+#left a:active {
+    color: #ffffff;
+}
+div#randomball{
+    min-width: 435px;
+    margin:5px auto;
+}
+#randomball table{
+    width:100%;
+    clear: both;
+    background-color: #333;
+    padding: 0;
+    border-spacing:1px;
+    margin:0 auto;
+}
+#randomball table .title_tr td{
+    height:25px;
+}
+#randomball tr.BallTr{
+    height: 30px;
+    font-size:12px
+}
+#randomball tr.BallTr td{
+    text-align:center;
+    background-color: #e5eaee;
+}
+#randomball table td{
+    min-width:60px;
+}
+/*D盤下注的連結區塊*/
+ul.DLUL{
+    clear:both;
+    width:200px;
+    height:22px;
+    line-height:22px;
+    margin:5px auto;
+    padding:0;
+    text-decoration: inherit;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    list-style:none;
+    overflow:hidden;
+    display:table;
+}
+ul.DLUL > li{
+    width:150px;
+    border-right:1px solid rgba(0,0,0,0.4);
+    display:table-cell;
+}
+ul.DLUL li:last-child {
+    border-right:0px solid rgba(0,0,0,0.4);
+}
+
+ul.DLUL > li > a{
+    font-size:12px;
+    width:100%;
+    display:block;
+    height:100%;
+    color:#000;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+}
+.W1quick_style {
+    /*display:none;*/
+}
+.quick_betnum_style {
+    height: 40px;
+    padding-top: 10px;
+}
+.quick_option_style {
+    padding-bottom: 5px;
+}
+input#qkGold, input#qkGoldW1 {
+    width:6em;
+}
+ul.DLUL > li > a.ON, #Game fieldset > nav > b.ON, div#D2quick a.ON, div#W1quick a.ON, div#B5W1quick a.ON, div#D3quick a.ON, div#W3quick a.ON, div#B5D2quick a.ON, div#B5D3quick a.ON, div#B5W3quick a.ON {
+    background: #2489ce; /* Old browsers */
+    background: linear-gradient(to bottom,  #2489ce 0%,#5393c5 100%); /* W3C */
+    color:#fff;
+}
+#Game {
+    width:99%;
+    font-size:11pt;
+}
+#Game fieldset, div#D2quick, div#B5D2quick {
+    clear:both;
+    border:0;
+    display:block;
+}
+#Game fieldset#PackgeBox {
+    width:70%;
+    border: 1px solid #000;
+}
+#Game fieldset#PackgeBox legend{
+    font-size:10pt;
+    margin-left:2em;
+}
+
+#Game > fieldset.HB, #Game > fieldset.HH {
+    width:auto;
+}
+#Game > fieldset.NA {
+    width:90%;
+}
+#Game fieldset.SPA {
+    width:82%;
+}
+#Game > fieldset.SF {
+    width:30%;
+}
+div#D3quick > p, div#B5D3quick > p {
+    width:95%;
+    clear:both;
+    height:22px;
+    line-height:22px;
+    margin:0 0 0 5px;
+    padding:0;
+    text-decoration: inherit;
+    border: 1px solid rgb(204,204,204);
+    border-bottom:0;
+    overflow:hidden;
+    display:table;
+}
+div#D3quick > p > b:last-child, div#B5D3quick > p > b:last-child {
+    border-right: 0px solid rgba(0,0,0,0.4);
+}
+div#D3quick > p.cc, div#B5D3quick > p.cc {
+    border-bottom: 1px solid rgb(204,204,204);
+}
+div#D3quick input[type=number], div#D3quick input[type=text], div#B5D3quick input[type=number], div#B5D3quick input[type=text] {
+    width:3em;
+    border:1px solid #000;
+}
+div#D3quick input[type=button], div#B5D3quick input[type=button], div#D2quick input[type=button], div#B5D2quick input[type=button], div#W3quick input[type=button], div#B5W3quick input[type=button] {
+    display:inline;
+    width:auto;
+    color:#fff;
+}
+#Game fieldset > nav > b, div#D2quick > p > *, div#D3quick > p > *, div#W3quick > p > *, div#B5D2quick > p > *, div#B5D3quick > p > *, div#B5W3quick > p > * {
+    font-size:12px;
+    display:table-cell;
+    height:100%;
+    color:#000;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    border-right:1px solid rgba(0,0,0,0.4);
+    cursor:pointer;
+}
+#Game fieldset > nav, div#D2quick > p, div#W1quick > p, div#B5W1quick > p, div#W3quick > p, div#B5D2quick > p, div#B5W3quick > p {
+    float:left;
+    width:70%;
+    height:24px;
+    line-height:24px;
+    margin:0 0 0 5px;
+    padding:0;
+    text-decoration: inherit;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.4);
+    overflow:hidden;
+    display:table;
+}
+div#D2quick > p#jjomj, div#B5D2quick > p#jjomj {
+    float:right;
+    width:20%;
+    height:48px;
+    line-height:48px;
+    font-size:9pt;
+    margin:0;
+    padding:0;
+    text-decoration: inherit;
+    overflow:hidden;
+    display:block;
+    border: 0;
+}
+div#D3quick input[type=number], div#D3quick input[type=text], div#B5D3quick input[type=number], div#B5D3quick input[type=text] {
+    width:3em;
+    border:1px solid #000;
+}
+div#D3quick input[type=button], div#B5D3quick input[type=button], div#D2quick input[type=button], div#B5D2quick input[type=button], div#W3quick input[type=button], div#B5W3quick input[type=button] {
+    color:#fff;
+}
+#Game fieldset > nav > b, div#W1quick > p > *, div#B5W1quick > p > *, div#D2quick > p > *, div#D3quick > p > *, div#W3quick > p > *, div#B5D2quick > p > *, div#B5D3quick > p > *, div#B5W3quick > p > * {
+    font-size:12px;
+    display:table-cell;
+    height:100%;
+    color:#000;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    border-right:1px solid rgba(0,0,0,0.4);
+    cursor:pointer;
+}
+div#D2quick > p > *, div#D3quick > p > *, div#B5D2quick > p > *, div#B5D3quick > p > * {
+    width:9%;
+}
+div#D2quick > p.OE > * {
+    width:12%;
+}
+div#D2quick p a,div#W1quick p a, div#B5W1quick p a, div#D3quick p a, div#W3quick p a, div#B5D2quick p a, div#B5D3quick p a {
+    width:8%;
+}
+div#D2quick p b, div#W1quick p b, div#B5W1quick p b, div#W3quick p b, div#B5D2quick p b{
+    width:14%;
+}
+div#W3quick > p > *, div#B5W3quick > p > *{
+    width:10%;
+}
+#Game > fieldset.HB > nav > b, #Game > fieldset.HH > nav > b {
+    width:14%;
+}
+#Game fieldset.SPA > nav > b {
+    width:25%;
+}
+#Game > fieldset.SF > nav > b {
+    width:50%;
+}
+#Game fieldset > nav > b:last-child {
+    border-right:0px solid rgba(0,0,0,0.4);
+}
+/*六合彩包組*/
+a.highlight_me_a {
+    background-color: #f5dec1;
+    color: blue;
+}
+.highlight_me {
+    background-color: #f5dec1;
+}
+#switchMode, #fquick {
+    display:inline-block;
+}
+.betMove {
+    cursor: url("/images/openhand.cur"), auto;
+}
+#table1,#table2,#table3,#table4,#table5, #table6, #table7, #table8,#ShowRule #RuleText,#ShowRule2 #RuleText2,#QuickBar div#QuickMenu,table.QuickTab, table.GameTable, #TodayTab,#HistoryTab {
+    border-collapse:collapse;
+}
+#table1 td, #table2 td, #table3 td, #table4 td{
+    text-align:center;
+}
+#table5 td, #table6 td, #table7 td, #table8 td{
+    padding:0;
+    border:1px solid #333;
+}
+#table1 {
+    clear:both;
+}
+#table1, #table2, #table3, #table4, #table5, #table6  ,#table7, #table8{
+    background-color: #fff;
+    width:100%;
+}
+.sColorR,.sColorG,.sColorB {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-family: "Arial Black";
+    color: black;
+    font-weight: bold;
+    color: #404040;
+}
+
+.padding_label {
+    display:block;
+    padding: 2px;
+}
+.sColorR {
+    background: #fff url("/TPL/pitaya/images/ball/r.gif") center 0 no-repeat;
+}
+.sColorG {
+    background: #fff url("/TPL/pitaya/images/ball/g.gif") center 0 no-repeat;
+}
+.sColorB {
+    background: #fff url("/TPL/pitaya/images/ball/b.gif") center 0 no-repeat;
+}
+.bColorR, .bColorG, .bColorB {
+    height: 30px;
+    font-weight: bold;
+}
+.bColorR {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/r.gif") center center no-repeat;
+}
+.bColorG {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/g.gif") center center no-repeat;
+}
+.bColorB {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/b.gif") center center no-repeat;
+}
+tr.Choice .cColorR {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/r.gif") center 0px no-repeat;
+}
+tr.Choice .cColorG {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/g.gif") center 0px no-repeat;
+}
+tr.Choice .cColorB {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/b.gif") center 0px no-repeat;
+}
+tr.Choice .wColorR,tr.Choice td.wColorG,tr.Choice td.wColorB {
+    background: #F4F8F9 url("/TPL/pitaya/images/ball/w.gif") center 0px no-repeat;
+}
+tr.Choice .cColorR span,tr.Choice .cColorG span,tr.Choice .cColorB span, tr.Choice .wColorR span,tr.Choice .wColorG span,tr.Choice .wColorB span{
+    font-family: "Arial Black";
+    color: #404040;
+    font-size:12px;
+    display:block;
+}
+td.cColorR, td.cColorG, td.cColorB, td.wColorR, td.wColorG, td.wColorB  {
+    height: 30px;
+    font-weight: bold;
+    text-align:center;
+    font-size:12px;
+}
+.bColorR span,.bColorG span,.bColorB span,.bColorR label,.bColorG label,.bColorB label {
+    font-family: "Arial Black";
+    color: #404040;
+    display:block;
+    font-size:12px;
+}
+/*分頁效果的css*/
+div#arrowLeft{
+    width:0;
+    height:0;
+    line-height:0;
+    border-top:15px solid transparent;
+    border-left:0 solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid rgba(0, 0, 0,0.7);
+    float:left;
+    margin-right:5px;
+    z-index:1000;
+    display:none;
+    cursor:pointer;
+
+}
+div#arrowRight{
+    width:0;
+    height:0;
+    line-height:0;
+    border-top:15px solid transparent;
+    border-left:15px solid rgba(0,0,0,0.7);
+    border-bottom:15px solid transparent;
+    border-right:0 solid transparent;
+    z-index:1000;
+    display:none;
+    float:left;
+    margin-left:5px;
+    cursor:pointer;
+
+}
+div#Game{
+   clear:both;
+}
+div#tab{
+    height:35px;
+    line-height:30px;
+    overflow:hidden;
+    clear:both;
+}
+div#tab ul {
+    margin: 5px 0 10px 0;
+    height: 24px;
+    line-height: 24px;
+    list-style: none;
+    padding: 0;
+    font-size:12px;
+    width:200%;
+    font-weight: bold;
+}
+div#tab ul li {
+    background: transparent url( '/TPL/pitaya/images/tab.png' ) no-repeat;
+    float: left;
+    height: 24px;
+    text-align: center;
+}
+div#tab ul li#space {
+    float: left;
+    height: 24px;
+    padding: 0;
+    width: 220px;
+    background-image: url();
+    border-bottom: 1px solid #000000;
+}
+div#tab ul .unTagClick  {
+    background-position: 100% -100px;
+    border-bottom: 1px solid #000000;
+}
+div#tab ul .onTagClick {
+    background-position: 100% -150px;
+    border-bottom: 0;
+}
+div#tab ul .unTagClick a, div#tab ul .unTagClick span {
+    display: block;
+    padding: 0 0 0 14px;
+    margin-right: 14px;
+    background: transparent url( '/TPL/pitaya/images/tab.png' ) no-repeat left 0;
+    color: #333333;
+    cursor: pointer;
+}
+div#tab ul .onTagClick a, div#tab ul .onTagClick span {
+    cursor: pointer;
+    display: block;
+    padding: 0 0 0 14px;
+    margin: 0 14px 0 0;
+    background: transparent url( '/TPL/pitaya/images/tab.png' ) no-repeat left -50px;
+    color: #000;
+}
+div#tab ul .onTagClick span b  {
+    background-color: #f5dec1;
+    font-weight:normal;
+}
+div#tab ul .onTagClick span font, div#tab ul .unTagClick span b {
+    font-size: 12px;
+    font-weight:normal;
+}
+/*六合彩快選*/
+table#gameTable, #showTable{
+    border-spacing:1px;
+    border:0;
+    width:100%;
+}
+table#gameTable td, #showTable td{
+    text-align:center;
+}
+table#showTable a{
+    display:block;
+}
+#showTable td.ball_td, #gameTable td.ball_td {
+    background-position: center center;
+    background-color: #ffffff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    color: #620607;
+}
+#showTable td.ball_td > span, #gameTable td.ball_td > span {
+    display:block;
+    width:100%;
+    height:100%;
+}
+#showTable td.ball_td > span:hover, #gameTable td.ball_td > span:hover {
+    background-color:#ffff33;
+}
+/* 連碼的css */
+span#Warn, span#Warn1, span#Warn2, span#Warn3{
+    color:red;
+    font-size:12px;
+    font-weight:bold;
+}
+#Game #showTable {
+    min-height:580px;
+}
+#SPA_Box {
+    font-size:10pt;
+}
+/* 交叉碰*/
+div#CrossOverHit{
+    display:none;
+    position:relative;
+    height:300px;
+}
+div#CrossOverHit div#HitZone{
+    width:60%;
+    margin:24px 0 0 0;
+}
+div#CrossOverHit div#HitZone div{
+    border:1px dotted #454545;
+    width:95%;
+    margin:0 auto;
+    clear:both;
+    float:left;
+}
+div#CrossOverHit div#HitZone div input{
+    float:left;
+}
+div#CrossOverHit div#HitZone div span{
+    text-align:center;
+    cursor:pointer;
+}
+div#CrossOverHit div#HitZone div#AddCross{
+    border:0;
+    width:100%;
+    clear:both;
+    height:26px;
+    line-height:26px;
+}
+div#CrossOverHit div#HitZone p{
+    margin:0;
+    padding:0;
+    clear:both;
+    width:95%;
+    clear:both;
+    text-align:center;
+}
+div#CrossOverHit div#NumBtn{
+    position:absolute;
+    top:0px;
+    left:60%;
+    width:35%;
+    min-height:300px;
+    background-color:#fff;
+    color:#454545;
+    border:2px solid #F8B29F;
+    border-radius:15px;
+}
+div#CrossOverHit > div#NumBtn > #QuickCross {
+    text-align:center;
+}
+div#CrossOverHit div#NumBtn a{
+    color:#454545;
+    text-decoration:none;
+    font-size:12px;
+}
+div#CrossOverHit div#NumBtn table{
+    width:95%;
+    border:1px solid #333;
+    margin:10px auto;
+    background-color:#fff;
+    text-align:center;
+    border-collapse:collapse;
+}
+div#CrossOverHit div#NumBtn table td{
+    border:1px solid #333;
+    height:17px;
+    width:20%;
+}
+div#CrossOverHit div#NumBtn table td span{
+    font-size: 12px;
+    cursor: pointer;
+}
+div#CrossOverHit div#CrossSend{
+    width:60%;
+    text-align:center;
+    height:48px;
+    line-height:48px;
+}
+/*膽拖*/
+div#Dantuo, div#DantuoC, div#DantuoSpa, div#FXF, div#XXX{
+    display:none;
+    position:relative;
+    height:300px;
+    font-size:12px;
+}
+div#Dantuo div.l, div#DantuoC div.l, div#DantuoSpa div.l, div#FXF div.l, div#XXX div.l{
+    float:left;
+    width:48%;
+}
+div.l table{
+    width:95%;
+    margin:0 auto;
+    text-align:center;
+    border:1px solid #454545;
+    border-collapse:collapse;
+}
+div.l table td{
+    width:20%;
+    border:1px solid #454545;
+    height:30px;
+}
+div.l table.s {
+    border:1px solid #D83811;
+}
+div.l table.s td{
+    width:16%;
+    border:1px solid #D83811;
+    background-color: #e4e4e4
+}
+div.l table td span{
+    cursor:pointer;
+}
+div.c table td span{
+    cursor:default;
+}
+div.l table td input{
+    display:none;
+}
+div.l table.s td input{
+    display:inline;
+}
+div.l h3{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+div.SubmitSend{
+    float:left;
+    width:100%;
+    text-align:center;
+}
+/*動態下注範圍選取*/
+div.Range{
+    height:22px;
+    border:1px solid #000;
+    margin:15px 0;
+    width:100%;
+}
+div.Range span{
+    width:19%;
+    height:18px;
+    line-height:18px;
+    display:block;
+    color:#000;
+    margin:1px;
+    float:left;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:underline;
+}
+div.Range span.On{
+    background-color: #f5dec1;
+    font-weight:bold;
+    color:#ff0000;
+    text-shadow: 1px 1px #111111;
+    text-decoration:none;
+}
+div.Range span.On b{
+    color:red;
+}
+#ShowBall h2{
+    display:block;
+    font-size:12px;
+    height:22px;
+    line-height:22px;
+    padding:0;
+    margin:0;
+    background-color:rgb(194,194,200);
+    color:#000;
+    text-align:center;
+}
+#ShowBall div#Ball{
+    height:92%;
+    overflow:auto;
+    padding:2px;
+    font-size:10pt;
+}
+#ShowBall div#Ball p{
+   margin:2px;
+   padding:0;
+   clear:both;
+   color:rgb(187,187,187);
+}
+#ShowBall div#Ball p span{
+   text-align:center;
+}
+/*快選區塊*/
+div#QuickMenu p.grp-title {
+    clear:both;
+    font-size:12px;
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    height:24px;
+    line-height:24px;
+    text-align:center;
+    z-index:50000;
+    padding:0;
+    color: #fff;
+    display:block;
+    background:transparent url(/TPL/pitaya/images/gradient.png) repeat-x 0 0;
+    font-weight:bold;
+    text-shadow: 2px 2px #111111;
+    cursor:pointer;
+}
+
+div#D3quick p.grp-title, div#B5D3quick p.grp-title {
+    text-align:center;
+    z-index:50000;
+    color: #fff;
+    background:transparent url(/TPL/pitaya/images/gradient.png) repeat-x 0 0;
+    font-weight:bold;
+    text-shadow: 2px 2px #111111;
+    cursor:pointer;
+}
+div#D3quick p.grp-title span, div#B5D3quick p.grp-title span{
+    display:inline;
+    color:#fff;
+    border:0;
+}
+div#QuickMenu p.grp-title i, div#D3quick p.grp-title i, div#B5D3quick p.grp-title i{
+    width:24px;
+    height:24px;
+    background:transparent url(/TPL/pitaya/images/menuIcon.png) no-repeat 0 3px;
+    display:inline-block;
+    vertical-align:top;
+    _background:transparent url() no-repeat 0 3px;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/TPL/pitaya/images/menuIcon.png', sizingMethod='image');
+    _vertical-align:baseline;
+    _margin-right:2px;
+}
+div#QuickMenu{
+    color:black;
+    text-align:center;
+    background-color:white;
+    border:1px solid black;
+}
+div#QuickMenu div{
+    font-size:14px;
+    border: 1px dotted black;
+    margin:4px;
+    padding:4px;
+    text-align:center;
+    height:24px;
+    line-height:24px;
+    clear:both;
+    width:95%;
+}
+div#QuickMenu fieldset {
+    width:62%;
+    width:47%;
+    float:left;
+}
+div#QuickMenu fieldset.ball49 {
+    width:32%;
+    width:95%;
+}
+div#QuickMenu fieldset::after {
+    clear:both;
+}
+div#QuickMenu fieldset.HB, div#QuickMenu fieldset.SPA{
+    width:95%;
+}
+div#QuickMenu fieldset p {
+    margin:5px;
+    padding:0;
+    line-height:20px;
+}
+div#QuickMenu fieldset.ball49 p {
+    line-height:28px;
+    line-height:20px;
+    text-align:left;
+}
+div#QuickMenu fieldset p a{
+    padding:3px;
+    margin:2px;
+    cursor:pointer;
+    font-weight: bold;
+}
+#GrpBtn fieldset {
+    margin: 4px;
+    padding: 0;
+    border: 1px dotted black;
+    background-color:#fff;
+}
+#QuickBar legend, #GrpBtn legend {
+    font-size: 12px;
+    margin-left: 5px;
+    color: black;
+    background-color:white;
+}
+#QuickBar a, #GrpBtn fieldset a {
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    border:1px solid #bbb;
+    background:#fff url(/TPL/pitaya/images/tab_bg.png) repeat-x bottom;
+}
+#GrpBtn fieldset a:hover {
+    background-position:top;
+}
+#QuickBar a, #GrpBtn fieldset.ball49 a {
+    font-size:12px;
+    padding:7px;
+    padding:2px;
+    margin:2px;
+    margin:1px;
+    border-radius:18px;
+    border-radius:12px;
+    background:#fff url() repeat-x bottom;
+}
+#GrpBtn fieldset a.b01, #GrpBtn fieldset a.b02, #GrpBtn fieldset a.b07, #GrpBtn fieldset a.b08, #GrpBtn fieldset a.b12, #GrpBtn fieldset a.b13, #GrpBtn fieldset a.b18, #GrpBtn fieldset a.b19, #GrpBtn fieldset a.b23, #GrpBtn fieldset a.b24, #GrpBtn fieldset a.b29, #GrpBtn fieldset a.b30, #GrpBtn fieldset a.b34, #GrpBtn fieldset a.b35, #GrpBtn fieldset a.b40, #GrpBtn fieldset a.b45, #GrpBtn fieldset a.b46 {
+    color:red;
+}
+#GrpBtn fieldset a.b03, #GrpBtn fieldset a.b04, #GrpBtn fieldset a.b09, #GrpBtn fieldset a.b10, #GrpBtn fieldset a.b14, #GrpBtn fieldset a.b15, #GrpBtn fieldset a.b20, #GrpBtn fieldset a.b25, #GrpBtn fieldset a.b26, #GrpBtn fieldset a.b31, #GrpBtn fieldset a.b36, #GrpBtn fieldset a.b37, #GrpBtn fieldset a.b41, #GrpBtn fieldset a.b42, #GrpBtn fieldset a.b47, #GrpBtn fieldset a.b48 {
+    color:blue;
+}
+#GrpBtn fieldset a.b05, #GrpBtn fieldset a.b06, #GrpBtn fieldset a.b11, #GrpBtn fieldset a.b16, #GrpBtn fieldset a.b17, #GrpBtn fieldset a.b21, #GrpBtn fieldset a.b22, #GrpBtn fieldset a.b27, #GrpBtn fieldset a.b28, #GrpBtn fieldset a.b32, #GrpBtn fieldset a.b33, #GrpBtn fieldset a.b38, #GrpBtn fieldset a.b39, #GrpBtn fieldset a.b43, #GrpBtn fieldset a.b44, #GrpBtn fieldset a.b49 {
+    color:green;
+}
+#GrpBtn fieldset a.hasGold {
+    background:yellow url() repeat-x bottom;
+}
+#GrpBtn fieldset a.RED {
+    color:red;
+}
+#GrpBtn fieldset a.BLUE {
+    color:blue;
+}
+#GrpBtn fieldset a.GREEN {
+    color:green;
+}
+#GrpBtn  label {
+    font-size:9px;
+    vertical-align:middle;
+}
+#GrpBtnB3, #GrpBtnB5 {
+    overflow:hidden;
+    position:relative;
+}
+#GrpBtn{
+    overflow:hidden;
+    width:95%;
+    margin:5px;
+}
+form.Aside {
+    width:75%;
+}
+/*廣告css*/
+#AD{
+    width:200px;
+    height:540px;
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:167px;
+}
+/*六合彩 連碼 連肖 連尾 自選不中的組合視窗css*/
+#ShowBall{
+    width:194px;
+    border:3px solid #cccccc;
+    margin:15px 0 0 0;
+    height:78%;
+    background-color:#000;
+    border-radius:8px;
+    box-shadow: 0px 0px 5px 5px #333;
+}
+@media all and (min-device-height:800px) and (max-device-height:899px) {
+    #bet-scroll {
+        max-height:200px;
+    }
+}
+@media all and (min-device-height:900px) {
+    #bet-scroll {
+        max-height:250px;
+    }
+}
+@media all and (max-width: 1024px) {
+    #AD{
+        left:799px;
+    }
+}
+@media all and (min-width: 1025px) {
+    #box_body {
+        width:1024px;
+        margin:0 auto;
+    }
+    #AD {
+        left:auto;
+        right : 50%;
+        margin-right:-500px;
+    }
+}
+@media all and (min-width: 1025px) and (max-width: 1279px) {
+    #bet-scroll {
+        max-height:184px \9;
+        *height:184px \9;
+    }
+}
+@media all and (min-width: 1365px) and (max-width: 1439px) {
+    #bet-scroll {
+        max-height:210px \9;
+        *height:210px;
+    }
+}
+@media all and (min-width: 1440px) and (max-width: 1599px) {
+    #bet-scroll {
+        max-height:210px \9;
+        *height:210px;
+    }
+}
+@media all and (min-width: 1600px) and (max-width: 1679px) {
+    #bet-scroll {
+        max-height:210px \9;
+        *height:210px;
+    }
+}
+@media all and (min-width: 1680px) and (max-width: 1919px) {
+    #bet-scroll {
+        max-height:210px \9;
+        *height:210px;
+    }
+}
+@media all and (min-width: 1920px){
+    #bet-scroll {
+        max-height:210px \9;
+        *height:210px;
+    }
+}
+#QuickBar h2, #GrpBtn h2 {
+    margin: 0;
+    padding: 0;
+    display: none;
+    font-size: 16px;
+    color: white;
+    clear:both;
+}
+#QuickBar h3, #GrpBtn h3 {
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+#QuickBar input, #GrpBtn input {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+/*滑動css*/
+#touchPadZone {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background: rgba(0,0,0,0.6);
+    z-index:30000;
+    top:0;
+    left:0;
+    display:none;
+}
+/*離開區塊*/
+#touchPadZone > #exitHall {
+    float:right;
+    width:24px;
+    height:24px;
+    line-height:24px;
+    display:block;
+    border-radius:12px;
+    text-align:center;
+    background-color: #CCCCCC;
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+/*滑動顯示區塊*/
+#touchNav{
+    width:70%;
+    height:580px;
+    margin:0 auto;
+}
+#touchNav h1{
+    display:block;
+    width:100%;
+    text-align:center;
+    font-size:32pt;
+    color:#fff;
+    text-shadow: 2px 2px #111111;
+    margin:10px 0;
+}
+#touchNav div#Pad{
+    top:0;
+    left:0;
+    width:2000%;
+}
+#touchNav div#Pad div{
+    width:5%;
+    float:left;
+}
+div#LeftGo{
+    width:0;
+    height:0;
+    line-height:0;
+    border-top:50px solid transparent;
+    border-left:0 solid transparent;
+    border-bottom:50px solid transparent;
+    border-right:50px solid rgba(255, 255, 255,0.5);
+    position:absolute;
+    top:306px;
+    left:0;
+    display:none;
+    color:#000;
+    font-weight:normal;
+}
+div#RightGo{
+    width:0;
+    height:0;
+    line-height:0;
+    border-top:50px solid transparent;
+    border-left:50px solid rgba(255,255,255,0.5);
+    border-bottom:50px solid transparent;
+    border-right:0 solid transparent;
+    position:absolute;
+    top:306px;
+    right:0;
+    display:none;
+    color:#000;
+    font-weight:normal;
+}
+div#Pad > div > nav{
+    padding:0;
+    margin:5px auto;
+    display:block;
+    overflow:hidden;
+    width:80%;
+    border-radius:30px;
+    background-color:#fff;
+    border:1px solid #555;
+}
+div#Pad > div > nav > a{
+    border-bottom:1px solid #555;
+    height:24pt;
+    line-height:24pt;
+    width:-webkit-calc(100% - 13px);
+    width:calc(100% - 13px);
+    padding:3px 0 0 13px;
+    font-size:22pt;
+    font-weight:normal;
+    display:block;
+    color:#000;
+    text-decoration:none;
+}
+div#Pad > div > nav > a::after{
+    content:">";
+    float:right;
+    height:24pt;
+    line-height:24pt;
+    font-weight:bold;
+    font-size:22pt;
+    margin-right:5px;
+}
+div#Pad > div > nav > a:last-child{
+    border-bottom:0;
+}
+/*右方規則說明區塊css*/
+#RightBar, #RightBar2 {
+    border: 1px solid #6b6b6b;
+    border-right: 0;
+    float: right;
+    cursor: pointer;
+    overflow: hidden;
+    width: 20px;
+}
+#RightBar div, #RightBar2 div {
+    background-color: #e2e2e2;;
+    border: 1px solid white;
+    border-bottom: 1px solid #afafaf;
+    text-align: center;
+}
+#RightBar .aa, #RightBar2 .aa {
+    height: 16px;
+    line-height: 16px;
+    color: #828282;
+    font-weight: bold;
+}
+#RightBar .bb, #RightBar2 .bb {
+    border-top: 0;
+    padding: 1px;
+    color: #828282;
+    font-size: 12px;
+}
+#ShowRule #RuleText,#QuickBar div#QuickMenu,#ShowRule2 #RuleText2{
+    border-radius:10px;
+}
+#ShowRule, #ShowRule2 {
+    position:absolute;
+    top: 149px;
+    right: 0px;
+    z-index: 50;
+    font-size:12px;
+}
+#ShowRule {
+    min-width:30px;
+    display:none;
+}
+#ShowRule2 {
+    width:385px;
+}
+#ShowRule #RuleText, #ShowRule2 #RuleText2 {
+    border: 1px solid #6b6b6b;
+    float: right;
+    min-height:150px;
+    padding: 0;
+    background-color:rgb( 231, 241, 248 );
+}
+#ShowRule #RuleText {
+    width: 245px;
+}
+#ShowRule2 #RuleText2 {
+    width: 360px;
+}
+#ShowRule #RuleText ol, #ShowRule2 #RuleText2 ol{
+    background-color:rgb( 255, 255, 255 );
+    margin:3px;
+    padding-left:20px;
+    list-style-type:decimal;
+}
+#ShowRule2 #RuleText2 ol li b{
+    font-weight:bold;
+}
+#ShowRule li{
+    color:#000;
+    font-weight:normal;
+}
+#ShowRule .ruleTips img{
+    border:0;
+}
+#ShowRule li span{
+    font-weight:bold;
+    color:red;
+}
+#ShowRule .ruleTips span{
+    font-weight:bold;
+    color:blue;
+}
+/*提示*/
+#Tips, #Tips2{
+    position:absolute;
+    top:0;
+    left:0;
+    width:250px;
+    height:45px;
+    border:1px solid #000;
+    padding:2.5px;
+    background-color:#fff;
+    z-index:500;
+    border-radius:5px;
+    box-shadow: 3px 3px 3px rgba(48, 48, 48, 0.7);
+    font-size:12px;
+}
+#Tips:after, #Tips2:after  {
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    border-bottom:10px solid #fff;
+    border-right:5px solid transparent;
+    border-left:5px solid transparent;
+    position:absolute;
+    left:120px;
+    top:-9px;
+    z-index:501;
+}
+#Tips:before, #Tips2:before {
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    border-bottom:10px solid #000;
+    border-right:5px solid transparent;
+    border-left:5px solid transparent;
+    position:absolute;
+    left:120px;
+    top:-10px;
+    z-index:500;
+}
+#Tips b.before, #Tips2 b.before {
+    display:none;
+}
+#Tips b.after, #Tips2 b.after {
+    display:none;
+}
+button.order, input.order, .SubmitSend input.yes, input#switchMode, input#fquick, .Send input.yes, #GrpBtn #QuickMenu p input#QuickSubmit, input.submit_cen, input#ok, .Inp input.btn, #Game fieldset#PackgeBox input.quickb, #CrossSend input.yes, #XF_Send input.yes, #HitZone #AddCross input, .Send input.yes_min, input#quickD3, input.long_cen {
+    overflow: hidden;
+    width: auto;
+    height: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    bottom: 6px;
+    right: 10px;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    text-shadow: #3e5779 0 -1px 0;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+    border: 1px solid #2d3f57;
+    border-radius: 5px;
+    background-image: none;
+    background-color: #50709a;
+    background-image: -moz-linear-gradient(top, #7c97bb 0%, #5a7caa 50%, #50709a 51%, #476489 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c97bb), color-stop(50%,#5a7caa), color-stop(51%,#50709a), color-stop(100%,#476489)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom, #7c97bb 0%,#5a7caa 50%,#50709a 51%,#476489 100%); /* W3C */
+}
+#GrpBtn #QuickMenu p input.cancel, input.cancel_cen, .Send input.no, #CrossSend input.no, #XF_Send input.no, .SubmitSend input.no, .Inp input.btnD, .Send input.no_min  {
+    overflow: hidden;
+    width: auto;
+    height: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    bottom: 6px;
+    right: 10px;
+    margin: 0;
+    padding: 0 10px;
+    color: white;
+    text-shadow: #3e5779 0 -1px 0;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+    border: 1px solid #2d3f57;
+    border-radius: 5px;
+    background-image: none;
+    background-color: #e57a78;
+    background-image: -moz-linear-gradient(top, #e57a78 0%, #dc504d 50%, #d83b38 51%, #ce2c28 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e57a78), color-stop(50%,#dc504d), color-stop(51%,#d83b38), color-stop(100%,#ce2c28)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #e57a78 0%,#dc504d 50%,#d83b38 51%,#ce2c28 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, #e57a78 0%,#dc504d 50%,#d83b38 51%,#ce2c28 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, #e57a78 0%,#dc504d 50%,#d83b38 51%,#ce2c28 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom, #e57a78, #dc504d 50%, #d83b38 51%, #ce2c28);
+}
+input[type=button]:disabled {
+    opacity:0.6;
+}
+input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
+    opacity:0.9;
+}
+/*彩票類玩法表格css*/
+table.GameTable {
+    width: 100%;
+    text-align: center;
+}
+table.GameTable tr {
+    background-color: white;
+    height:28px;
+}
+table.GameTable tr.title_line {
+    color: white;
+    font-size:12px;
+    height:22px;
+    line-height:22px;
+    background-color: #828282;
+}
+table.GameTable tr.title_line td{
+    white-space:nowrap;
+}
+table.GameTable td{
+    padding:3px;
+}
+table.GameTable td.num {
+    width:55px;
+    background-color: #F4F8F9;
+}
+table.GameTable td.oddsD{
+    background-color:#ffffaa;
+    color: red;
+    font-weight: bold;
+}
+table.GameTable td.odds {
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    font-family: Verdana, "Microsoft YaHei", "SimSun", Arial, Helvetica, sans-serif;
+}
+div.spaceH {
+    clear:both;
+    height:30px;
+    line-height:30px;
+    font-size:9pt;
+    width:97%;
+    margin: 0 0 0 5px;
+}
+/*賠率紅色*/
+label.odds{
+    color:red;
+    font-weight:bold;
+    display:block;
+    margin-top:2px;
+}
+div.odds {
+    background-color: white;
+}
+div.num{
+    font-family: "Arial Black";
+    font-weight:bold;
+    font-size:11pt;
+}
+table.MobileTable tr td {
+    font-size:8pt;
+}
+table.GameTable td input.G{
+    width:4em;
+    margin:2px 0;
+}
+/*彩票類玩法即時搖珠球號的css*/
+#final_01, #final_02, #final_03, #final_04,#final_05, #num{
+    font-size:12px;
+    font-weight:bold;
+}
+#final_01, #final_04 {
+  color: red;
+}
+#final_02, #final_05 {
+  color: green;
+}
+#final_03 {
+  color: blue;
+}
+#D3Result{
+    width:220px;
+    position:absolute;
+    top:111px;
+    right:0;
+    display:none;
+}
+#SendSS, #SendD3, #SendP3, #SendT3, #SendCQ, #SendJX, #SendTJ, #SendB3, #SendB5, .SendLT {
+    text-align:right;
+    padding:0;
+    margin:-10px 0 15px 5px;
+    width:95%;
+}
+#SendSS span.credit, #SendB3 span.credit, #SendB5 span.credit, .SendLT span.credit{
+    font-size:8pt;
+}
+
+#shownum{
+    position:absolute;
+    top:0px;
+    left:569px;
+    text-align:left;
+    width:250px;
+    padding:0 5px 0 5px;
+    line-height:8pt;
+    font-size:8pt;
+}
+#tickedBox {
+    position:absolute;
+    top:42px;
+    left:569px;
+    text-align:left;
+    width:200px;
+    padding:0 5px 0 5px;
+    line-height:8pt;
+    font-size:8pt;
+    display:none;
+}
+#tickedBoxBt {
+    position:absolute;
+    top:74px;
+    left:569px;
+    text-align:left;
+    width:200px;
+    padding:0 5px 0 5px;
+    line-height:8pt;
+    font-size:8pt;
+    display:none;
+}
+#BetInfo{
+    position:absolute;
+    top:215px;
+    right:0;
+    width:225px;
+    display:none;
+}
+#NAS-fix-ie6 {
+    display:none;
+}
+
+.bb3d_video_link {
+    display: block !important;
+    background: url("/C_TPL/C_TYPE2/images/btnLive.gif") no-repeat;
+    float: left;
+    width: 140px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 10px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:12px;
+}
+#ding {
+    height:0;
+    overflow:hidden;
+}
+embed {
+    width:0;
+    height:0;
+    overflow:hidden;
+}
+
+td#NA_ODD_bg, td#NA_EVEN_bg, td#NA_OVER_bg, td#NA_UNDER_bg {
+    min-width:60px;
+    width:auto !important;
+    width:60px;
+}
+#SP_R_bg, #SP_G_bg, #SP_B_bg {
+    min-width:90px;
+    width:auto !important;
+    width:90px;
+}
+td#C7_G_bg, td#C7_B_bg, td#C7_N_bg {
+    min-width:75px;
+    width:auto !important;
+    width:75px;
+}
+
+.aniDissolve{
+    animation:solve 1s 1;
+    -o-animation:solve 1s 1; /* Opera */
+    -moz-animation:solve 1s 1; /* Firefox */
+    -webkit-animation:solve 1s 1; /* Safari and Chrome */
+}
+.toTop{
+    animation:bottomstart 0.5s 1;
+    -o-animation:bottomstart 0.5s 1; /* Opera */
+    -moz-animation:bottomstart 0.5s 1; /* Firefox */
+    -webkit-animation:bottomstart 0.5s 1; /* Safari and Chrome */
+}
+.toBottom{
+    animation:bottomend 0.5s 1;
+    -o-animation:bottomend 0.5s 1; /* Opera */
+    -moz-animation:bottomend 0.5s 1; /* Firefox */
+    -webkit-animation:bottomend 0.5s 1; /* Safari and Chrome */
+}
+@-webkit-keyframes solve {
+    0% { opacity: 1; }
+    10% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-o-keyframes solve {
+    0% { opacity: 1; }
+    10% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes solve {
+    0% { opacity: 1; }
+    10% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes solve {
+    0% { opacity: 1; }
+    10% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes bottomstart{
+    0%   { -webkit-transform: translateY(100%) translateZ(0); }
+    100% { -webkit-transform: translateY(0) translateZ(0); }
+}
+@-moz-keyframes bottomstart{
+    0%   { -moz-transform: translateY(100%) translateZ(0); }
+    100% { -moz-transform: translateY(0) translateZ(0); }
+}
+@-o-keyframes bottomstart{
+    0%   { -o-transform: translate(0,100%); }
+    100% { -o-transform: translate(0,0);}
+}
+@keyframes bottomstart{
+    0%   { transform: translateY(100%) translateZ(0); }
+    100% { transform: translateY(0) translateZ(0); }
+}
+@-webkit-keyframes bottomend{
+    from { -webkit-transform: translateY(0) translateZ(0); }
+    to   { -webkit-transform: translateY(100%) translateZ(0); }
+}
+@-moz-keyframes bottomend{
+    from { -moz-transform: translateY(0) translateZ(0); }
+    to   { -moz-transform: translateY(100%) translateZ(0); }
+}
+@-o-keyframes bottomend{
+    from { -o-transform: translate(0,0);}
+    to   { -o-transform: translate(0,100%); }
+}
+@keyframes bottomend{
+    from { transform: translateY(0) translateZ(0); }
+    to   { transform: translateY(100%) translateZ(0); }
+}
+
+#formLhc input,#formB5 input,#formB3 input, input[type=text], input[type=number],input[type=password], select{
+    -moz-border-radius:3px;;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #000;
+    text-align:center;
+    width:45px;
+}
+.GameTable td.odds{
+    width:60px;
+}

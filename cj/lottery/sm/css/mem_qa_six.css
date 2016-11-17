@@ -1,0 +1,233 @@
+﻿/*2010-09-20-For NewSI2 =======chg passwd ======*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~ chg_passwd~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+body#ROUL div#main { font-family: arial; font-size: 12px; color: #313131; line-height: 22px; }
+.b { font-weight: bold; margin-bottom:15px;}
+h1 {font-size: 12px; padding-bottom:10px; border-bottom: 1px dotted #313131;}
+h1 select {font-size: 12px;}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~According to ball games replacement~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+table {	border: 2px solid #BC9A3F;}
+th {	background-color: #C8A670;}
+th, td {	border: 1px solid #B9B9A3;}
+body#SPORT table { border-collapse: separate;border-spacing: 1; border:none; background-color:#B9B9A3;}
+body#SPORT th {border:none; padding:3px 2px;}
+body#SPORT td { border:none; background-color:#FFF; padding:3px 2px;}
+/*辽ㄆ絛ㄒ*/
+body#SPORT .demo { background-color:#333;}
+body#SPORT .demo th { background-color:#ff9700;}
+
+/*~~~ League  ~~~*/
+.subHead {	background-color: #DADADA;}
+#RBK table {border: 2px solid #518A57}
+#RBK th {	background-color: #57593A; color:#FFF;}
+#RBK th, #RBK td {	border: 1px solid #B9B9A3;}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~Sharing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*a {}
+a:link, a:visited {	color: #669900;}
+a:hover {	color:#C00;	text-decoration: none;}
+p {	margin: 0px;	line-height: 1.3;}
+/*~~~~~~               Red font               ~~~~~~~*/
+strong {	color: #C00; font-weight: normal; }
+/*~~~~~~               Blue font               ~~~~~~~*/
+#main em, #main td.em {	color: #00F;	font-style: normal;}
+#main .b em { color:#000;font-style: italic!important;}
+/*~~~~~~               bgcolor font               ~~~~~~~*/
+s { background-color:#F00; color:#FFF; text-decoration: none; padding:2px;}
+/*~~~~~~               Table               ~~~~~~~*/
+table {
+	border-collapse:collapse;
+	background-color: #FFFFFF;
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+th {font-weight: normal;}
+table th, table td {
+	white-space: normal;
+	text-align: left;
+	padding: 2px 0.3em 1px;
+}
+/*~~~~~~               Abbreviation               ~~~~~~~*/
+acronym {}
+/*~~~~~~               Company name               ~~~~~~~*/
+tt {
+	font-weight: bold; color: #993300; font-size: 12px;
+	margin-right: 2px; margin-left: 2px;	
+}
+/*ul, ol { margin: 0px;}*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~data~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#info1,#info2,#info3,#info4,#info5,#info6,#info7,#info8 {
+	background-color: #FFFFFF;
+	padding: 0 11px 20px;
+	line-height:170%;
+	/*font: 12px Arial, Helvetica, sans-serif;*/
+	
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~Ball games synopsis~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#intro {	margin-bottom: 50px;}
+#intro h2 {	margin: 0px;	font-size: 15px;	color: #000; font-weight:bold;}
+#intro ul {	line-height: 18px;	padding: 0px;	margin: 18px 0 0 0;}
+#intro li {	margin-bottom: 18px; text-align:justify;}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~Fast menu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#summary {	margin-bottom: 4em;}
+#summary h3 {	margin: 0px;	font-size: 12px;	color: #8F7421;}
+#summary ul {	list-style-type: none;	margin-top: 1em;}
+#summary li {	display: inline;}
+#summary a{
+	white-space: nowrap;
+	background: url(../images/ind_arr.gif) no-repeat left -120px;
+	margin-bottom: 0.6em;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~Vice- content~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#rule {}
+/*~~~~~~~~~~~~~~~~~~~~~~~~Game~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.play {	margin-bottom: 3em;}
+.play table { margin-top:1em; margin-bottom:0.6em;}
+.play ul, .play ol {	margin-left: 15px;}
+#rule h4 {
+	margin: 0px 0px 0.6em -5px;
+	color: #FFF;
+	font-size: 12px;
+	background: url(../images/inda_h4.jpg) no-repeat left center;
+	height: 23px;
+	padding: 6px 6px 0.2em 22px;
+	font-weight: normal;
+}
+#rule h4 em {	color: #600;	margin-left: 4px;	margin-right: 4px;}
+#rule p.p4 {	margin: 0px 0px 1.5em;	line-height: 1.6em;}
+/*~~~~~~~~~~~~~~~  Table set  ~~~~~~~~~~~~~~~*/
+
+/*~~~  Team  ~~~*/
+td.team {	text-align: left;	padding-left: 0.4em;}
+td.drawn {	color: #C00;	text-align: right;}
+.rig {text-align: right;}
+/*~~~  Bold red font - Table  ~~~*/
+.bb {	color: #C00;	font-weight: bold;}
+.dred {color: #C00;	font-weight: bold;}
+/*~~~  Handicap bgcolor - Table - 1x2~~~*/
+.htd {
+	font-weight: bold;
+	color: #060;
+	background: #E4F0F3 url(../images/inda_BS_r.gif) no-repeat 3;
+	padding-left: 18px;
+}
+.htd2 {font-weight: bold;	color: #C00;
+	background: #FFC url(../images/inda_BS_r.gif) no-repeat 3;
+	padding-left: 17px;
+}
+/*Handicap Parlay*/
+td.hp3 {
+	background: url(../images/inda_BS_r.gif) no-repeat 98% center;
+	padding-right: 17px;
+	text-align: right;
+	margin: 0px; border-top:0 none; border-bottom:0 none;
+}
+td.hp3 strong {	margin-left: 2px;}
+/*~~~~~~~~~~~~~~~~~~~~~~~~None border~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Blue font*/
+table em {	margin-right: 0.5em;}
+/*Red font*/
+table strong {	font-weight: bold;}
+/*~~~~~~~~~~~~~~~~~~~~~~~~Category~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.type {}
+.type h5 {
+	background: url(../images/point.gif) no-repeat left top;
+	margin: 20px 0;
+	padding-left: 22px;
+	height: 20px;
+	color: #C00;
+	line-height: 18px;
+}
+.type h5 em {	color: #666; margin-right:1px;margin-left: 1px;}
+.type p.p5, #rule p.p5 {	margin-left: 22px;}
+.type h6 {
+	color: #33C;
+	margin: 1em 0 0.8em 22px;
+	font-size: 14px;
+}
+/*~~old .type p.p6~~*/
+.type .tex {
+	margin-left: 22px; margin-right:22px;
+	background-color: #FFFFCC;
+	padding: 0.5em 1.3em;
+	width:100%;
+}
+.type .tex p {	margin: 0.7em 18px 0.5em auto;}
+.type .tex strong {	margin-right: 0.3em;	margin-left: 0.3em;}
+/*First line of selection - transaction model*/
+.type .tex p:first-line {color: #009;}
+/*First line of selection - Result*/
+.type .tex span {display: block;color: #666;}
+.type ul, .type ol {
+	line-height: 1.2;
+	margin-left: 35px;
+	margin-bottom: 0.8em;
+}
+.type li {	line-height: 16px;margin-bottom: 21px;}
+/*Table Head*/
+.type table {	margin: 0.6em auto 0.6em 22px;}
+.play caption, .type caption {	text-align: left;	color: #33C;}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~Link~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#nav {
+	width: 180px;
+	position: absolute;
+	top: 81px;
+	left: 0px;
+	font: 0.75em Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 1px;
+}
+#nav ul {
+	list-style-type: none;
+	margin: 0px 0px 0px 10px;
+	padding: 15px 0px 0px;
+}
+#nav li {
+	display: block;
+	padding: 8px 12px;
+	border-bottom: 1px solid #937520;
+	width: 160px;
+}
+#nav a {
+	text-decoration: none;
+	display: block;
+	padding-left: 15px;
+}
+#nav a:link, #nav a:visited {	background: url(../images/ind_arr.gif) no-repeat left top;	color: #FFF;}
+#nav a:hover {	background: url(../images/ind_arr.gif) no-repeat left -60px;	color: #FF0;}
+#nav .mail {}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#foot {
+	background-color: #7C631D;
+	height: 28px;
+	color: #FFF;
+	text-align: center;
+	font-size: 12px;
+	bottom: 0px;
+	width: 90%;
+	padding-top: 6px;
+	margin: auto;
+	border: 1px solid #000;
+	border-top:0;
+}
+#foot tt {color: #FFF;}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~ For Mac/Safari Fix ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html > body h2 tt { font-size:12px;}
+html > body #rule h4 {padding-top: 12px; }
+html > body .play ul, html > body .play ol {	margin-left: -2px;}
+html > body table { font-size:12px;}
+html > body #nav li { width:130px;}
+html > body h5, html > body tt {font-size:12px;}
+html > body #summary ul { margin-left:-2.5em;}
+
+/*稼繟*/
+p.b { font-weight: bold; margin-bottom:15px; margin-top:15px;}
+
+/* ~~~~~~ New FT ~~~~~~ */
+table.menu { background-color:#FFF!important; width:90%; text-align:center;}
+table.menu td { background-color:#333333!important;}
+.quick_link { width:100%; background-color:#333333; font-weight:bold;padding: 5px 0px 5px 10px; color:#FFF;}
+
+.displayyes { display: block;}
+.displayno { display: none;}

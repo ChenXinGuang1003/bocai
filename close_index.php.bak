@@ -1,0 +1,126 @@
+<?php
+session_start();
+header("Expires: Mon, 26 Jul 1970 05:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-cache, must-revalidate");
+header("Pragma: no-cache");
+$C_Patch=$_SERVER['DOCUMENT_ROOT'];
+include_once($C_Patch."/app/member/include/address.mem.php");
+include_once($C_Patch."/app/member/include/config.inc.php");
+include_once($C_Patch."/app/member/common/function.php");
+
+$sql	=	"select * from sys_config limit 0,1";
+$query	=	$mysqli->query($sql);
+$rows	=	$query->fetch_array();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>网站更新启示</title>
+    <style>
+        body{
+            background: #1B110D;
+        }
+    </style>
+    <link rel="shortcut icon" href="/cl/tpl/starball/ver1/image/logo.ico" type="image/x-icon"/>    <link href="/cl/tpl/commonFile/css/standard.css" rel="stylesheet"/>
+    <link href="/TPL/template/style/upup.css" rel="stylesheet"/>
+</head>
+<body class="zh-cn">
+<div id="maintain-box">
+    <div id="maintain" class="pngclass">
+        <div id="maintain-top"><span class="notice">网站系统公告</span><div class="noticeIcon"></div></div>
+        <div id="maintain-logo"><img src="/cl/tpl/starball/ver1/image/upup/160X160.png" class="pngclass"/></div>
+        <div id="maintain-content">
+            <p class="text-body">
+                目前网站进行系統維護中，如有不便之处，敬请见谅！
+            </p>
+            <p class="text-notice">Access to the site is not available due to scheduled maintenance,<br/>
+                we apologize for any inconvenience caused.</p>
+            <p class="text-date">--   预计于 <span>北京时间 <?=$rows["end_close_time"]?></span> 完成！   --</p>
+            <p class="text-info">
+            </p>
+            <p class="text-upup">客戶：<?=$rows["service_email"]?>&nbsp;&nbsp;&nbsp;&nbsp;推廣：<?=$rows["generalize_email"]?>&nbsp;&nbsp;&nbsp;&nbsp;投訴：<?=$rows["complain_email"]?></p>
+        </div>
+    </div>
+</div>
+<script src='/cl/js/jquery-1.7.2.min.js'></script>
+<script src="/cl/js/tools/float.js"></script>
+
+<ul id="TplFloatPic_0" class="TplFloatSet" style="position:absolute;cursor:pointer;display:none;" picfloat="right" class="png_fix">
+    <li><a  onclick="BBOnlineService();">
+            <img src="/images/138794919729.png?82220" align="center" alt="" class="png_fix"/>
+            <img src="/images/138794919996.png?82220" align="center" style="display:none;" alt="" class="png_fix"/>
+        </a></li>
+    <li><a  onclick="BBOnlineService();">
+            <img src="/images/138794933827.png?82220" align="center" alt="" class="png_fix"/>
+            <img src="/images/138794934034.png?82220" align="center" style="display:none;" alt="" class="png_fix"/>
+        </a></li>
+    <li><a  onclick="BBOnlineService();">
+            <img src="/images/138794934333.png?82220" align="center" alt="" class="png_fix"/>
+            <img src="/images/138794934564.png?82220" align="center" style="display:none;" alt="" class="png_fix"/>
+        </a></li>
+    <li><a  onclick="BBOnlineService();">
+            <img src="/images/138794934944.png?82220" align="center" alt="" class="png_fix"/>
+            <img src="/images/138794935406.png?82220" align="center" style="display:none;" alt="" class="png_fix"/>
+        </a></li>
+    <li><a  onclick="FloatClose(this);">
+            <img src="/images/138794935858.png?82220" align="center" alt="" class="png_fix"/>
+            <img src="/images/138794935858.png?82220" align="center" style="display:none;" alt="" class="png_fix"/>
+        </a></li>
+</ul>
+<style>
+    .TplFloatSet a{display:block;margin:0 auto;text-align:center;}
+    .TplFloatSet img{vertical-align:bottom;font-size:0px;}
+    .TplFloatSet li{list-style: none;}
+</style>
+<script type="text/javascript">
+    //關閉效果
+    function FloatClose(t){ event.cancelBubble = true;$(t).parents('.TplFloatSet').hide(); }
+    var left_top = 150, right_top = 150, float_list = [];
+    $(window).load(function() {
+        // 廳主自改 - 浮動圖V2 -2013.7.19
+        float_list['0'] = $('#TplFloatPic_0');
+        for (var i in float_list) {
+            var self = float_list[i],
+                picfloat = (self.attr('picfloat') == 'right') ? 1 : 0;
+            self.show().Float({'floatRight' : picfloat, 'topSide' : ((picfloat == 1) ? right_top : left_top)});
+            var w = 0;
+            $.each(self.find('img'), function(){
+                var width = $(this).width();
+                w = (width > w) ? width : w;//取圖片最大寬度
+                $(this).attr({
+                    'width' : width,
+                    'height': $(this).height()
+                });
+            });
+            self.css('width', w);
+            if (picfloat) {
+                right_top = right_top + 10 + (self.height() || 250);
+            } else {
+                left_top = left_top + 10 + (self.height() || 250);
+            }
+
+            $('a', self).each(function(){
+                $(this).css({'width' : $(this).find('img:first').width(),'height' : $(this).find('img:first').height()});
+                $(this).hover(function() {
+                    $(this).find('img:first').hide();
+                    $(this).find('img:last').show();
+                }, function() {
+                    $(this).find('img:last').hide();
+                    $(this).find('img:first').show();
+                });
+            });
+        }
+    });
+</script>
+
+
+<script language="javascript">
+    function BBOnlineService() {
+        psL5Pdow();
+    }
+</script>
+
+</body>
+</html>

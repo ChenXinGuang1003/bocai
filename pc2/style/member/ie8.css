@@ -1,0 +1,167 @@
+/*font-family*/
+#ui-btn-games ul li a, .second-nav a, .rde-menu a, #game_result {
+}
+#content {
+    min-height:300px;
+    width:76%;
+}
+#content div.scrollL > b.before {
+    position:absolute;
+    width:60px;
+    height:26px;
+    line-height:26px;
+    top:2px;
+    left:0;
+    background-color:#fff;
+    color:#333;
+    text-align:center;
+    font-weight:bold;
+    z-index:101;
+    cursor:pointer;
+    display:block;
+    font-size:12px;
+    border-right:2px dotted #ccc;
+}
+#content div.scrollR > b.after  {
+    position:absolute;
+    width:60px;
+    height:26px;
+    line-height:26px;
+    top:2px;
+    right:0;
+    background-color:#fff;
+    color:#333;
+    text-align:center;
+    font-weight:bold;
+    z-index:101;
+    cursor:pointer;
+    display:block;
+    font-size:12px;
+    border-left:2px dotted #ccc;
+
+}
+#content div.scrollR > b.before, #content div.scrollL > b.after {
+    display:none;
+}
+ul.DLUL {
+    border:0;
+    background:transparent url(/TPL/pitaya/images/lineD.png) no-repeat top left;
+    width:202px;
+    height:24px;
+}
+ul.DLUL li {
+    background-color:transparent;
+    line-height:24px;
+}
+#Game fieldset > nav, div#D2quick > p, div#W3quick > p, div#B5D2quick > p, div#B5W3quick > p, div#W1quick > p, div#B5W1quick > p {
+    border:0;
+    background:transparent url(/TPL/pitaya/images/btn-bg.png) no-repeat top left;
+    height:24px;
+    line-height:22px;
+    margin-left:5px;
+    position:relative;
+    z-index:1;
+    margin-bottom:3px;
+}
+#Game fieldset > nav > b.last, div#D2quick > p a.last , div#W3quick > p a.last , div#B5D2quick > p a.last , div#B5W3quick > p a.last , div#W1quick > p a.last , div#B5W1quick > p a.last {
+    background: transparent url( /TPL/pitaya/images/btn-right.png) no-repeat center right ;
+    z-index:1;
+}
+div#D2quick > p.cc, div#W3quick > p.cc, div#B5D2quick > p.cc, div#B5W3quick > p.cc, div#W1quick > p.cc, div#B5W1quick > p.cc {
+    background:transparent url() no-repeat top left;
+    height:34px;
+    line-height:34px;
+}
+#Game fieldset > nav:after, div#D2quick > p:after, div#W3quick > p:after, div#B5D2quick > p:after, div#B5W3quick > p:after, div#W1quick > p:after, div#B5W1quick > p:after {
+    position:absolute;
+    display:block;
+    width:24px;
+    height:24px;
+    right:0;
+    top:0;
+    background:transparent url(/TPL/pitaya/images/btn-right.png) no-repeat top right;
+    z-index:2;
+}
+div#D2quick > p#jjomj, div#B5D2quick > p#jjomj {
+    background-image:url();
+}
+div#D2quick > p#jjomj:after, div#B5D2quick > p#jjomj:after {
+    background-image:url();
+}
+div#D2quick > p.cc:after, div#W3quick > p.cc:after, div#B5D2quick > p.cc:after, div#B5W3quick > p.cc:after, div#W1quick > p.cc:after, div#B5W1quick > p.cc:after {
+    content: "";
+    background:transparent url() no-repeat top right;
+}
+#Game fieldset > nav > b, div#D2quick > p > *, div#D3quick > p > *, div#W3quick > p > *, div#B5D2quick > p > *, div#B5D3quick > p > *, div#B5W3quick > p > *, div#W1quick > p > *, div#B5W1quick > p > * {
+    border-right:1px solid rgb(204,204,204);
+    z-index:3;
+}
+div#D2quick > p > input[type=button], div#D3quick > p > input[type=button], div#W3quick > p > input[type=button], div#B5D2quick > p > input[type=button], div#B5D3quick > p > input[type=button], div#B5W3quick > p > input[type=button], div#W1quick > p > input[type=button], div#B5W1quick > p > input[type=button] {
+    display:inline;
+    width:auto;
+    border-right:0;
+}
+#Game fieldset > nav > b.last, div#D2quick > p > .last, div#D3quick > p > *.last, div#W3quick > p > *.last, div#B5D2quick > p > *.last, div#B5D3quick > p > *.last, div#B5W3quick > p > *.last, div#W1quick > p > *.last, div#B5W1quick > p > *.last {
+    border-right:0;
+}
+ul.DLUL > li > a.first.ON, #Game fieldset > nav > b.first.ON, div#D2quick > p > *.first.ON, div#D3quick > p > *.first.ON, div#W3quick > p > *.first.ON, div#B5D2quick > p > *.first.ON, div#B5D3quick > p > *.first.ON, div#B5W3quick > p > *.first.ON, div#W1quick > p > *.first.ON, div#B5W1quick > p > *.first.ON {
+    background: transparent url(/TPL/pitaya/images/on-left.png) no-repeat left -1px;
+}
+#Game fieldset > nav > b.ON, div#D2quick > p > .ON, div#D3quick > p > .ON, div#W3quick > p > .ON, div#B5D2quick > p > .ON, div#B5D3quick > p > .ON, div#B5W3quick > p > .ON , div#W1quick > p > .ON, div#B5W1quick > p > .ON {
+    background: transparent url(/TPL/pitaya/images/on.png) no-repeat left top;
+}
+ul.DLUL > li > a.last.ON, #Game fieldset > nav > b.last.ON, div#D2quick > p > *.last.ON, div#D3quick > p > *.last.ON, div#W3quick > p > *.last.ON, div#B5D2quick > p > *.last.ON, div#B5D3quick > p > *.last.ON, div#B5W3quick > p > *.last.ON, div#W1quick > p > *.last.ON, div#B5W1quick > p > *.last.ON {
+    background: transparent url(/TPL/pitaya/images/on-right.png) no-repeat right 0px;
+}
+
+.view-mask {
+    background:transparent url(/TPL/pitaya/images/apha3.png) repeat 0 0;
+}
+.view-mask div#CenterView h1, .alert_box .title, .confirm_box .title {
+    background:transparent url(/TPL/pitaya/images/gradient.png) repeat-x 0 0;
+}
+#SPA_Box {
+    border:1px solid #333;
+}
+#SPA_Box div.round-top-left {
+    top:-1px;
+    left:-1px;
+}
+#SPA_Box div.round-top-right {
+    top:-1px;
+    right:-1px;
+}
+#SPA_Box div.round-bottom-left {
+    bottom:-1px;
+    left:-1px;
+}
+#SPA_Box div.round-bottom-right {
+    bottom:-1px;
+    right:-1px;
+}
+#SendSS, #SendD3, #SendP3, #SendT3, #SendCQ, #SendJX, #SendTJ, #SendB3, #SendB5{
+}
+.toTop {
+    display:block;
+}
+.toBottom {
+    display:none;
+}
+#ShowBall h2{
+    background-color:#277DF5;
+    color:#fff;
+    border-bottom:2px solid #ccc;
+}
+div#tab{
+    width:100%;
+    z-index:10000;
+}
+table#gameTable, #showTable{
+    border-spacing:0;
+}
+#Game fieldset.SPA > nav > b {
+    width:25%;
+}
+footer {
+    display:none !important;
+}

@@ -1,0 +1,707 @@
+﻿<?php
+	session_start();
+	if($_SESSION['uid']==''){$logined=0;}else{$logined=1;}
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BBIN电子游戏</title>
+<style type="text/css">
+body{ font-size:12px; width:100%;line-height: 18px; font-family:"微软雅黑";  }
+*{ margin:0; padding:0;}
+ul,li{ list-style:none;}
+img,hr{border:0;}
+a{ text-decoration:none;}
+.clr {clear:both;height:0px;}
+
+#main{ width:1000px; margin:0px auto; padding:10px 10px; height:6500px;  }
+#main ul li{ float:left; margin:10px 10px; width:220px; height:200px; border:5px solid #fff; background-color:#FFF; overflow:hidden; position:relative;}
+#main ul li #a{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_15030.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #b{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5005.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #c{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5006.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #d{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5007.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #e{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5008.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #f{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5009.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #g{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5011.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #h{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5012.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #i{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5013.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #j{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5014.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #k{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5015.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #l{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5016.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #m{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5017.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #n{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5018.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #o{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5019.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #p{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5020.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #q{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5025.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #r{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5026.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #s{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5027.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #t{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5028.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #w{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5029.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #x{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5030.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #y{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5034.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #z{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5035.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #aa{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5039.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #bb{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5040.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #cc{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5041.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #dd{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5043.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ee{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5044.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ff{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5047.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #gg{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5048.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #hh{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5049.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ii{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5050.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #jj{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5057.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #kk{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5058.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ll{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5059.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #mm{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5060.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #nn{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5061.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #oo{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5062.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #pp{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5063.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #qq{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5064.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #rr{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5065.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ss{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5066.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #tt{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5070.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #uu{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5073.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #vv{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5076.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ww{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5077.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #xx{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5078.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #yy{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5079.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #zz{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5080.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #aaa{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5083.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #bbb{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5084.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ccc{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5088.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ddd{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5089.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #eee{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5091.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #fff{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5092.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ggg{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5093.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #hhh{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5094.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #iii{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5095.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #jjj{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5101.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #kkk{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5102.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #lll{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5103.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #mmm{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5104.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #nnn{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5106.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ooo{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5115.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ppp{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5116.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #qqq{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5117.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #rrr{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5118.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #sss{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5131.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ttt{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5201.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #uuu{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5202.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #vvv{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5203.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #www{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5204.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #xxx{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5401.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #yyy{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5402.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #zzz{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5403.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #aaaa{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5404.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #bbbb{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5405.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #cccc{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5406.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #dddd{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5407.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #eeee{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5601.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ffff{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5701.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #gggg{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5703.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #hhhh{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5704.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #iiii{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5705.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #jjjj{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5706.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #kkkk{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5707.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #llll{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5801.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #mmmm{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5802.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #nnnn{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5803.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #oooo{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5804.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #pppp{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5805.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #qqqq{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5806.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #rrrr{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5808.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ssss{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5809.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #tttt{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5810.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #uuuu{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5811.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #vvvv{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5821.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #wwww{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5823.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #xxxx{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5824.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #yyyy{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5825.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #zzzz{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5826.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #aaaaa{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5827.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #bbbbb{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5828.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ccccc{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5831.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ddddd{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5832.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #eeeee{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5833.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #fffff{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5835.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #ggggg{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5836.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #hhhhh{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5837.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #iiiii{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5901.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li #jjjjj{ background:url(http://s3.bbimgs.net/cl/tpl/commonFile/igame/public/casino/220X162/Game_5902.png?v=ver58.52) no-repeat; width:220px; height:160px;}
+#main ul li .two{ height:40px; line-height:40px;}
+#main ul li .two a{ color:#000; font-size:16px; font-weight:bold; padding:10px 10px;}
+#main ul li .bg{ background-color:#666; position:absolute;top:0px; left:opx; height:200px; width:220px; display:none;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8; opacity: 0.8; }
+#main ul li:hover .bg{ display:block;}
+#main ul li .bg a{ color:#fff;}
+#main ul li .bg .yx{ width:160px; background-color:#9B241C; height:30px; margin:0px auto;  margin-top:60px; text-align:center; line-height:30px;filter:alpha(opacity=100) -moz-opacity:1;-khtml-opacity: 1; opacity:1; }
+#main ul li .bg .yx:hover { background-color:#F00;}
+#main ul li .bg .sm{ width:160px; height:30px; margin:20px auto; line-height:30px; text-align:center; border:1px #000 solid; }
+#main ul li .bg .sm:hover{ background-color:#ccc;}
+#main ul li .bg .sm:hover a{ color:#000;}
+#main h1{ line-height:50px; margin-left:15px; letter-spacing:1px; font-weight:600; color:#fff;}
+
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+window.onload=function(){
+	window.parent.document.getElementById("dzframe").style.height='6500px';
+	window.parent.document.getElementById("ll").style.height='6600px';
+	window.parent.parent.document.getElementById("mainFrame").style.height='6869px';
+}
+	$(function(){
+		
+		//if(!check_lg()){ alert('请先登录!'); return;}  window.open('url', '惑星战记', 'height=400, width=700, top=200, left=50%,margin-left=-350 toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');playgame.php?id=5005
+	})
+	function check_lg(){
+	  return (<?=$logined?>==1);
+	}
+
+</script>
+<div id="main">
+
+<ul>
+<li>
+            	<div class="one" id="iiiii"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5901', '连环夺宝', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">连环夺宝</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5901', '连环夺宝', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5901&lang=zh-cn&HALLID=5&State=0', '连环夺宝', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="jjjjj"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5902', '糖果派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">糖果派对</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5902', '糖果派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5902&lang=zh-cn&HALLID=5&State=0', '糖果派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+        	<li>
+            	<div class="one" id="a"></div>
+                <div class="two"><a href="#">捕鱼达人</a></div>
+                <div class="bg"><p class="yx"><a href="#">进入游戏</a></p><p class="sm"><a href="#">规则说明</a></div>
+            </li>
+            <li>
+            	<div class="one" id="b"></div>
+                <div class="two"><a  href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5005', '惑星战记', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">惑星战记</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5005', '惑星战记', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5005&lang=zh-cn&HALLID=5&State=0', '惑星战记', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="c"></div>
+                <div class="two"><a hhref="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5006', 'Starburst', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">Starburst</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5006', 'Starburst', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a  href="javascript:;" onclick="http://live199.net/ipl/app/help.php?GameType=5006&lang=zh-cn&HALLID=5&State=0', 'Starburst', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="d"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5007', '激爆水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">激爆水果盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5007', '激爆水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5007&lang=zh-cn&HALLID=5&State=0', '激爆水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="e"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5008', '猴子爬树', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">猴子爬树</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5008', '猴子爬树', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a  href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5008&lang=zh-cn&HALLID=5&State=0', '猴子爬树', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="f"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5009', '金刚爬楼', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">金刚爬楼</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5009', '金刚爬楼', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5009&lang=zh-cn&HALLID=5&State=0', '金刚爬楼', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="g"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5011', '西游记', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">西游记</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5009', '西游记', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm">
+                <a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5011&lang=zh-cn&HALLID=5&State=0', '西游记', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="h"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5012', '外星争霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">外星争霸</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5012', '外星争霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm">
+                <a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5012&lang=zh-cn&HALLID=5&State=0', '外星争霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="i"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5013', '传统', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">传统</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5013', '传统', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p>
+                <p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5013&lang=zh-cn&HALLID=5&State=0', '传统', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="j"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5014', '丛林', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">丛林</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5014', '丛林', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p>
+                <p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5014&lang=zh-cn&HALLID=5&State=0', '丛林', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="k"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5015', 'FIFA2010', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">FIFA2010</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5015', 'FIFA2010', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5015&lang=zh-cn&HALLID=5&State=0', 'FIFA2010', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="l"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5016', '史前丛林大冒险', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">史前丛林大冒险</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5016', '史前丛林大冒险', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5016&lang=zh-cn&HALLID=5&State=0', '史前丛林大冒险', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="m"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5017', '星际大战', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">星际大战</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5017', '星际大战', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5017&lang=zh-cn&HALLID=5&State=0', '星际大战', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="n"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5018', '齐天大圣', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">齐天大圣</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5018', '齐天大圣', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5018&lang=zh-cn&HALLID=5&State=0', '齐天大圣', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="o"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5019', '水果乐园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">水果乐园</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5019', '水果乐园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5019&lang=zh-cn&HALLID=5&State=0', '水果乐园+', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="p"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5020', '热带风情', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">热带风情</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5020', '热带风情', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5020&lang=zh-cn&HALLID=5&State=0', '热带风情', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="q"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5025', '法海斗白蛇', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">法海斗白蛇</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5020', '热带风情', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5025&lang=zh-cn&HALLID=5&State=0', '法海斗白蛇', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="r"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5026', '2012伦敦奥运会', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">2012伦敦奥运会</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5026', '2012伦敦奥运会', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5026&lang=zh-cn&HALLID=5&State=0', '2012伦敦奥运会', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="s"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5027', '功夫龙', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">功夫龙</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5027', '功夫龙', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5027&lang=zh-cn&HALLID=5&State=0', '功夫龙', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="t"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5028', '中秋月光派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">中秋月光派对</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5028', '中秋月光派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5028&lang=zh-cn&HALLID=5&State=0', '中秋月光派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="w"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5029', '圣诞派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">圣诞派对</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5029', '圣诞派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5029&lang=zh-cn&HALLID=5&State=0', '圣诞派对', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="x"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5030', '幸运财神', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">幸运财神</a></div>
+                <div class="bg"><p class="yx"><a  href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5030', '幸运财神', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5030&lang=zh-cn&HALLID=5&State=0', '幸运财神', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="y"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5034', '王牌5PK', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">王牌5PK</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5034', '王牌5PK', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5034&lang=zh-cn&HALLID=5&State=0', '王牌5PK', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="z"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5035', '加勒比扑克', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">加勒比扑克</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5035', '加勒比扑克', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5035&lang=zh-cn&HALLID=5&State=0', '加勒比扑克', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="aa"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5039', '鱼虾蟹', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">鱼虾蟹</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5039', '鱼虾蟹', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5039&lang=zh-cn&HALLID=5&State=0', '鱼虾蟹', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');" >规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="bb"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5040', '百搭二王', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">百搭二王</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5040', '百搭二王', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5040&lang=zh-cn&HALLID=5&State=0', '百搭二王', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="cc"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5041', '7PK', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">7PK</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5041', '7PK', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5041&lang=zh-cn&HALLID=5&State=0', '7PK', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="dd"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5043', '钻石水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">钻石水果盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5043', '钻石水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5043&lang=zh-cn&HALLID=5&State=0', '钻石水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ee"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5044', '明星79II', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">明星79II</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5044', '明星79II', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5044&lang=zh-cn&HALLID=5&State=0', '明星79II', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ff"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5047', '尸乐园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">尸乐园</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5047', '尸乐园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5047&lang=zh-cn&HALLID=5&State=0', '尸乐园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="gg"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5048', '特务危机', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">特务危机</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5048', '特务危机', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5048&lang=zh-cn&HALLID=5&State=0', '特务危机', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="hh"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5049', '玉蒲团', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">玉蒲团</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5049', '玉蒲团', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5049&lang=zh-cn&HALLID=5&State=0', '玉蒲团', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="ii"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5050', '战火佳人', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">战火佳人</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5050', '战火佳人', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5050&lang=zh-cn&HALLID=5&State=0', '战火佳人', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="jj"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5057', '明星97', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">明星97</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5057', '明星97', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5057&lang=zh-cn&HALLID=5&State=0', '明星97', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="kk"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5058', '疯狂水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">疯狂水果盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5058', '疯狂水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5058&lang=zh-cn&HALLID=5&State=0', '疯狂水果盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ll"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5059', '马戏团', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">马戏团</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5059', '马戏团', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5059&lang=zh-cn&HALLID=5&State=0', '马戏团', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="mm"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5060', '动物奇观五', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">动物奇观五</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5060', '动物奇观五', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5060&lang=zh-cn&HALLID=5&State=0', '动物奇观五', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="nn"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5061', '超级7', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">超级7</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5061', '超级7', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5061&lang=zh-cn&HALLID=5&State=0', '超级7', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="oo"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5062', '龙在囧途', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">龙在囧途</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5062', '龙在囧途', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5062&lang=zh-cn&HALLID=5&State=0', '龙在囧途', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="pp"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5063', '水果拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">水果拉霸</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5063', '水果拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5063&lang=zh-cn&HALLID=5&State=0', '水果拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="qq"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5064', '扑克拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">扑克拉霸</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5064', '扑克拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5064&lang=zh-cn&HALLID=5&State=0', '扑克拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="rr"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5065', '筒子拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">筒子拉霸</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5065', '筒子拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5065&lang=zh-cn&HALLID=5&State=0', '筒子拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="ss"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5065', '足球拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">足球拉霸</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5065', '足球拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5066&lang=zh-cn&HALLID=5&State=0', '足球拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="tt"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5070', '黄金大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">黄金大转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=570', '黄金大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5070&lang=zh-cn&HALLID=5&State=0', '黄金大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="uu"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5073', '百家乐大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">百家乐大转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5073', '百家乐大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5073&lang=zh-cn&HALLID=5&State=0', '百家乐大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="vv"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5076', '数字大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">数字大转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5076', '数字大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5076&lang=zh-cn&HALLID=5&State=0', '数字大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ww"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5077', '水果大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">水果大转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5077', '水果大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5077&lang=zh-cn&HALLID=5&State=0', '水果大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="xx"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5078', '象棋大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">象棋大转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5078', '象棋大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5078&lang=zh-cn&HALLID=5&State=0', '象棋大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="yy"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5079', '3D数字大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">3D数字大转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5079', '3D数字大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5079&lang=zh-cn&HALLID=5&State=0', '3D数字大转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="zz"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5080', '乐透转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">乐透转轮</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5080', '乐透转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5080&lang=zh-cn&HALLID=5&State=0', '乐透转轮', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+             <li>
+            	<div class="one" id="aaa"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5083', '钻石列车', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">钻石列车</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5083', '钻石列车', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5083&lang=zh-cn&HALLID=5&State=0', '钻石列车', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="bbb"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5084', '圣兽传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">圣兽传说</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5084', '圣兽传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5084&lang=zh-cn&HALLID=5&State=0', '圣兽传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ccc"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5088', '斗大', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">斗大</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5088', '斗大', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5088&lang=zh-cn&HALLID=5&State=0', '斗大', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ddd"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5089', '红狗', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">红狗</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5089', '红狗', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5089&lang=zh-cn&HALLID=5&State=0', '红狗', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="eee"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5091', '三国拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">三国拉霸</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5091', '三国拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5091&lang=zh-cn&HALLID=5&State=0', '三国拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="fff"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5092', '封神榜', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">封神榜</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5092', '封神榜', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5092&lang=zh-cn&HALLID=5&State=0', '封神榜', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="ggg"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5093', '金瓶梅', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">金瓶梅</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5093', '金瓶梅', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5093&lang=zh-cn&HALLID=5&State=0', '金瓶梅', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="hhh"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5094', '金瓶梅2', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">金瓶梅2</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5094', '金瓶梅2', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5094&lang=zh-cn&HALLID=5&State=0', '金瓶梅2', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="iii"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5095', '斗鸡', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">斗鸡</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5095', '斗鸡', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5095&lang=zh-cn&HALLID=5&State=0', '斗鸡', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="jjj"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5101', '欧式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">欧式轮盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5101', '欧式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5101&lang=zh-cn&HALLID=5&State=0', '欧式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="kkk"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5102', '美式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">美式轮盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5102', '美式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5102&lang=zh-cn&HALLID=5&State=0', '美式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="lll"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5103', '彩金轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">彩金轮盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5103', '彩金轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5103&lang=zh-cn&HALLID=5&State=0', '彩金轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="mmm"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5104', '法式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">法式轮盘</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5104', '法式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5104&lang=zh-cn&HALLID=5&State=0', '法式轮盘', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="nnn"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5106', '三国', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">三国</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5106', '三国', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5106&lang=zh-cn&HALLID=5&State=0', '三国', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ooo"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5115', '经典21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">经典21点</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5115', '经典21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5115&lang=zh-cn&HALLID=5&State=0', '经典21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="ppp"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5116', '西班牙21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">西班牙21点</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5116', '西班牙21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5116&lang=zh-cn&HALLID=5&State=0', '西班牙21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="qqq"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5117', '维加斯21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">维加斯21点</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5117', '维加斯21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5117&lang=zh-cn&HALLID=5&State=0', '维加斯21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="rrr"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5118', '奖金21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">奖金21点</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5118', '奖金21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5118&lang=zh-cn&HALLID=5&State=0', '奖金21点', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="sss"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5131', '皇家德州扑克', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">皇家德州扑克</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5131', '皇家德州扑克', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5131&lang=zh-cn&HALLID=5&State=0', '皇家德州扑克', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ttt"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5201', '火焰山', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">火焰山</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5201', '火焰山', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5201&lang=zh-cn&HALLID=5&State=0', '火焰山', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="uuu"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5202', '月光宝盒', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">月光宝盒</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5202', '月光宝盒', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5202&lang=zh-cn&HALLID=5&State=0', '月光宝盒', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="vvv"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5203', '爱你一万年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">爱你一万年</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5203', '爱你一万年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5203&lang=zh-cn&HALLID=5&State=0', '爱你一万年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="www"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5204', '2014FIFA', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">2014FIFA</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5204', '2014FIFA', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5204&lang=zh-cn&HALLID=5&State=0', '2014FIFA', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="xxx"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5401', '天山侠侣传', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">天山侠侣传</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5401', '天山侠侣传', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5401&lang=zh-cn&HALLID=5&State=0', '天山侠侣传', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="yyy"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5402', '夜市人生', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">夜市人生</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5402', '夜市人生', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5402&lang=zh-cn&HALLID=5&State=0', '夜市人生', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="zzz"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5403', '七剑传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">七剑传说</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5403', '七剑传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5403&lang=zh-cn&HALLID=5&State=0', '七剑传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+             <li>
+            	<div class="one" id="aaaa"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5404', '沙滩排球', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">沙滩排球</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5404', '沙滩排球', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5404&lang=zh-cn&HALLID=5&State=0', '沙滩排球', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="bbbb"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5405', '暗器之王', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">暗器之王</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5405', '暗器之王', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5405&lang=zh-cn&HALLID=5&State=0', '暗器之王', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="cccc"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5406', '神舟27', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">神舟27</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5406', '神舟27', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5406&lang=zh-cn&HALLID=5&State=0', '神舟27', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="dddd"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5407', '大红帽与小野狼', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">大红帽与小野狼</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5407', '大红帽与小野狼', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5407&lang=zh-cn&HALLID=5&State=0', '大红帽与小野狼', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="eeee"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5601', '秘境冒险', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">秘境冒险</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5601', '秘境冒险', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5601&lang=zh-cn&HALLID=5&State=0', '秘境冒险', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ffff"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5701', '连连看', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">连连看</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5701', '连连看', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5701&lang=zh-cn&HALLID=5&State=0', '连连看', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="gggg"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5703', '发达啰', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">发达啰</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5703', '发达啰', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5703&lang=zh-cn&HALLID=5&State=0', '发达啰', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="hhhh"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5704', '斗牛', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">斗牛</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5704', '斗牛', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5704&lang=zh-cn&HALLID=5&State=0', '斗牛', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="iiii"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5705', '聚宝盆', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">聚宝盆</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5705', '聚宝盆', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5705&lang=zh-cn&HALLID=5&State=0', '聚宝盆', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="jjjj"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5706', '浓情巧克力', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">浓情巧克力</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5706', '浓情巧克力', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5706&lang=zh-cn&HALLID=5&State=0', '浓情巧克力', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="kkkk"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5707', '金钱豹', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">金钱豹</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5707', '金钱豹', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5707&lang=zh-cn&HALLID=5&State=0', '金钱豹', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="llll"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5801', '海豚世界', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">海豚世界</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5801', '海豚世界', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5801&lang=zh-cn&HALLID=5&State=0', '海豚世界', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="mmmm"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5802', '阿基里斯', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">阿基里斯</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5802', '阿基里斯', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5802&lang=zh-cn&HALLID=5&State=0', '阿基里斯', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="nnnn"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5803', '阿兹特克宝藏', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">阿兹特克宝藏</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5803', '阿兹特克宝藏', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5803&lang=zh-cn&HALLID=5&State=0', '阿兹特克宝藏', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="oooo"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5804', '大明星', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">大明星</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5804', '大明星', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5804&lang=zh-cn&HALLID=5&State=0', '大明星', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="pppp"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5805', '凯撒帝国', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">凯撒帝国</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5805', '凯撒帝国', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5805&lang=zh-cn&HALLID=5&State=0', '凯撒帝国', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="qqqq"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5806', '奇幻花园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">奇幻花园</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5806', '奇幻花园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5806&lang=zh-cn&HALLID=5&State=0', '奇幻花园', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="rrrr"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5808', '浪人武士', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">浪人武士</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5808', '浪人武士', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5808&lang=zh-cn&HALLID=5&State=0', '浪人武士', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="ssss"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5809', '空战英豪', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">空战英豪</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5809', '空战英豪', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5809&lang=zh-cn&HALLID=5&State=0', '空战英豪', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="tttt"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5810', '航海时代', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">航海时代</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5810', '航海时代', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5810&lang=zh-cn&HALLID=5&State=0', '航海时代', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="uuuu"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5811', '狂欢夜', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">狂欢夜</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5811', '狂欢夜', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5811&lang=zh-cn&HALLID=5&State=0', '扑克拉霸', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="vvvv"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5821', '国际足球', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">国际足球</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5821', '国际足球', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5821&lang=zh-cn&HALLID=5&State=0', '国际足球', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="wwww"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5823', '发大财', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">发大财</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5823', '发大财', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5823&lang=zh-cn&HALLID=5&State=0', '发大财', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="xxxx"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5824', '恶龙传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">恶龙传说</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5824', '恶龙传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5824&lang=zh-cn&HALLID=5&State=0', '恶龙传说', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="yyyy"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5825', '金莲', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">金莲</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5825', '金莲', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5825&lang=zh-cn&HALLID=5&State=0', '金莲', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="zzzz"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5826', '金矿工', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">金矿工</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5826', '金矿工', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5826&lang=zh-cn&HALLID=5&State=0', '金矿工', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+             <li>
+            	<div class="one" id="aaaaa"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5827', '老船长', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">老船长</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5827', '老船长', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5827&lang=zh-cn&HALLID=5&State=0', '老船长', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="bbbbb"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5828', '霸王龙', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">霸王龙</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5828', '霸王龙', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5828&lang=zh-cn&HALLID=5&State=0', '霸王龙', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ccccc"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5831', '高球之旅', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">高球之旅</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5831', '高球之旅', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5831&lang=zh-cn&HALLID=5&State=0', '高球之旅', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="ddddd"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5832', '高速卡车', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">高速卡车</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5832', '高速卡车', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5832&lang=zh-cn&HALLID=5&State=0', '高速卡车', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="eeeee"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5833', '沉默武士', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">沉默武士</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5833', '沉默武士', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5833&lang=zh-cn&HALLID=5&State=0', '沉默武士', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+            <li>
+            	<div class="one" id="fffff"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5835', '喜福牛年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">喜福牛年</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5835', '喜福牛年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5835&lang=zh-cn&HALLID=5&State=0', '喜福牛年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="ggggg"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5836', '龙卷风', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">龙卷风</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5836', '龙卷风', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5836&lang=zh-cn&HALLID=5&State=0', '龙卷风', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li><li>
+            	<div class="one" id="hhhhh"></div>
+                <div class="two"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5837', '喜福猴年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">喜福猴年</a></div>
+                <div class="bg"><p class="yx"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('playgame.php?id=5837', '喜福猴年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">进入游戏</a></p><p class="sm"><a href="javascript:;" onclick="if(!check_lg()){ alert('请先登录!'); return;}  window.open('http://live199.net/ipl/app/help.php?GameType=5837&lang=zh-cn&HALLID=5&State=0', '喜福猴年', 'height=800, width=1033, top=200, left=270,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no');">规则说明</a></p></div>
+            </li>
+           
+        
+</ul>	
+</div>
+</body>
+</html>

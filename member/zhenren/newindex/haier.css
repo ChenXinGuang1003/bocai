@@ -1,0 +1,786 @@
+/* common style */
+.clear {clear: both; }
+.floatL {float: left; _display: inline; }
+.floatR {float: right; _display: inline; }
+.mCenter {margin: 0 auto; }
+.tCenter {text-align: center; }
+.hoverFade,
+.hoverInst{background-position: 100% 100%; background-repeat: no-repeat;}
+.hoverFade a,
+.hoverInst a{display: block; background-position: 0 0; background-repeat: no-repeat; cursor: pointer;position: relative;top:0;left:0; }
+strong {font-weight: bolder;}
+object { display: none;}
+#mainBody object { display: inline-block;}
+a,input{font-family: Arial,sans-serif;text-decoration: none;}
+label,input,a{font-family: Arial;}
+.zh-tw body,.zh-tw a{font-family: "Microsoft JhengHei","微軟正黑體"}
+.zh-cn body,.zh-cn a{font-family: STHeiti,"Microsoft YaHei", "微软雅黑", "SimSun", "宋体" }
+.transColor{transition: color 0.6s ease;}
+.transOpacity{transition: opacity 0.6s linear;}
+body{
+    min-width: 1024px;
+    font-size: 12px;
+    color: #FFF;
+
+}
+#logo-wrap{
+    margin-left: 15px;
+}
+#mainBody{
+    width: 100%;
+    overflow: hidden;
+    background: url('../newindex/bg01.jpg') no-repeat center top;
+}
+#page-container{
+    position: relative;
+    z-index: 1;
+    width: 1024px;
+    margin: 0 auto;
+    background: url('../newindex/container_bg_y.png') repeat-y center top;
+	min-height: 650px;
+}
+.first #page-container{
+    padding: 0;
+    background: none;
+}
+.inGame #page-container{padding-top: 45px;}
+.inGame #container{width: 1000px;}
+#page-body{
+    width: 1024px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+    background: url('../newindex/container_bg.png') no-repeat center top;
+}
+.isLoginY #page-body{
+    padding: 50px 0 20px;
+}
+.first #page-body{
+    padding: 0;
+    height: 684px;
+    background: url('../newindex/c_container_bg.png') no-repeat center top;
+}
+/* header */
+#page-header{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.first #header{background: none;height: 127px;}
+#header{
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../newindex/header_bg.png') no-repeat center top;
+}
+.header-top{
+    height: 29px;
+    padding-top: 8px;
+}
+#header-bottom{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.isTPL #header{margin: 0;height: 150px;}
+
+#header-left{
+    width: 205px;
+    height: 127px;
+}
+#header-right{
+    width: 819px;
+    position: relative;
+    z-index: 1;
+}
+/*header-title*/
+#header-title{
+    position: relative;
+    z-index: 5;
+}
+#header-title .title{
+    width: 1024px;
+    height: 230px;
+    position: relative;
+    z-index: 5;
+}
+/* footer */
+#page-footer{
+    width: 100%;
+    min-width: 1024px;
+}
+#footer{
+    width: 1024px;
+    margin: 0 auto;
+    color: #ECECFB;
+    background: url('../newindex/container_bg_y.png') repeat-y center top;
+}
+.first #footer{background: none}
+.footer-info{margin-top: 10px;}
+#article-menu{
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+    color: #ECECFB;
+    font-size: 12px;
+}
+#article-menu a{
+    line-height: 20px;
+    color: #ECECFB;
+}
+#article-menu a:hover{
+    color: #FFD200;
+}
+.copyright{
+    line-height: 20px;
+    text-align: right;
+    color: #ECECFB;
+}
+#bblogo{
+    width: 131px;
+    height: 59px;
+    display: block;
+    background: url('../newindex/bbinLogo.png') no-repeat 0 0;
+    margin: 0 20px 0 10px;
+}
+/*lang*/
+#lang-wrap{
+    margin: 3px 5px 0;
+}
+/* est time */
+#est-wrap{
+    position: absolute;
+    right: 15px;
+    top: 122px;
+}
+#est-wrap .time_text{
+    height: auto;
+    padding: 0;
+    background: none;
+    color: #FFF;
+    text-align: left;
+    filter: none;
+    opacity: 1;
+    width: auto;
+    margin-right: 20px;
+}
+/* 登入區 */
+#login-wrap{
+    display: block;
+    overflow: hidden;
+    height: 26px;
+    width: 600px;
+}
+.login-unit{
+    width: 125px;
+    height: 26px;
+    position: relative;
+    margin: 0 2px;
+    background: url('../newindex/h_input_bg.png') no-repeat 0 0;
+}
+.login-unit .nLink{line-height: 24px;margin-left: 10px;}
+.login-label{
+    position: absolute;
+    top: 0;
+    top: 3px \9;
+    left: 10px;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    color: #A8A8B7;
+    cursor: text;
+    font-size: 12px;
+    z-index: 11;
+    font-family: Arial;
+    /* IE 57 */ filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    /* IE 8 */  -MS-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1.0;
+}
+.login-input{
+    display: block;
+    width: 105px;
+    padding: 0 10px;
+    padding: 4px 10px \9;
+    height: 26px;
+    font-family: Arial;
+    color: #A8A8B7;
+    outline: 0;
+    border: none;
+    background: none;
+}
+#vPic{
+    position: absolute;
+    top: 4px;
+    right: 3px;
+    width: 40px;
+    height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+    display: none;
+    z-index: 11;
+}
+#header-login-wrap .loginBTN{
+    display: block;
+    cursor: pointer;
+    width: 69px;
+    height: 26px;
+    text-align: center;
+    vertical-align: center;
+    font-weight: bold;
+    color: #FFF;
+    outline: 0;
+    border: none;
+    position: relative;
+    z-index: 10;
+    margin: 0 5px;
+    background: url('../newindex/btn_login.png') no-repeat 0 0;
+}
+#header-login-wrap .loginBTN:hover{color: #FDFF5E;}
+#LoginForm a,
+#LoginForm span{
+    height: 26px;
+    line-height: 26px;
+    color: #D4B340;
+}
+#LoginForm a:hover{
+    color: #FDFF5E;
+}
+#LoginForm span{margin: 0 5px;}
+/* 登入後 */
+#mem-info-wrap{
+    position: absolute;
+    top: 127px;
+    right: 7px;
+}
+#mem-Acc-bg{
+    background: url('../newindex/c_logout_bg.png') no-repeat 0 0;
+    width: 390px;
+    height: 108px;
+}
+#mem-info-wrap .viewacc{width: 390px;height: 33px;}
+#mem-Acc{
+    text-align: left;
+    color: #F4F1DF;
+    padding: 0 25px ;
+}
+.en #mem-Acc{margin-bottom: 5px;}
+#mem-Acc li{
+    float: left;
+    *display: inline;
+    *zoom: 1;
+    line-height: 20px;
+    margin: 0 20px 0 0;
+    list-style: none;
+}
+#mem-Acc span{
+    color: #F4F1DF;
+    white-space: nowrap;
+}
+#mem-Acc strong{
+    color: #F4F1DF;
+    font-weight:normal;
+}
+/*main nav*/
+#main-Menu{
+    text-align: center;
+    width: 818px;
+    height: 84px;
+    position: relative;
+    background: url('../newindex/nav_bg.png') no-repeat 0 0;
+}
+#mainnav{padding-left: 4px;padding-top: 10px;}
+#mainnav li{
+    padding: 0 1px;
+    width: 88px;
+    float: left;
+    display: block;
+    _display: inline;
+    text-align: center;
+}
+#mainnav li a{
+    display: block;
+    width: 88px;
+    line-height: 45px;
+    margin: 0 auto;
+    height: 45px;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    outline: none;
+    text-shadow: 1px 1px 3px #333;
+}
+#mainnav li a.current,
+#mainnav li a:hover{
+    line-height: 35px;
+    background: url('../newindex/nav_over.png') no-repeat center top;
+}
+.en #mainnav li a{font-size: 12px;}
+.en #mainnav a.dbline{
+    line-height: 15px;
+    height: 36px;
+    padding: 9px 0 0;
+}
+.en #mainnav li a.dbline.current,
+.en #mainnav li a.dbline:hover{
+    line-height: 15px;
+    height: 41px;
+    padding: 4px 0 0;
+}
+/* 副選單 */
+#L-Sub{
+    position: relative;
+    z-index: 100;
+    clear: both;
+    _left:-400px;
+}
+#L-Sub div{
+    display: none;
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px;
+    z-index: 100;
+}
+#L-Sub a,
+#L-Sub span{
+    float: left;
+    height: 32px;
+    display: block;
+}
+#L-Sub a{
+    color: #EADFB8;
+    padding: 0 5px;
+    text-decoration: none;
+    background: url('../newindex/sub.png') repeat-x left center;
+    _background: url('../newindex/sub8.png') repeat-x left center;
+}
+#L-Sub a:hover{
+    color: #FFD24C;
+}
+#L-Sub span{
+    width: 20px;
+}
+#L-Sub span.subbg-left{
+    background: url('../newindex/sub.png') no-repeat left top;     
+    _background: url('../newindex/sub8.png') no-repeat left top;     
+}
+#L-Sub span.subbg-right{
+    background: url('../newindex/sub.png') no-repeat right bottom;    
+    _background: url('../newindex/sub8.png') no-repeat right bottom;    
+}
+/* 頁首 end */
+/* 會員選單 */
+#SU-Menual{
+    color: #FFF;
+    text-align: right;
+    line-height: 20px;
+}
+.first #SU-Menual,
+.isTPL #SU-Menual{
+    margin: 5px 20px 0 0;
+}
+#SU-Menual li{
+    display: block;
+    float: left;
+    _display: inline;
+    white-space: nowrap;
+}
+#SU-Menual li a{color: #FFF;}
+#SU-Menual li.last a{color: #FF0;}
+#SU-Menual li a:hover{color: #FF0;}
+#SU-Menual span.block{margin: 0 5px 0 3px;}
+
+.page-top{
+    position: absolute;
+    z-index: 10;
+    top: 367px;
+    right: 30px;
+}
+/* first */
+#first-flash-wrap{position: relative;z-index: 1;}
+.first-right{margin-top: 117px;}
+.first-BTN{
+    width: 332px;
+    height: 109px;
+    display: block;
+    margin-left: 16px;
+}
+#first-joinBTN{position: relative;}
+#first-jackpot{margin-top: 10px;}
+#first-news{margin-top: 6px;}
+#first-jackpot{
+    position: relative;
+}
+#firstPrize{
+    position: absolute;
+    top: 53px;
+    left: 23px;
+}
+#first-news{
+    color: #666;
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    padding: 35px 87px 24px 25px;
+    overflow: hidden;   
+}
+#first-gameBTN-wrap{
+    width: 348px;
+    height: 159px;
+}
+#first-downloadBTN,
+#first-eventBTN,
+#first-serviceBTN{position: absolute;display: block;z-index: 10;}
+#first-downloadBTN{
+    width: 180px;
+    height: 186px;
+    top: 38px;
+    left: 430px;
+}
+#first-eventBTN{
+    width: 163px;
+    height: 179px;
+    top: 265px;
+    left: 530px;
+}
+#first-serviceBTN{
+    width: 207px;
+    height: 215px;
+    top: 443px;
+    left: 392px;
+}
+/* 頁尾 end */
+/* 真人導引列 */
+#livebtn a{
+    width: 103px;
+    line-height: 29px;
+    height: 34px;
+    color: #FFF;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    background: url('../newindex/baccaratbg.png') no-repeat 0 0;
+}
+#livebtn a:hover{
+    color: #FF0;
+}
+/* 真人娛樂 電子遊藝 彩票 */
+#jackpotPrize{
+    width: 184px;
+    height: 131px;
+    margin-bottom: 10px;
+    border: 2px solid #222;
+}
+#prizeDIV {
+    width: 174px;
+    padding-left: 10px;
+    padding-top: 27px;
+    height: 64px;
+    background:url(../newindex/prizeBG.jpg) no-repeat;
+}
+#jackpotRules,
+#jackpotRules .jpBTN-link{
+    width: 100%;
+    height: 31px;
+    background-repeat: no-repeat;
+}
+#jackpotRules-wrap{
+    width: 184px;
+    height: 40px;
+    background: #464646;
+    /* Webkit */   background: -webkit-linear-gradient(top, #464646 30%, #2F2F2F  100%);
+    /* Firefox */  background: -moz-linear-gradient(top, #464646 30%, #2F2F2F  100%);
+    /* IE10+ */    background: -ms-linear-gradient(top, #464646 30%, #2F2F2F  100%);
+    /* Opera */    background: -o-linear-gradient(top, #464646 30%, #2F2F2F  100%);
+    /* W3C */      background: linear-gradient(top, #464646 30%, #2F2F2F  100%);
+    /* IE6-9 */    *filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#2F2F2F ',GradientType=0 );
+}
+#jackpotRules{
+    width: 166px;
+    clear: both;
+    background-position: 50% 100%;
+    margin: 0 auto;
+}
+#jackpotRules .jpBTN-link{
+    background-position: 50% 0;
+}
+.jpBTN,
+.jpBTN .jpBTN-link {
+    background-image: url('../newindex/PrizeRule_en.jpg');
+}
+.jpBTN-zh-tw,
+.jpBTN-zh-tw .jpBTN-link {
+    background-image: url('../newindex/PrizeRule_tw.jpg');
+}
+.jpBTN-zh-cn,
+.jpBTN-zh-cn .jpBTN-link {
+    background-image: url('../newindex/PrizeRule_cn.jpg');
+}
+/* game */
+.game-list{padding-left: 40px;padding-top: 20px;}
+.game-list.hide{
+    display: none;
+}
+.game-item{
+    width: 323px;
+    height: 148px;
+    float: left;
+    _display: inline;
+    margin: 0px 5px 5px;
+    position: relative;
+    background: url('../newindex/gamebg01.png') no-repeat 0 0;
+}
+.game .game-item{ margin: 0px 15px 5px;}
+.isLoginY .game-item-lottery{
+    height: 220px;
+    _height: 220px;
+}
+.game-img{
+    float: left;
+    _display: inline;
+    margin: 18px 0 0 15px;
+    position: relative;
+    z-index: 1;
+    text-align: right;
+}
+.game-name{
+    width: 155px;
+    height: 22px;
+    line-height: 20px;
+    font-size: 12px;
+    _display:inline;
+    white-space: nowrap;
+    text-align: left;
+    color: #E6CFAE;
+    position: absolute;
+    font-weight: bold;
+    top: 19px;
+    left: 160px;
+    z-index: 10;
+}
+.en .game-name{font-size: 12px;}
+.game-link{
+    position: absolute;
+    top: 60px;
+    left: 242px;
+}
+.game-link a{
+    width: 72px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    color: #FFF;
+    background: url('../newindex/game_rule.png') no-repeat 0 0;
+}
+.game-link a:hover{
+    color: #FF0;
+}
+.lottery-result{
+    position: absolute;
+    top: 130px;
+    left: 0px;
+    width: 300px;
+    height: 60px;
+    overflow: hidden;
+    line-height: 19px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    background: #E7E7E7;
+    z-index: 9;
+    font-weight: bold;
+    box-shadow: inset 0 8px 9px 0 rgba(255, 255, 255, 0.7), inset 0 -5px 10px 0 #666;
+}
+.lottery-result-preload{
+    visibility: hidden;
+    opacity: 0;
+}
+.lottery-result-rounds{
+    color: #E3711C;
+    font-weight: bold;  
+}
+.lottery-result-numbers{
+    color: #F00; 
+    font-weight: bold;   
+}
+/*gameicon*/
+.GameIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    z-index: 15;
+}
+.GameIcon-First {
+    width: 72px;
+    height: 29px;
+}
+.GameIcon-New {
+    width: 36px;
+    height: 37px;
+    background-image: url('../newindex/GameIcon/New.gif');
+}
+/* 文案區塊 */
+#page-right-wrap{
+    width: 720px;
+}
+#page-right{
+    width: 700px;
+}
+/*遊戲選單*/
+#page-sidebar{
+    float: left;
+    _display: inline;
+    margin: 0 20px;
+}
+.sidemenu-body{
+    width: 249px;
+    background: url('../newindex/sidebar_bg_y.png') repeat-y center top;
+}
+#sidemenu{
+    background: url('../newindex/sidebar_bg.png') no-repeat center top;/**/
+    width: 249px;
+}
+.sidemenu-body li{
+    margin: 5px 0;
+    position: relative;
+}
+.sidemenu-body li a{
+    display: block;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    background: url('../newindex/sidebar.png') no-repeat 0 0;
+}
+.sidemenu-body li a:hover{
+    color: #FF0;
+    background: url('../newindex/sidebar.png') no-repeat 100% 100%;
+}
+.sidemenu-top{
+    width: 249px;
+    height: 29px;
+    background: url('../newindex/sidebar_top.png') no-repeat top center;
+}
+.sidemenu-bottom{
+    width: 249px;
+    height: 43px;
+    background: url('../newindex/sidebar_bottom.png') no-repeat top center;
+}
+
+/*文案*/
+#memCash_body{color: #FFF;}
+#direction{
+    color: #FFF;
+    margin: 0 auto;
+    width: 100%;
+}
+#articles h3{ /*文案標題*/
+    color: #FFF;
+    margin: 0;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-transform: capitalize;
+    padding: 0 20px;
+}
+#articles p{ /*文案標題*/
+    padding: 0 20px;
+}
+#joinMember{
+    margin: 0 auto;
+    width: 700px;
+}
+#direction.exclusive-event{padding-top: 10px;}
+#direction ul.mtab-menual{
+    list-style: none;
+}
+.MemberExclusiveII #direction ul.mtab-menual{
+    width: 940px;
+    margin: 0 auto;
+}
+#direction ul.mtab-menual li{
+    margin-right: 5px;
+    padding: 5px 10px;
+    display: inline;
+    cursor: pointer;
+    background: #3F2800;
+    color: #FFF;
+}
+#direction ul.mtab-menual li:hover,
+#direction ul.mtab-menual li.mtab{
+    background: #FFF;
+    font-weight: bold;
+    color: #3F2800;
+}
+/* 文案連結 */
+#direction a{
+    color: #FC0;
+}
+#direction a:hover{
+    text-decoration: underline;
+}
+/*優惠活動*/
+#PT-switcher-wrap{
+    padding: 0;
+}
+/*共用頁面*/
+.Tpl-table01{
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    color: #000;
+    font-size: 12px;
+}
+table .Tpl-title01 th{
+    height: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+
+    background-color: #B4A35B;
+    /* Webkit */   background: -webkit-linear-gradient(top, #B4A35B 30%, #8D7F46 100%);
+    /* Firefox */  background: -moz-linear-gradient(top, #B4A35B 30%, #8D7F46 100%);
+    /* IE10+ */    background: -ms-linear-gradient(top, #B4A35B 30%, #8D7F46 100%);
+    /* Opera */    background: -o-linear-gradient(top, #B4A35B 30%, #8D7F46 100%);
+    /* W3C */      background: linear-gradient(top, #B4A35B 30%, #8D7F46 100%);
+    /* IE6-9 */    *filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#B4A35B', endColorstr='#8D7F46 ',GradientType=0 );
+}
+#Tpl-user-acc span{
+    line-height: 20px;
+    color: #0000FF;
+}
+.Tpl-table01 th, .Tpl-table01 td{
+    height: 22px;
+    border: 1px solid #CCC;
+}
+tr.Tpl-trcolor1{
+    background: #FFF;
+    /* IE10 */     background: -ms-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Firefox */  background: -moz-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Opera */    background: -o-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Webkit */   background: -webkit-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* W3C */      background: linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+}
+tr.Tpl-trcolor2{
+    background: #EEE;
+}
+tr.Tpl-trmouseenter{
+    background: #DEF;
+}
+#Tpl-memdata .Tpl-table01 th, #Tpl-memdata .Tpl-table01 td.Tpl-left{
+    text-align: center;
+}
+#Tpl-memdata .Tpl-table01 td.Tpl-right{
+    text-align: left;
+}
+.Tpl-blue{
+    color: #00F;
+}

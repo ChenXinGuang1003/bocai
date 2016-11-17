@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0020)http://www.8585.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>澳门永利-线路检测</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=1000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="format-detection" content="telephone=no">
+
+<link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="./js/ca-pub-4490194096475053.js"></script>
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.bcat.bgswitcher.js"></script>
+<script type="text/javascript">
+if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="http//www.yl66y.com/wap.php";
+            }else if(/iPad/i.test(navigator.userAgent)){
+                window.location.href="http//www.yl66y.com/wap.php";
+            }else{
+                window.location.href="http//www.yl66y.com/wap.php"
+            }
+        }catch(e){}
+    }
+}
+</script>
+<div id="bg-body">
+
+<!--
+<img id="bg-body0" src="./img/bg1.jpg" alt="Full screen background image" style="display: block;">
+<img id="bg-body1" src="./img/bg2.jpg" alt="Full screen background image" style="display: none;">
+<img id="bg-body2" src="./img/bg3.jpg" alt="Full screen background image" style="display: none;">
+<img id="bg-body3" src="./img/bg4.jpg" alt="Full screen background image" style="display: none;">
+<img id="bg-body0" src="./img/bg1.jpg" alt="Full screen background image" style="display: none;">--></div>
+<!--end of bg-body-line-->
+
+<script type="text/javascript">
+var srcBgArray = ["images/bg1.jpg","images/bg2.jpg","images/bg3.jpg","images/bg4.jpg"];
+
+$(document).ready(function() {
+  $('#bg-body').bcatBGSwitcher({
+    urls: srcBgArray,
+    alt: 'Full screen background image'
+  });
+});
+</script><!--end of bg-body script-->
+
+<!--大背景start-->
+<div id="wrapper">
+
+<!--头部start-->
+<div id="header">
+	<div class="logo"><object type="application/x-shockwave-flash" id="logo-flash" title="鼎盛国际娱乐城" onmousedown="top.mem_index.location.href=&#39;/cl/?module=System&amp;method=First&#39;" data="img/logo.swf" width="669" height="160"><param name="wmode" value="transparent"><param name="quality" value="high"></object></div>
+</div>
+<!--头部end-->
+<!--菜单start-->
+<div id="nav">
+	<ul>
+    	<li><a href="#">线路检测</a></li>
+    	<li><a href="#">快速登录</a></li>
+    	<li><a href="#">免费试玩</a></li>
+    	<li><a href="#">新手教程</a></li>
+    	<li><a href="#">在线客服</a></li>
+    	<li><a  href="#">游戏官网</a></li>
+    </ul>
+</div>
+<!--菜单end-->
+<div id="black">
+
+	<div id="box" class="xl clearfix">
+    	<div class="xl_left float_l">
+        	<dl>
+            	<dt>温馨提示 / Tips</dt>
+                <dd>MS数值越小 越靠前的网址，打开速度就越快</dd>
+                <dd>如果检测后还不能登录请按以下操作方式：<br>
+                    1.打开IE浏览器，选择工具<br>
+                    2.选择Internet选项<br>
+                    3.选择删除历史记录<br>
+                    4.点击删除<br>
+                    5.重启IE
+				</dd>
+            </dl>
+        </div>
+        <div class="xl_right float_r">
+		
+
+			<script type="text/javascript" src="./js/jiance.js"></script>
+			
+			
+			
+			<form name="autof"><ul class="jiance clearfix"><li class="clearfix"><input class="add" type="text" name="url1"><span class="zh"></span><input class="time" type="text" name="txt1" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url1.value)"></li>
+			
+			
+			
+			<li class="clearfix"><input class="add" type="text" name="url2"><span class="zh"></span><input class="time" type="text" name="txt2" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url2.value)"></li><li class="clearfix"><input class="add" type="text" name="url3"><span class="zh"></span><input class="time" type="text" name="txt3" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url3.value)"></li><li class="clearfix"><input class="add" type="text" name="url4"><span class="zh"></span><input class="time" type="text" name="txt4" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url4.value)"></li><li class="clearfix"><input class="add" type="text" name="url5"><span class="zh"></span><input class="time" type="text" name="txt5" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url5.value)"></li><li class="clearfix"><input class="add" type="text" name="url6"><span class="zh"></span><input class="time" type="text" name="txt6" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url6.value)"></li><li class="clearfix"><input class="add" type="text" name="url7"><span class="zh"></span><input class="time" type="text" name="txt7" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url7.value)"></li><li class="clearfix"><input class="add" type="text" name="url8"><span class="zh"></span><input class="time" type="text" name="txt8" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url8.value)"></li><li class="clearfix"><input class="add" type="text" name="url9"><span class="zh"></span><input class="time" type="text" name="txt9" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url9.value)"></li><li class="clearfix"><input class="add" type="text" name="url10"><span class="zh"></span><input class="time" type="text" name="txt10" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url10.value)"></li><li class="clearfix"><input class="add" type="text" name="url11"><span class="zh"></span><input class="time" type="text" name="txt11" value="测试中……"><span class="arr"></span><input class="enter" type="button" value="点击访问" onclick="window.open(this.form.url11.value)"></li></ul>
+			
+			
+			
+			
+			
+			
+			<div class="inputRe"><input type="submit" value="重新检测"></div></form>
+        </div>
+    </div>
+    <!--底部链接start-->
+
+    <!--底部链接end-->
+    
+</div>
+	<div class="low" style="width:100%;background:#291B0D;height:120px;">
+    <div class="footLinks">
+        <ul class="clearfix">
+            <li><a class="a1" href="">免费试玩</a></li>
+            <li><a class="a2" href="">新手教程</a></li>
+            <li><a class="a3" href="">线路检测</a></li>
+            <li><a target="_blank" class="a4" href="">在线客服</a></li>
+        </ul>
+    </div>
+	
+	
+	</div>
+
+</div>
+<!--大背景end-->
+
+
+</body></html>

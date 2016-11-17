@@ -1,0 +1,19 @@
+﻿
+.game-link2{
+    position: absolute;
+    top: 60px;
+    left: 162px;
+}
+.game-link2 a{
+    width: 72px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    color: #FFF;
+    background: url('../newindex/game_rule.png') no-repeat 0 0;
+}
+.game-link2 a:hover{
+    color: #FF0;
+}

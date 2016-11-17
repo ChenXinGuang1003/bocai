@@ -1,0 +1,34 @@
+/* reset */
+*{ margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+textarea { resize:none; overflow:auto; }
+em{ font-style:normal; }
+/* !£nd reset*/
+
+html{ height:100%; background:#1A1309; }
+body{ font-size:0.14rem; height:100%;  font-family: "Arial","Microsoft YaHei","ºÚÌå","ËÎÌå",sans-serif;}
+.mainBox{ width:100%; height:100%; overflow:hidden;  background:#1A1309; }
+#headerBox{ width:100%; height:0.35rem; line-height:0.35rem; background:#986600; box-sizing:border-box; overflow:hidden;  position:relative;  }
+#headerBox a{ padding:0.12rem; border-radius:0.12rem; background:rgba(0,0,0,0.3) url(../../img/index_ico.png) center center no-repeat; background-size:70%; position:absolute; left:0.1rem; top:calc(0.18rem - 0.12rem); }
+#headerBox .logo{ display:block; position:absolute; left:calc(1.5rem - 0.54rem); top:calc(0.18rem - 0.16rem); height:0.3rem; }
+#banner{ width:3rem; height:1.3rem; background:url(../../img/bg01_x.png) repeat-x -0.13rem; background-size:cover; }
+
+
+#Register{  position:absolute;  left:0.3rem; right:0.3rem; margin-top:0.15rem; height:auto; overflow:hidden; }
+#user{ width:100%; height:auto; overflow:hidden; }
+#user div{ width:100%; height:0.32rem; margin-bottom:0.07rem; }
+#user div input{ width:100%; height:100%; border:none; background-color:#fff; box-sizing:border-box; font-size:0.12rem; border-top:2px solid #AFAFAF;  border-radius:0.03rem; text-indent:0.2rem; color:#666666; font-weight:bolder; }
+#user div input:focus{ background-color:#ccc; outline: none; box-shadow:8px rgba(103, 166, 217, 1); }
+div input.username{ background:url(../../img/usernme2.png) no-repeat 0.05rem 0.06rem; background-size:0.135rem; }
+div input.password{ background:url(../../img/usernme1.png) no-repeat 0.05rem 0.06rem; background-size:0.135rem;}
+div.yzm{ position:relative; }
+div.yzm input{ text-indent:0.05rem !important; }
+div.yzm img{ height:0.25rem; position:absolute; right:0.02rem; top:calc(0.16rem - 0.12rem); }
+div #submit{ background:none; border-color:#986600 !important; font-size:0.15rem !important; text-indent:0rem !important; font-weight:bolder; color:#E8E8E8 !important; }
+#user:nth-last-child(1) a:nth-of-type(1){ float:left; color:#E8E8E8; }
+#user:nth-last-child(1) a:nth-of-type(2){ float:right; color:gold; }
+#footer{ width:3rem; height:0.35rem; line-height:0.35rem; overflow:hidden; text-align:center; color:#fff; background:#986600; position:fixed; bottom:0;}
+#footer a{ font-size:0.14rem; color:#E8E8E8; font-weight:bolder; display:inline-block; width:1rem; float:left; text-align:center; text-decoration:none; }

@@ -1,0 +1,45 @@
+/* reset */
+*{ margin:0; padding:0; }
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+textarea { resize:none; overflow:auto; }
+em{ font-style:normal; }
+/* !£nd reset*/
+
+html{ height:100%; background:#1A1309; }
+body{ font-size:0.14rem; height:100%;  font-family: "Arial","Microsoft YaHei","ºÚÌå","ËÎÌå",sans-serif;}
+.mainBox{ width:100%; height:100%; background:#1A1309; }
+#headerBox{ width:100%; height:0.35rem; line-height:0.35rem; background:#986600; box-sizing:border-box; overflow:hidden;  position:relative;  }
+#headerBox a{ padding:0.12rem; border-radius:0.12rem; background:rgba(0,0,0,0.3) url(../img/index_ico.png) center center no-repeat; background-size:70%; position:absolute; left:0.1rem; top:calc(0.18rem - 0.12rem); }
+#headerBox .logo{ display:block; position:absolute; left:calc(1.5rem - 0.54rem); top:calc(0.18rem - 0.16rem); height:0.3rem; }
+
+#contant{ width:100%; overflow:hidden; }
+#contant h1.huibg{ width:3rem; height:1.3rem; margin:0 auto; background: url(/img/yuanxin.png) no-repeat center center; background-size:50%; }
+#contant .memberList{ width:100%; overflow:hidden; }
+.memberList>a{ display:block; width:100%; height:0.6rem; text-indent:0.5rem; line-height:0.6rem; color:#fff; font-size:0.13rem; border-bottom:3px solid #000; position:relative; }
+.memberList>a:nth-of-type(1){ background:url(../img/history.png) no-repeat 0.15rem center; background-size:0.2rem; }
+.memberList>a:nth-of-type(2){ background:url(../img/deal.png) no-repeat 0.15rem center; background-size:0.2rem; }
+.memberList>a:nth-of-type(3){ background:url(../img/transform.png) no-repeat 0.15rem center; background-size:0.2rem; }
+.memberList>a span{ display:block; position:absolute; width:0.15rem; height:0.15rem; right:0.2rem; top:calc(0.3rem - 0.075rem); border-radius:0.075rem; background:rgba(178,178,178,0.3) url(../img/right.png) center no-repeat; background-size:contain; }
+.memberList>p{ width:100%; height:0; transition:.5s; overflow:hidden; background:rgba(22, 60, 161, 0.08); }
+.memberList>p>a{ display:block; width:100%; height:0.4rem; text-indent:0.5rem; line-height:0.4rem; color:rgba(255,255,255,0.6); font-size:0.12rem; border-bottom:1px solid #000; }
+.user{ width:100%; height:0.6rem; line-height:0.6rem;  font-weight:bolder; font-size: 0.16rem; border-bottom:3px solid #000; }
+
+.user span:nth-of-type(1){ float:left; margin-left:0.45rem; color:#fff; font-weight:normal; font-size:0.14rem; }
+.user span:nth-of-type(2){ float:right; margin-right:0.2rem; color:rgb(255, 0, 0);}
+.active{ background:none; text-align:center; border:none; height:0.15rem; line-height:0.2rem; }
+.active span{ float:none !important; margin:0 !important; color:#F6D372 !important; }
+.user:nth-of-type(2){ background:url(../img/moneys.png) no-repeat 0.15rem center !important; background-size:0.2rem; }
+
+#footer{ width:3rem; height:0.35rem; line-height:0.35rem; overflow:hidden; text-align:center; color:#fff; background:#986600; position:fixed; bottom:0;}
+#footer a{ font-size: 0.14rem;
+		    color: #E8E8E8;
+		    font-weight: bolder;
+		    display: inline-block;
+		    width: 1rem;
+		    float: left;
+		    text-align: center;
+		}
+#footer .convert{ margin-left:0; }

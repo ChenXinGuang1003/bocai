@@ -1,0 +1,106 @@
+/* 維護劃面共用CSS */
+/* div middle */
+#maintain-box{
+    position:absolute;
+    margin: -150px 0px 0px -400px;
+    top:50%;
+    left:50%;
+    height:319px;
+    width:797px;
+}
+#maintain{
+    height:319px;
+    width:797px;
+    position:relative;
+    background:url('/TPL/template/images/upup/Maintain_bg.png');
+}
+#maintain-top{
+    font-size: 20px;
+    height: 26px;
+    padding: 10px 15px 0 0;
+}
+#maintain-top .notice{
+    font-weight: bold;
+    text-shadow:1px 1px 1px #DDDDDD;
+    font-family: "Microsoft YaHei";
+    line-height: 26px;
+    float: right;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 5px;
+}
+#maintain-top .noticeIcon{
+    background:url('/TPL/template/images/upup/TT.png');
+    _background:url('/TPL/template/images/upup/TT8.png');
+    width: 30px;
+    height: 26px;
+    display: block;
+    float: right;
+    *display: inline;
+    *zoom: 1;
+    margin-right: 5px;
+}
+#maintain-logo{
+    position:absolute;
+    top:85px;
+    left:40px;
+}
+#maintain-content{
+    width:550px;
+    height:240px;
+    float:right;
+    _display: inline;
+    margin-right: 12px;
+}
+#maintain-content p{
+    font-family: "Microsoft YaHei";
+    text-align: left;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+#maintain-content .text-body{
+    color:#900;
+    margin-top:40px;
+    _margin-top:30px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#maintain-content .text-notice{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #999;
+    margin-top:10px;
+    _margin-top:0px;
+}
+#maintain-content .text-date{
+    margin:20px 0 20px 0;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: "Comic Sans MS","Microsoft YaHei", "cursive";
+    font-weight: bold;
+    color: #666;
+}
+#maintain-content .text-date span{
+    font-size: 16px;
+    color: #C00;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+#maintain-content .text-info span{
+    font-size: 14px;
+    font-family: "新細明體";
+    color: #333;
+    margin:0 15px 5px 0;
+}
+#maintain-content .text-upup{
+    font-size: 12px;
+    font-family: "新細明體";
+    color: #666;
+}
+.jp #maintain-top .notice{
+    margin-left: 640px;
+    font-size: 16px;
+}
+#maintain-content .service{
+    cursor:pointer;
+    border-bottom:1px solid #666;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全部</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background: #121212;">
+<!--main-->
+<div class="main">
+<!--header-->
+	<div class="header">
+  		<div class="logo">
+        	<a href="index.html"><img src="pic/logo.png" /></a>
+        </div>
+        <div class="logo2">
+        	<img src="pic/mg_gamelist_w.png" />
+        </div>	
+    </div>
+
+<!--nav-->
+	<div class="nav">
+		<ul>
+    		<li class="title">游戏分类:</li>
+        	<li class="hotgame"><a href="remen1.html">热门游戏</a></li>
+        	<li><a href="index1.html">全部</a></li>
+        	<li><a href="pk.html">视频扑克</a></li>
+        	<li><a href="zhuomianyouxi.html">桌面游戏</a></li>
+        	<li><a href="jzj1.html">角子机</a></li>
+        	<li><a href="guaguaka.html">刮刮卡</a></li>
+        	<li><a href="jzj1.html">角子机</a></li>
+        	<li><a href="dc.html">赌场游戏</a></li>
+    	</ul>
+	</div>
+<!--list-->
+	<div class="gamelist">
+    	<ul>
+        	<li><div class="gametitle">孟买魔术</div>
+            	<a href="/newmg2/playgame.php?id=RubyMumbaiMagic" target="_blank"><div id="img53"></div></a>
+            </li>
+            <li><div class="gametitle">扑克​</div>
+            	<a href="/newmg2/playgame.php?id=RubyAllAces" target="_blank"><div id="img54"></div></a>
+            </li>
+            <li><div class="gametitle">幸运数字</div>
+            	<a href="/newmg2/playgame.php?id=RubyLuckyNumbers" target="_blank"><div id="img55"></div></a>
+            </li>
+            <li><div class="gametitle">遗产</div>
+            	<a href="/newmg2/playgame.php?id=RubyLegacy" target="_blank"><div id="img56"></div></a>
+            </li>
+            <li><div class="gametitle">加德满都</div>
+            	<a href="/newmg2/playgame.php?id=RubyKathmandu" target="_blank"><div id="img57"></div></a>
+            </li>
+            <li><div class="gametitle">小丑8000</div>
+            	<a href="/newmg2/playgame.php?id=RubyJoker8000" target="_blank"><div id="img58"></div></a>
+            </li>
+            <li><div class="gametitle">杀手</div>
+            	<a href="/newmg2/playgame.php?id=RubyHitman" target="_blank"><div id="img59"></div></a>
+            </li>
+            <li><div class="gametitle">新年快乐</div>
+            	<a href="/newmg2/playgame.php?id=HappyNewYear" target="_blank"><div id="img60"></div></a>
+            </li>
+            <li><div class="gametitle">肉搏战</div>
+            	<a href="/newmg2/playgame.php?id=RubyHandToHandCombat" target="_blank"><div id="img61"></div></a>
+            </li>
+            <li><div class="gametitle">黄金海岸</div>
+            	<a href="/newmg2/playgame.php?id=RubyGoldCoast" target="_blank"><div id="img62"></div></a>
+            </li>
+            <li><div class="gametitle">兔子锅炉</div>
+            	<a href="/newmg2/playgame.php?id=RubyBunnyBoiler" target="_blank"><div id="img63"></div></a>
+            </li>
+            <li><div class="gametitle">豪华奖金扑克</div>
+            	<a href="/newmg2/playgame.php?id=RubyBonusPokerDeluxe" target="_blank"><div id="img64"></div></a>
+            </li>
+            <li><div class="gametitle">红利扑克</div>
+            	<a href="/newmg2/playgame.php?id=RubyBonusPoker" target="_blank"><div id="img65"></div></a>
+            </li>
+            <li><div class="gametitle">环游世界</div>
+            	<a href="/newmg2/playgame.php?id=RubyAroundTheWorld" target="_blank"><div id="img66"></div></a>
+            </li>
+            <li><div class="gametitle">王牌扑克</div>
+            	<a href="/newmg2/playgame.php?id=RubyAllAces" target="_blank"><div id="img67"></div></a>
+            </li>
+        </ul>
+	</div>
+<!--footer-->
+    <div class="footer">
+   		<ul>
+        	<li><a href="index1.html">首页</a></li>
+            <li><a href="index4.html">上一页</a></li>
+            <li><a href="index5.html">page:5</a></li>
+            <li><a href="index6.html">下一页</a></li>
+            <li><a href="index20.html">尾页</a></li>
+            <li><a href="#">共20页</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src='public.js'></script> </body>
+</html>

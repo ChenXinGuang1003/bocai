@@ -1,0 +1,16 @@
+#ui-btn-games {
+    top:0px;
+    width:613px;
+}
+#ShowRule, #ShowRule2 {
+    top: 90px; 
+}
+@media all and (min-width: 1025px) {
+    #ShowRule, #ShowRule2 {
+        right:100%;
+        margin-right:-1184px;
+    }
+   /*  #AD {
+        left:975px;
+    } */
+}

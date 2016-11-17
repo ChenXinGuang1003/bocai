@@ -1,0 +1,174 @@
+<?php
+$gId = $_REQUEST["gid"];
+$order_num = $_REQUEST["order_num"];
+$date_POST = $_REQUEST["date"];
+$gtype = $_REQUEST["gtype"];
+
+include_once($C_Patch."/app/member/class/report_sport.php");
+
+$user_sport_list = report_sport::getSportCgDetailsByUser($_SESSION["userid"],$gId);
+
+$subPage = '';
+foreach ($user_sport_list as $key =>$userSport) {
+    $status = "";
+    if($userSport["status"]==0){
+        $status = '未结算';
+    }elseif($userSport["status"]==1){
+        $status = '赢';
+    }elseif($userSport["status"]==2){
+        $status = '输';
+    }elseif($userSport["status"]==8){
+        $status = '和';
+    }elseif($userSport["status"]==3){
+        $status = '注单无效';
+    }elseif($userSport["status"]==4){
+        $status = '赢一半';
+    }elseif($userSport["status"]==5){
+        $status = '输一半';
+    }elseif($userSport["status"]==6){
+        $status = '其他无效';
+    }elseif($userSport["status"]==7){
+        $status = '红卡取消';
+    }
+    if($userSport["status"]!=0 && $userSport["status"]!=3 && $userSport["MB_Inball"]!=''){
+        $mb_inball = $userSport["MB_Inball"];
+        $tg_inball = $userSport["TG_Inball"];
+        $bet_info_result = "<br/>[$mb_inball:$tg_inball]";
+    }
+    $bet_info = $userSport["bet_info"].$bet_info_result;
+
+    $subPage = $subPage.'
+<tr >
+<td style="text-align:center;width: 80px;">'.$userSport["match_name"].'</td>
+<td style="text-align:center;min-width: 100px;">'.$userSport["master_guest"].'</td>
+<td style="text-align:center;width: 120px;">'.$bet_info.'</td>
+<td style="text-align:center;min-width: 100px;">'.$userSport["bet_time"].'<br/>'.$userSport["match_endtime"].'</td>
+<td style="text-align:center;width: 60px;">'.$status.'</td>
+</tr>';
+}
+?>
+<div id="MACenterContent">
+    <div id="MNav">
+        <span class="mbtn" >投注记录</span>
+        <div class="navSeparate"></div>
+    </div>
+    <div id="MNavLv2">
+        <span class="MGameType" ><a href="javascript: f_com.MChgPager({type: 'GET', method: 'SKLhcHistoryDetails'}, {date: '2016-05-14', gtype: 'LT'});" style="text-decorationnone;color:#630px">六合彩</a></span>｜
+        <span class="MGameType" onclick="chgType('liveHistory');">真人记录</span>｜
+        <span class="MGameType" onclick="chgType('skRecord');">彩票投注记录</span>｜
+		<span class="MGameType MCurrentType" onclick="chgType('ballRecord');">体育投注记录</span>｜
+        <span class="MGameType" onclick="chgType('cqRecord');">存取款记录</span>｜
+    </div>
+    <div id="MMainData" style="margin-top: 8px;">
+        <div class="MControlNav">
+            <select disabled="disabled" name="foo" id="MSelectType" class="MFormStyle">
+                <option label="<?=$date_POST?>" dis="false" value="history" selected="selected"><?=$date_POST?></option>
+            </select>
+            <select disabled="disabled" name="foo" id="MSelectType" class="MFormStyle">
+                <option label="<?=$gtype?>" dis="false" value="history" selected="selected"><?=$gtype?></option>
+            </select>
+            <select disabled="disabled" name="foo" id="MSelectType" class="MFormStyle">
+                <option label="主订单号:<?=$order_num?>" dis="false" value="history" selected="selected">主订单号：<?=$order_num?></option>
+            </select>
+
+            <input type="button" class="MBtnStyle" value="上一页" onclick="f_com.MChgPager({type: 'GET', method: 'sportGameCgDetails'}, {date: '<?=$date_POST?>',gtype: '<?=$gtype?>'});" onmouseover="mover(this);" onmouseout="mout(this);" />
+        </div>
+        <table class="MMain" border="1">
+            <thead>
+            <tr>
+                <th>联赛名</th>
+                <th>主客队</th>
+                <th>投注详细信息</th>
+                <th>投注/开赛时间</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody id="general-msg">
+            <?=$subPage?>
+            </tbody>
+            <tfoot id="msgfoot" style="display:none;">
+            <tr><td colspan='5' style='text-align:center;'></td></tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    var oMsg = {
+        "totalPage": {},    //總頁數
+        "pageMsg": 50,      //每頁顯示訊息數
+        "msglist": $('#general-msg'),
+        'currentPage': 1,    //當前頁碼
+        "page": function(p) {
+            this.msglist.find("tr").css({"background-color": ""});
+            $(".msgcontent").remove();
+            oMsg.currentPage = p;
+            this.totalPage = Math.ceil(this.msglist.find("tr").length / this.pageMsg);
+
+            if(this.totalPage > 1) {
+                $("#msgfoot").show();
+            }
+            if(this.totalPage == 1) {
+                $("#msgfoot").hide();
+            }
+            $("#msgfoot tr td").html("");
+            oMsg.msglist.find("tr").hide();
+
+            //判斷最後一頁是否有筆數
+            if(oMsg.currentPage > this.totalPage) {
+                oMsg.currentPage = this.totalPage ;
+            }
+            for(var i = ((oMsg.currentPage-1) * oMsg.pageMsg ) ; i < oMsg.pageMsg + ((oMsg.currentPage - 1) * oMsg.pageMsg); i++) {
+                oMsg.msglist.find("tr:eq(" + i + ")").show();
+            }
+            for(var t = 1 ; t <= this.totalPage ; t++) {
+                if(oMsg.currentPage == t) {
+                    $("#msgfoot tr td").append("<span id='currentpage'>" + t + "</span>");
+                } else {
+                    $("#msgfoot tr td").append("<a class='pagelink' href='#' onclick='oMsg.page(" + t + ")'>" + t + "</a>");
+                }
+            }
+        }
+    }
+
+    oMsg.page(oMsg.currentPage);
+
+    $(".MMain tbody tr").hover(function(){
+        $("td", this).addClass("mouseenter");
+        $("td a", this).addClass("mouseenter");
+    }, function() {
+        $("td", this).removeClass("mouseenter");
+        $("td a", this).removeClass("mouseenter");
+    });
+
+    function chgType(type) {
+        switch(type) {
+            case 'ballRecord':
+                f_com.MChgPager({method: 'ballRecord'});
+                break;
+            case 'lotteryRecord':
+                f_com.MChgPager({method: 'lotteryRecord'});
+                break;
+            case 'liveHistory':
+                f_com.MChgPager({method: 'liveHistory'});
+                break;
+            case 'gameHistory':
+                f_com.MChgPager({method: 'gameHistory'});
+                break;
+            case 'skRecord':
+                f_com.MChgPager({method: 'skRecord'});
+                break;
+            case 'a3dhHistory':
+                f_com.MChgPager({method: 'a3dhHistory'});
+                break;
+            case 'TPBFightHistory':
+                f_com.MChgPager({method: 'TPBFightHistory'});
+                break;
+            case 'TPBSPORTHistory':
+                f_com.MChgPager({method: 'TPBSPORTHistory'});
+                break;
+            case 'cqRecord':
+                f_com.MChgPager({method: 'cqRecord'});
+                break;
+        }
+    }
+</script>

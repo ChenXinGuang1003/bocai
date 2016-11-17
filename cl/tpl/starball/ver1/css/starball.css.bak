@@ -1,0 +1,922 @@
+.border{
+	border:#ccc solid 1px;
+}
+.block{
+    display:block;
+}
+.clear{
+    clear:both;
+}
+.hover_fade { background-position: 100% 100%; background-repeat: no-repeat; }
+.hover_fade a { display: block; background-position: 0 0; background-repeat: no-repeat; cursor: pointer; }
+html{
+    margin:0;
+    padding:0;
+}
+body{
+    padding:0;
+    margin:0px auto;
+    font-family:'微软雅黑',Arial;
+    font-size:12px;
+}
+.first body{  }
+#mainBody_bg{ background:url("/imgs/top_x.jpg") repeat-x scroll center top; }
+#mainBody{
+    width:1094px;
+    height:auto;
+    margin:0px auto;
+	position:relative;
+	background:url("/imgs/top_bg2.png") repeat-x scroll center top;
+}
+.isTpl #mainBody{ float: left;margin: 0px 0px; }
+#page-header{
+	width:1000px;
+	height:auto;
+	margin: 0 auto;
+	background: url(/cl/tpl/starball/ver1/image/headerBg.jpg) left top no-repeat;
+}
+#page-container{
+    width:1000px;
+    margin: 0 auto;
+}
+#page-body{
+	width:1000px;
+	height:auto;
+	margin:25px auto 0px auto;
+}
+.isLogin #page-body{ margin:0px auto 0px auto; }
+/*登入表單*/
+#topbox{
+	position:relative;
+	float:right;
+    width:720px;
+    height:108px;
+    display:inline;
+    color: #FFF;
+}
+#time_flag{
+	float:left;
+	width:368px;
+	height:50px;
+	text-align: right;
+	padding-top:12px;
+}
+#flag{
+	float:right;
+	width:88px;
+	height:19px;
+}
+.en #flag{ width:86px; }
+#top_info{
+	float:right;
+	width:auto;
+	height:20px;
+	line-height:20px;
+	color: #FFFFFF;
+}
+#top_info ul li{float:left;}
+#top_info ul li a{
+	color: #FFFFFF;
+	text-decoration:none;
+	padding: 0 5px;
+}
+#top_info ul li a:hover{
+	color:#FC9;
+}
+/*美東時間*/
+#est_bg{
+	position: relative;	
+	top:5px;
+	right:5px;
+	float:right;
+    display: inline;
+    width:190px;
+    height:20px;
+    line-height:20px;
+    color: #FFFFFF;
+    text-align:left;
+    background: transparent;
+    /* For IE 8 */   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    /* For IE 5-7 */ *filter:alpha(opacity=100);
+    /* For W3C */    opacity: 1;
+}
+/*美東時間_END*/
+   /*首頁登入後副選單*/
+
+#SU-Menual-first {
+    position: absolute;
+    top: 83px;
+    right: -2px;
+    height: auto;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.en #SU-Menual-first{
+	left:210px;
+	_left:190px;
+}
+#SU-Menual-first ul{float:right;}
+#SU-Menual-first ul li{float:left;}
+#SU-Menual-first ul li a{
+	float:left;
+	line-height:20px;
+	text-align:center;
+    color:#FFFFFF;
+    font-size:12px;
+    text-decoration:none;
+    display:block;
+    padding:0px;
+}
+#SU-Menual-first ul li a:hover{color:#FFDAB9;}
+   /*首頁登入後副選單_END*/
+     /*登入框*/
+    /*主選單*/
+#main-Menual{
+    width:1000px;
+    height:40px;
+}
+#main-Menual ul.topNav li{
+    float:left;
+    width:90px;	
+    height:38px;
+    background: url(/cl/tpl/starball/ver1/image/nav_img.jpg) 88px 2px no-repeat;
+}
+#main-Menual ul li a{
+	height:38px;
+	line-height:38px;
+    display:block;
+    text-align:center;
+    color:#FFFFFF;
+    text-decoration:none;
+    font-weight:bold;
+    overflow: hidden;
+}
+#main-Menual ul li a:hover ,#main-Menual ul li a.current{
+	color:#CC9966;
+	background: url(/cl/tpl/starball/ver1/image/mOver.jpg) top center no-repeat;
+}
+#L-Sub{
+    position: relative;
+    z-index: 9999;
+    clear: both;
+}
+#L-Sub div {
+    display:none;
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 8px;
+    z-index:100;
+}
+#L-Sub div a {
+    float: left;
+    display: block;
+    background: url(/cl/tpl/starball/ver1/image/sub.gif) 32px repeat-x;
+    padding: 0 4px;
+    color:#CC9966;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "細明體",serif;
+}
+#L-Sub div a:hover{color:#DBB793;}
+#L-Sub span {
+    display: block;
+    float: left;
+    width: 7px;
+    height: 32px;
+}
+#L-Sub span.subbg-left {
+    background: url(/cl/tpl/starball/ver1/image/sub.gif) left top no-repeat;
+}
+#L-Sub span.subbg-right {
+    background: url(/cl/tpl/starball/ver1/image/sub.gif) left bottom no-repeat;
+}
+	/*主選單END*/
+	/*中間廣告+title圖*/
+#header_ad{
+	width:1000px;
+	height:auto;
+	clear:both;
+}
+#ad-flash{
+	width:1000px;
+	height:348px;
+}
+#header_game_tit{
+	width:1000px;
+	height:100px;
+}
+	/*中間廣告+title圖_END*/
+    /*首頁中間一排*/
+.first_btn{
+	width:956px;
+	height:120px;
+	margin:9px auto 0 21px;
+}
+.first_news marquee{
+    color:#AD9285;
+    float:right;
+    margin-right:22px;
+    _margin-right:11px;
+}
+.first_prize #prize-first{
+    position:absolute;
+    top:56px;
+    left:34px;
+}
+   /*首頁中間一排-END*/
+   /*首頁捲動圖*/
+.rollphotos {
+	width:1000px;
+	height:121px;
+	padding:20px 0px 20px 0px;
+	background: url(/cl/tpl/starball/ver1/image/gamesBG.jpg) left top no-repeat;
+}
+div#ISL_Cont_1.Cont{
+	width:950px;
+}
+.blk_29 {
+	padding:0px;
+	zoom:1;
+	position:relative;
+}
+.blk_29 .LeftBotton {
+	float: left;
+	width:25px;
+	height:25px;
+	cursor: pointer;
+	position: absolute;
+	top:45px;
+	left:0px;
+	background: url(/cl/tpl/starball/ver1/image/game_btnL.png) left top no-repeat;
+}
+.blk_29 .RightBotton {
+	float:right;
+	width:25px;
+	height:25px;
+	cursor: pointer;
+	position: absolute;
+	top:45px;
+	right:0px;
+	background: url(/cl/tpl/starball/ver1/image/game_btnR.png) left top no-repeat;
+}
+.blk_29 .Cont {
+	margin: 0px auto;
+	overflow: hidden;
+	width:950px
+}
+.blk_29 .box {	
+	float: left; 
+	width: 180px;
+	height: 113px;
+	padding: 0px 5px 0px 5px;
+}
+.blk_29 .box a{	
+	float: left; 
+	width: 180px;
+	height: 113px;
+	text-align: center;
+}
+   /*首頁捲動圖_END*/
+	/*登入後副選單*/
+#top_login ul {
+    padding:8px 0 0 25px;
+    overflow:hidden;
+}
+#top_login ul li{
+	display:inline;
+	float:left;
+	line-height: 35px;
+	color:#fff;
+	padding:0 5px;
+}
+#SU-Menual{
+	width:1000px;
+    height:40px;
+}
+.isTpl #SU-Menual{ height:32px; }
+#SU-Menual ul{float:right;padding-right:13px;}
+#SU-Menual ul li{
+    float:left;
+    line-height:40px;
+    font-size:12px;
+    color:#AD9285;
+    text-align:center;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display:inline-block;
+}
+.isTpl #SU-Menual ul li{ line-height:32px; }
+a.string06:link,
+a.string06:active,
+a.string06:visited{
+    color:#AD9285;
+    text-decoration:none;
+    padding:0px 5px 0px 9px;
+}
+a.string06:hover{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+    /*登入後副選單END*/   
+   /*footer*/
+#page-footer{
+    width:968px;
+    color:#644D42;
+    padding-right:32px;
+    background: url(/cl/tpl/starball/ver1/image/bg_footer.jpg) #1B120D center top no-repeat;
+}
+#bblogo{
+	float:left;
+	width:128px;
+	height:52px;
+	cursor:pointer;
+	margin: 32px 0px 0px 0px;
+	background: url(/cl/tpl/commonFile/images/bbinlogo/white.png) left top no-repeat;
+} 
+#bankLogo{
+    position: absolute;
+    top:42px;
+    z-index:1;
+    left:138px;
+}
+#footer-article{
+    float:right;
+    width:760px;
+    height:49px;
+    line-height:49px;
+    margin-top:23px;
+    text-align:right;
+    color:#AD9285;
+    position:relative;
+    z-index:5;
+}
+#footer-article a{
+    color:#AD9285;
+    text-decoration:none;
+}
+#footer-article a:hover{
+    color:#FFFFFF;
+}
+#copy_ifo{
+	float:right;
+	text-align:right;
+	width:760px;
+	line-height:17px;
+}
+#copy_ifo p{margin-bottom:6px;}
+/*首頁內容*/
+/*真人+電子*/
+.content-area{margin-top: 20px;}
+.liveTopFlash{
+    width: 934px;
+	margin: 0px auto;
+}
+.liveTopFlash object { display: inline-block; }
+#tit_chose{
+	width: 150px;
+	height:22px;
+	border:1px #110906 solid;
+	background:#3E2A23;
+	margin-left:24px;
+}
+#tit_chose a{
+	width:100px;
+	line-height:22px;
+    color:#C96;
+    text-decoration:none;
+}
+#tit_chose a:hover{color:#FC9;}
+.content-area{}
+.GameIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+.GameIcon-First {
+    width: 72px;
+    height: 29px;
+}
+.GameIcon-New {
+    width: 36px;
+    height: 37px;
+    background-image: url('/cl/tpl/commonFile/images/GameIcon/New.gif');
+}
+.Game-layout{
+	float:left;
+	position:relative;
+    width:312px;
+    height:116px;
+    margin:0px 0px 16px 16px;
+    _margin:0px 0px 8px 8px;
+    background:url(/cl/tpl/starball/ver1/image/bggame.jpg) top no-repeat;
+}
+.box_text{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:158px;
+	height:116px;
+}
+.box_text h3{
+	position:relative;
+	z-index:5;
+    line-height:27px;
+    color:#FC9;
+	text-align:left;
+	padding:13px 0px 0px 25px;
+}
+.box_text p{
+    margin:10px 0px 0px 25px;	
+}	
+.box_img{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:230px;
+	height:116px;
+}
+a.Game-select:link,
+a.Game-select:active,
+a.Game-select:visited{
+    color:#AD9285;
+    text-decoration:none;
+}
+a.Game-select:hover{
+    color:#DACEC9;
+    text-decoration:none;
+}
+/*樂透*/
+.Lottery-layout{
+	float:left;
+	position:relative;
+	width:430px;
+	height:116px;
+	background:url(/cl/tpl/starball/ver1/image/bggame02.jpg) top left no-repeat;
+	margin:0px 0px 18px 18px;
+}
+.lot_text{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:158px;
+	height:116px;
+}
+.lot_text h3{
+    line-height:27px;
+    color:#FC9;
+	text-align:left;
+	padding:14px 0px 0px 25px;
+}
+.lot_text p{
+    margin:10px 0px 0px 25px;	
+}	
+.isLogin .lot_text p{ margin:7px 0px 0px 25px; }
+.lot_img{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:230px;
+	height:116px;
+}
+.lot_boxcaption{
+	position:absolute;
+	top:83px;
+	left:8px;
+	width:416px;
+	height:27px;
+	color:#300;
+	background:#D1C289;
+	padding:1px 0px 5px 6px ;
+	opacity: .85;
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+}
+.number01{ font-family:Verdana; color:#B51600; font-size:11px;}
+.number02{ font-family: Arial; color:#ED5200; font-size:11px;}   
+    /*左側快速選單*/
+#page-left{
+	float:left;
+	width:220px;
+	padding-left:33px;
+}
+#page-left img{ display: block; }
+#mem-menual{
+	width:220px;
+}
+#mem-menual ul li{
+    list-style: none;
+}
+#mem-menual ul li a{
+	width:220px;
+	height:32px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	font-size:12px;
+	color:#FC9;
+	display:block;
+	background:url(/cl/tpl/starball/ver1/image/about_btn.jpg) left top no-repeat;
+}
+#mem-menual ul li a:hover{
+    color:#FFE4CA;
+    background:url(/cl/tpl/starball/ver1/image/about_btn.jpg) left bottom no-repeat;
+}   
+/*文案*/
+#direction{
+	float:left;
+    color:#CCC;
+    width:700px;
+    letter-spacing:1px;
+    margin:0px 0px 0px 40px;
+    _margin:0px 0px 0px 20px;
+}
+#direction a{color:#FC9;}
+#direction a:hover{color:#FFE4CA;}
+#direction h3{
+    font-size:14px;
+    line-height:25px;
+    color:#FFFFFF;
+}
+#direction ul.mtab-menual{
+    list-style:none;
+}
+#direction ul.mtab-menual li{
+    margin-left:5px;
+    line-height:25px;
+    height:25px;
+    display:inline;
+    cursor:pointer;
+    padding:9px 5px 8px 9px;
+    font-size:12px;
+    color:#FC9;
+    background-color:#4C352F;
+}
+#direction ul.mtab-menual li.mtab{
+    background-color:#C26C09;
+    color:#FAEBD8;
+    font-weight:bolder;
+}
+/*優惠活動*/
+#direction.exclusive-event{
+	float:none;
+	width:auto;
+	line-height:auto;
+    padding:0px 0px 0px 0px;
+    margin: 0px auto;
+}
+.eventtext p{
+  padding:0 15px;
+}
+.MemberExclusive .eventtext a{
+	color:#FFCC00;
+	text-decoration: none;
+}
+.MemberExclusive .eventtext a:hover{
+	text-decoration: underline;
+}
+#PT-switcher-wrap{
+    padding-left: 25px;
+}
+/* 彩金說明 */
+a.jpbtn-zh-tw,
+a.jpbtn-zh-cn,
+a.jpbtn-en,
+a.jpbtn-th,
+a.jpbtn-ja,
+a.jpbtn-es,
+a.jpbtn-vi,
+a.jpbtn-ko,
+a.jpbtn-km,
+a.jpbtn-lo,
+a.jpbtn{
+    margin:0px auto;
+	display:block;
+	width:166px;
+	height:31px;
+	background: url(/cl/tpl/commonFile/images/PrizeRule_en.jpg) top left no-repeat;
+}
+a.jpbtn-zh-tw{
+	background: url(/cl/tpl/commonFile/images/PrizeRule_tw.jpg) top left no-repeat;
+}
+a.jpbtn-zh-cn{
+	background: url(/cl/tpl/commonFile/images/PrizeRule_cn.jpg) top left no-repeat;
+}
+a.jpbtn-zh-tw,
+a.jpbtn-zh-cn,
+a.jpbtn-en,
+a.jpbtn-th,
+a.jpbtn-ja,
+a.jpbtn-es,
+a.jpbtn-vi,
+a.jpbtn-ko,
+a.jpbtn-km,
+a.jpbtn-lo,
+a.jpbtn:hover{
+	background-positon:bottom;
+}
+a.prizeBB-zh-tw,
+a.prizeBB-zh-cn,
+a.prizeBB-en,
+a.prizeBB-th,
+a.prizeBB-ja,
+a.prizeBB-es,
+a.prizeBB-vi,
+a.prizeBB-ko,
+a.prizeBB-km,
+a.prizeBB-lo,
+a.prizeBB{
+    margin:0px auto;
+	display:block;
+	width:166px;
+	height:31px;
+	background: url(/cl/tpl/commonFile/images/PrizeBB_en.jpg) top left no-repeat;
+}
+a.prizeBB-zh-tw{
+	background: url(/cl/tpl/commonFile/images/PrizeBB_tw.jpg) top left no-repeat;
+}
+a.prizeBB-zh-cn{
+	background: url(/cl/tpl/commonFile/images/PrizeBB_cn.jpg) top left no-repeat;
+}
+#prizeDIV{
+	position:relative;
+    float:left;
+    width:184px;
+    height:91px;
+    line-height:91px;
+    margin:11px 0px 10px 24px;
+    background:url(/cl/tpl/commonFile/images/prizeBG.jpg) no-repeat;
+}
+#jackpot-prize-flash{
+    position: absolute;
+    top:33px;
+    left: 10px;
+}
+#prize-rule{
+    position: relative;
+    top:72px;
+    left:0px;
+    float:left;
+    width:166px;
+}
+/*共用頁面*/
+.Tpl-table01 {
+    background-color: #FFFFFF;
+    border: 1px solid #666;
+    color: #000;
+    font-size: 12px;
+}
+table .Tpl-title01 th{
+    background-color: #491807;  
+    height: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    /* IE10 */ 
+    background: -ms-linear-gradient(top, #6D2D14 0%, #491807 100%);
+    /* Mozilla Firefox */ 
+    background: -moz-linear-gradient(top, #6D2D14 0%, #491807 100%);
+    /* Opera */ 
+    background: -o-linear-gradient(top, #6D2D14 0%, #491807 100%);
+    /* Webkit (Chrome 11+) */ 
+    background: -webkit-linear-gradient(top, #6D2D14 0%, #491807 100%);
+    /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6D2D14', endColorstr='#491807',GradientType=0 );
+    /* Proposed W3C Markup */ 
+    background: linear-gradient(top, #6D2D14 0%, #491807 100%);
+}
+#Tpl-user-acc span{
+    line-height:20px;
+    color: #0000FF;
+}
+.Tpl-table01 th, .Tpl-table01 td {
+    height: 22px;
+    border: 1px solid #666;
+}
+tr.Tpl-trcolor1{
+    background: #FFFFFF;
+    /* IE10 */ 
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Mozilla Firefox */ 
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Opera */ 
+    background: -o-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Webkit (Chrome 11+) */ 
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+    /* Proposed W3C Markup */ 
+    background: linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+}
+tr.Tpl-trcolor2{
+    background: #EEEEEE;
+}
+tr.Tpl-trmouseenter {
+    background: #DEF;
+}
+#Tpl-memdata .Tpl-table01 th, #Tpl-memdata .Tpl-table01 td.Tpl-left{
+	text-align: center;
+}
+#Tpl-memdata .Tpl-table01 td.Tpl-right{
+    text-align: left;
+}
+.Tpl-blue {
+	color: #0000FF;
+}
+.Tpl-fontcolor1 {
+	color: #D73600;
+}
+.Tpl-fontcolor2 {
+	color: #0000FF;
+}
+
+/*新模板新增样式*/
+.block {
+    height: auto;
+    width: 1000px;
+}
+#header {
+    height: 109px;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    position:relative;
+}
+#header-logo {
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    width: 425px;
+    overflow:hidden;
+    position:absolute;
+    left:40px;
+    top:2px;
+}
+#headtop {
+    color: #F8DF7A;
+    float: right;
+    height: 109px;
+    width: 470px;
+}
+#hdselect {
+    color: #F8DF7A;
+    height: 31px;
+    line-height: 25px;
+    margin: 0;
+    text-align: right;
+}
+#hdselect a {
+    color: #F8DF7A;
+	text-decoration:none;
+    margin-right:3px;
+    font-size:13px;
+}
+#hdselect a:hover{
+    color:#FF0000;
+}
+#loginbox3 {
+    height: 40px;
+    margin: 0;
+    padding-left: 200px;
+}
+#idxreg {
+    display: inline;
+    float: left;
+    height: 34px;
+    width: 125px;
+}
+div.mainBoxs{
+    overflow:hidden;
+    position:relative;
+    width:480px;
+    height:80px;
+    right:-55px;
+    margin-top:10px;
+    background:url(/imgs/login_q.png) no-repeat center top;
+}
+#idxreg a {
+    background: #ccc;
+    cursor: pointer;
+    display: block;
+    height: 65px;
+    width: 130px;
+    background:none;
+}
+#idxkefu {
+    display: inline;
+    float: left;
+    height: 40px;
+    margin-left: 5px;
+    width: 125px;
+}
+#idxkefu a {
+    background:pink;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 125px;
+}
+.clear {
+    clear: both;
+}
+#loginbox1 {
+    float: left;
+    height: auto;
+    padding-left: 0px;
+    width: 360px;
+}
+.login_ip {
+    float: left;
+    height: 25px;
+    width: 150px;
+}
+.login_input01 {
+    border: 0 none;
+    color: #CEAE57;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    width: 130px;
+    height:25px !important;
+    background:none;
+}
+.login_input02{
+    border: 0 none;
+    color: #CEAE57;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    width: 50px;
+    background:none;
+}
+#loginbox2 {
+    float: left;
+    height: auto;
+    text-align: center;
+    width: 70px;
+    height:30px;
+}
+/* #ibtnLogin {
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    width: 70px;
+     background:none;
+} */
+#loginbox2 a.forpwd {
+    display: inline;
+    width: 70px;
+    height: 25px;
+}
+
+
+
+.blank4 {
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+    width: 1016px;
+}
+#menu {
+    height: 43px;
+    margin: 0;
+    position: relative;
+    right:-29px;
+    margin-top:30px;
+}
+#menu ul {
+    float: left;
+    height: 34px;
+    position: absolute;
+    width:1100px;
+}
+#menu .normal, #menu .active {
+    float: left;
+    height: 35px;
+    list-style: none outside none;
+    position: relative;
+    width: 115px;
+    z-index: 1;
+}
+#menu .normal a {
+    color: #4C1300; 
+    font-weight:bolder;
+}
+#menu .normal a, #menu .active a {
+    float: left;
+    font-size: 16px;
+    height: 100%;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-family: "微软雅黑";
+}
+#menu .normal a:hover{
+	color:#F00;
+	}
+#vPic{vertical-align:top;}

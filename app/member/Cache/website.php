@@ -1,0 +1,31 @@
+<?php 
+unset($web_site);
+$web_site			=	array();
+$web_site['close']	=	0;
+$web_site['web_name']	=	'澳门永利赌场';
+$web_site['end_close_time']	=	'2016-05-20 08:00:00';
+$web_site['check_url1']	=	'';
+$web_site['check_url2']	=	'';
+$web_site['check_url3']	=	'';
+$web_site['check_url4']	=	'';
+$web_site['check_url5']	=	'';
+$web_site['check_url6']	=	'2.yl00853.com';
+$web_site['check_url7']	=	'1.yl00853.com';
+$web_site['check_url8']	=	'www.yl00853.com';
+$web_site['ag_hall']	=	'3000';
+$web_site['ag_viphall']	=	'';
+$web_site['tyc_hall']	=	'';
+$web_site['hk_sxf']	=	'0.01';
+$web_site['caipiao_auto_time']	=	'150';
+$web_site['lhc_auto_time']	=	'150';
+$web_site['sport_auto_time']	=	'150';
+$web_site['auto_zhenren']	=	'1';
+$web_site['notice_regster']	=	'1';
+$web_site['show_caipiao']	=	'1';
+$web_site['caipiao_auto']	=	'1';
+$web_site['lhc_auto']	=	'1';
+$web_site['sport_auto']	=	'1';
+$web_site['caipiao_show_row']	=	'50';
+$web_site['lhc_show_row']	=	'50';
+$web_site['sport_show_row']	=	'50';
+?>

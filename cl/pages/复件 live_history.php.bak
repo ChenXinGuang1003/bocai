@@ -1,0 +1,254 @@
+<?php
+include_once($C_Patch."/app/member/class/live_info.php");
+
+$user_live_list = live_info::getLifeRecordByUser($_SESSION["userid"]);
+
+$subPage = '';
+if($user_live_list && count($user_live_list)>0){
+$in_normal_total = 0;
+$in_vip_total = 0;
+$out_normal_total = 0;
+$out_vip_total = 0;
+$in_tyc_total = 0;
+$out_tyc_total = 0;
+foreach ($user_live_list as $key =>$userLive) {
+    $zz_type = "";
+    $live_type = "";
+    if($userLive["zz_type"]=="d" && $userLive["live_type"]=="AG"){
+        $live_type = "AG";
+        $zz_type = "转入AG娱乐城";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $in_normal_total += $userLive["zz_money"];
+        }
+    }elseif($userLive["zz_type"]=="vd" && $userLive["live_type"]=="AG"){
+        $live_type = "AG";
+        $zz_type = "转入AG VIP厅";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $in_vip_total += $userLive["zz_money"];
+        }
+    }elseif($userLive["zz_type"]=="w" && $userLive["live_type"]=="AG"){
+        $live_type = "AG";
+        $zz_type = "从AG娱乐城转出";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $out_normal_total += $userLive["zz_money"];
+        }
+    }elseif($userLive["zz_type"]=="vw" && $userLive["live_type"]=="AG"){
+        $live_type = "AG";
+        $zz_type = "从AG VIP厅转出";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $out_vip_total += $userLive["zz_money"];
+        }
+    }
+    elseif($userLive["zz_type"]=="i"){
+        $live_type = "太阳城";
+        $zz_type = "主账户转到太阳城";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $in_tyc_total += $userLive["zz_money"];
+        }
+    }elseif($userLive["zz_type"]=="o"){
+        $live_type = "太阳城";
+        $zz_type = "太阳城转到主账户";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $out_tyc_total += $userLive["zz_money"];
+        }
+    }elseif($userLive["zz_type"]=="d" && $userLive["live_type"]=="BBIN"){
+        $live_type = "BBIN";
+        $zz_type = "转入BBIN娱乐城";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $in_normal_total += $userLive["zz_money"];
+        }
+    }elseif($userLive["zz_type"]=="w" && $userLive["live_type"]=="BBIN"){
+        $live_type = "BBIN";
+        $zz_type = "从BBIN娱乐城转出";
+        if(strpos($userLive["result"],"[成功]")!==false){
+            $out_normal_total += $userLive["zz_money"];
+        }
+    }
+    $cancel_button = "";
+    if($userLive["status"]=="0" || $userLive["status"]=="4"){
+        $cancel_button = '<input type="button" value="取消转账" onclick="rollbackDeal(\''.$userLive["id"].'\',\''.$userLive["zz_type"].'\',\''.$live_type.'\')"/>';
+    }
+$subPage = $subPage.'
+<tr id="myrefreshtr">
+<td style="text-align:center;width: 150px;">'.$userLive["order_num"].'</td>
+<td style="text-align:center;width: 100px;">'.$live_type.'</td>
+<td style="text-align:center;width: 150px;">'.$zz_type.'</td>
+<td style="text-align:center;width: 100px;">'.$userLive["zz_money"].'</td>
+<td style="text-align:center;width: 150px;">'.$userLive["do_time"].'</td>
+<td id="'.$userLive["id"].'" style="text-align:center;width: 200px;">'.$userLive["result"].$cancel_button.'</td>
+</tr>';
+}
+    $subPage .= '<tr>
+    <td colspan="6" style="text-align:center;">
+    成功转入娱乐城：'.$in_normal_total.'。
+    成功转出娱乐城：'.$out_normal_total.'。
+    </td>
+    </tr>';
+}else{
+    $subPage = '<td colspan="6" style="text-align:center;">暂时没有下注信息。</td>';
+}
+?>
+<div id="MACenterContent">
+    <div id="MNav">
+        <span class="mbtn" >投注记录</span>
+        <div class="navSeparate"></div>
+    </div>
+    <div id="MNavLv2">
+        <span class="MGameType" onclick="chgType('ballRecord');">体育赛事</span>｜
+        <span class="MGameType MCurrentType" onclick="chgType('liveHistory');">视讯直播</span>｜
+		<span class="MGameType MCurrentType" onclick="chgType('skRecord');">彩票</span>｜
+        <span class="MGameType" onclick="chgType('cqRecord');">存取款记录</span>｜
+    </div>
+    <div id="MMainData" style="margin-top: 8px;">
+        <div class="MControlNav">
+            日期：
+            <input type="text" value="<?=date('Y-m-d',strtotime('-6 day'))?>" style="width: 70px;background-color: white;" disabled="disabled"/> ~
+            <input type="text" value="<?=date('Y-m-d')?>" style="width: 70px;background-color: white;" disabled="disabled"/>
+        </div>
+
+        <table class="MMain" border="1">
+            <thead>
+            <tr>
+                <th>订单号</th>
+                <th>游戏类型</th>
+                <th>账转类型</th>
+                <th>账转金额</th>
+                <th>更新时间</th>
+                <th>结果反馈</th>
+            </tr>
+            </thead>
+            <tbody id="general-msg">
+            <?=$subPage?>
+            </tbody>
+            <tfoot id="msgfoot" style="display:none;">
+            <tr><td colspan='6' style='text-align:center;'></td></tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    var oMsg = {
+        "totalPage": {},    //總頁數
+        "pageMsg": 50,      //每頁顯示訊息數
+        "msglist": $('#general-msg'),
+        'currentPage': 1,    //當前頁碼
+        "page": function(p) {
+            this.msglist.find("tr").css({"background-color": ""});
+            $(".msgcontent").remove();
+            oMsg.currentPage = p;
+            this.totalPage = Math.ceil(this.msglist.find("tr").length / this.pageMsg);
+
+            if(this.totalPage > 1) {
+                $("#msgfoot").show();
+            }
+            if(this.totalPage == 1) {
+                $("#msgfoot").hide();
+            }
+            $("#msgfoot tr td").html("");
+            oMsg.msglist.find("tr").hide();
+
+            //判斷最後一頁是否有筆數
+            if(oMsg.currentPage > this.totalPage) {
+                oMsg.currentPage = this.totalPage ;
+            }
+            for(var i = ((oMsg.currentPage-1) * oMsg.pageMsg ) ; i < oMsg.pageMsg + ((oMsg.currentPage - 1) * oMsg.pageMsg); i++) {
+                oMsg.msglist.find("tr:eq(" + i + ")").show();
+            }
+            for(var t = 1 ; t <= this.totalPage ; t++) {
+                if(oMsg.currentPage == t) {
+                    $("#msgfoot tr td").append("<span id='currentpage'>" + t + "</span>");
+                } else {
+                    $("#msgfoot tr td").append("<a class='pagelink' href='#' onclick='oMsg.page(" + t + ")'>" + t + "</a>");
+                }
+            }
+        }
+    }
+
+    oMsg.page(oMsg.currentPage);
+
+    $(".MMain tbody tr").hover(function(){
+        $("td", this).addClass("mouseenter");
+        $("td a", this).addClass("mouseenter");
+    }, function() {
+        $("td", this).removeClass("mouseenter");
+        $("td a", this).removeClass("mouseenter");
+    });
+
+    function rollbackDeal(id,zz_type,live_type){
+        if(confirm("确定取消转账吗？")){
+            $.ajax({
+                type: "POST",
+                url: "/cl/pages/money_change_rollback.php",
+                data: {
+                    live_id: id,
+                    change_type: zz_type,
+					live_type: live_type
+                }
+            }).done(function( msg ) {
+                    alert(msg);
+                    chgType('liveHistory');
+                }).fail(function(error){
+                    alert(error.responseText);
+                });
+        }
+    }
+
+    function chgType(type) {
+        switch(type) {
+            case 'ballRecord':
+                f_com.MChgPager({method: 'ballRecord'});
+                break;
+            case 'lotteryRecord':
+                f_com.MChgPager({method: 'lotteryRecord'});
+                break;
+            case 'liveHistory':
+                f_com.MChgPager({method: 'liveHistory'});
+                break;
+            case 'gameHistory':
+                f_com.MChgPager({method: 'gameHistory'});
+                break;
+            case 'skRecord':
+                f_com.MChgPager({method: 'skRecord'});
+                break;
+            case 'a3dhHistory':
+                f_com.MChgPager({method: 'a3dhHistory'});
+                break;
+            case 'TPBFightHistory':
+                f_com.MChgPager({method: 'TPBFightHistory'});
+                break;
+            case 'TPBSPORTHistory':
+                f_com.MChgPager({method: 'TPBSPORTHistory'});
+                break;
+            case 'cqRecord':
+                f_com.MChgPager({method: 'cqRecord'});
+                break;
+
+        }
+    }
+
+    function getData() {
+        var searchtype = $("#searchType").val();
+        var stime = $("select[name=sdate]").val();
+        var etime = $("select[name=edate]").val();
+        var page = $("select[name=page]").val();
+        f_com.MChgPager({type: 'POST', method: 'liveHistory'}, {searchtype: searchtype, STime: stime, ETime: etime, page: page});
+    }
+
+    function refreshData(){
+        var intervalId = setInterval(function(){
+            var tdRefreshArray = $("#myrefreshtr");
+            if(!tdRefreshArray || tdRefreshArray.length==0){
+                clearInterval(intervalId);
+            }
+
+            $.getJSON("/cl/ajax/live_history_ajax.php", function(data) {
+                $.each(data.comments, function(i, item) {
+                    $("#"+item.id).html(item.content);
+                });
+            });
+
+            console.log(new Date());
+        },3000);
+    }
+    refreshData();
+</script>
